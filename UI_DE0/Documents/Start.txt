@@ -1,0 +1,8 @@
+//########################################################\\
+//################# DE0 Controller V 0.5 #################\\
+//                                                        \\
+//         Developed at the University of Florida         \\
+//                          For                           \\
+//              EEL 4712 Digital Design Lab               \\
+//########################################################\\
+          Make Sure to Disconnect to Program Board          
