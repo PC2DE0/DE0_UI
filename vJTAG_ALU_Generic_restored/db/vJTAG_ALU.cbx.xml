@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="vJTAG_ALU">
-		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|alu_ns:U_ALU_NS|lpm_mult:Mult0" CBX_FILE_NAME="mult_19t.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

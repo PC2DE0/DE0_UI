@@ -12,8 +12,7 @@ entity address_wrapper is
 		sdr					: in std_logic;
 		input 				: in std_logic_vector(DATA_WIDTH-1 downto 0);
 		out_data_rdy 		: out std_logic;
-		sel_a				: out std_logic;
-		sel_b 				: out std_logic;
+		selects				: out selectArray;
 		sel_out 			: out std_logic
 	);
 end address_wrapper;
@@ -61,8 +60,7 @@ begin
 			addr_in 		=> addr_output,
 			counter 		=> counter,
 			out_data_rdy 	=> out_data_rdy,
-			sel_a 			=> sel_a,
-			sel_b  			=> sel_b,
+			selects => selects,
 			sel_out 		=> sel_out
 		);
 end STR;
