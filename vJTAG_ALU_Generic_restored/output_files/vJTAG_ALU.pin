@@ -83,10 +83,10 @@ GND+                         : A12       :        :                   :         
 led_hi_a[6]                  : A13       : output : 2.5 V             :         : 7         : Y              
 led_hi_a[3]                  : A14       : output : 2.5 V             :         : 7         : Y              
 led_hi_a[0]                  : A15       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : A16       :        :                   :         : 7         :                
-RESERVED_INPUT               : A17       :        :                   :         : 7         :                
+led_lo_b[5]                  : A16       : output : 2.5 V             :         : 7         : Y              
+led_lo_b[2]                  : A17       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : A18       :        :                   :         : 7         :                
-RESERVED_INPUT               : A19       :        :                   :         : 7         :                
+led_hi_b[4]                  : A19       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : A20       :        :                   :         : 7         :                
 VCCIO7                       : A21       : power  :                   : 2.5V    : 7         :                
 GND                          : A22       : gnd    :                   :         :           :                
@@ -149,10 +149,10 @@ GND+                         : B12       :        :                   :         
 led_hi_a[5]                  : B13       : output : 2.5 V             :         : 7         : Y              
 led_hi_a[2]                  : B14       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : B15       :        :                   :         : 7         :                
-RESERVED_INPUT               : B16       :        :                   :         : 7         :                
-RESERVED_INPUT               : B17       :        :                   :         : 7         :                
-RESERVED_INPUT               : B18       :        :                   :         : 7         :                
-RESERVED_INPUT               : B19       :        :                   :         : 7         :                
+led_lo_b[4]                  : B16       : output : 2.5 V             :         : 7         : Y              
+led_lo_b[1]                  : B17       : output : 2.5 V             :         : 7         : Y              
+led_hi_b[6]                  : B18       : output : 2.5 V             :         : 7         : Y              
+led_hi_b[3]                  : B19       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : B20       :        :                   :         : 7         :                
 RESERVED_INPUT               : B21       :        :                   :         : 6         :                
 RESERVED_INPUT               : B22       :        :                   :         : 6         :                
@@ -174,7 +174,7 @@ RESERVED_INPUT               : C15       :        :                   :         
 GND                          : C16       : gnd    :                   :         :           :                
 RESERVED_INPUT               : C17       :        :                   :         : 7         :                
 GND                          : C18       : gnd    :                   :         :           :                
-RESERVED_INPUT               : C19       :        :                   :         : 7         :                
+led_hi_b[2]                  : C19       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : C20       :        :                   :         : 6         :                
 RESERVED_INPUT               : C21       :        :                   :         : 6         :                
 RESERVED_INPUT               : C22       :        :                   :         : 6         :                
@@ -192,11 +192,11 @@ VCCIO8                       : D11       : power  :                   : 2.5V    
 VCCIO7                       : D12       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT               : D13       :        :                   :         : 7         :                
 VCCIO7                       : D14       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT               : D15       :        :                   :         : 7         :                
+led_lo_b[6]                  : D15       : output : 2.5 V             :         : 7         : Y              
 VCCIO7                       : D16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT               : D17       :        :                   :         : 7         :                
 VCCIO7                       : D18       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT               : D19       :        :                   :         : 7         :                
+led_hi_b[1]                  : D19       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : D20       :        :                   :         : 6         :                
 RESERVED_INPUT               : D21       :        :                   :         : 6         :                
 RESERVED_INPUT               : D22       :        :                   :         : 6         :                
@@ -214,7 +214,7 @@ led_lo_a[6]                  : E11       : output : 2.5 V             :         
 RESERVED_INPUT               : E12       :        :                   :         : 7         :                
 RESERVED_INPUT               : E13       :        :                   :         : 7         :                
 led_hi_a[1]                  : E14       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : E15       :        :                   :         : 7         :                
+led_lo_b[3]                  : E15       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : E16       :        :                   :         : 7         :                
 VCCD_PLL2                    : E17       : power  :                   : 1.2V    :           :                
 GNDA2                        : E18       : gnd    :                   :         :           :                
@@ -235,8 +235,8 @@ RESERVED_INPUT               : F10       :        :                   :         
 led_lo_a[5]                  : F11       : output : 2.5 V             :         : 7         : Y              
 led_lo_a[1]                  : F12       : output : 2.5 V             :         : 7         : Y              
 led_lo_a[0]                  : F13       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT               : F14       :        :                   :         : 7         :                
-RESERVED_INPUT               : F15       :        :                   :         : 7         :                
+led_lo_b[0]                  : F14       : output : 2.5 V             :         : 7         : Y              
+led_hi_b[5]                  : F15       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : F16       :        :                   :         : 7         :                
 RESERVED_INPUT               : F17       :        :                   :         : 6         :                
 VCCA2                        : F18       : power  :                   : 2.5V    :           :                
@@ -258,7 +258,7 @@ RESERVED_INPUT               : G11       :        :                   :         
 led_lo_a[2]                  : G12       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : G13       :        :                   :         : 7         :                
 RESERVED_INPUT               : G14       :        :                   :         : 7         :                
-RESERVED_INPUT               : G15       :        :                   :         : 7         :                
+led_hi_b[0]                  : G15       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : G16       :        :                   :         : 7         :                
 RESERVED_INPUT               : G17       :        :                   :         : 6         :                
 RESERVED_INPUT               : G18       :        :                   :         : 6         :                

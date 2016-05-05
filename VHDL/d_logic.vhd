@@ -75,11 +75,126 @@ begin
 					if (addr_or_data = '1') then
 						selectRegisters(1) <= '1';
 					end if;
---			--Send value to REG_3
---				when ADDR_3(regSize'range) =>
---					if (addr_or_data = '1') then
---						sel_out_reg <= '1';
---					end if;
+				when ADDR_3(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(2) <= '1';
+					end if;
+				when ADDR_4(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(3) <= '1';
+					end if;
+				when ADDR_5(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(4) <= '1';
+					end if;
+				when ADDR_6(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(5) <= '1';
+					end if;
+				when ADDR_7(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(6) <= '1';
+					end if;
+				when ADDR_8(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(7) <= '1';
+					end if;
+				when ADDR_9(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(8) <= '1';
+					end if;
+				when ADDR_10(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(9) <= '1';
+					end if;
+				when ADDR_11(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(10) <= '1';
+					end if;
+				when ADDR_12(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(11) <= '1';
+					end if;
+				when ADDR_13(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(12) <= '1';
+					end if;
+				when ADDR_14(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(13) <= '1';
+					end if;
+				when ADDR_15(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(14) <= '1';
+					end if;
+				when ADDR_16(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(15) <= '1';
+					end if;
+				when ADDR_17(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(16) <= '1';
+					end if;
+				when ADDR_18(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(17) <= '1';
+					end if;
+				when ADDR_19(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(18) <= '1';
+					end if;
+				when ADDR_20(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(19) <= '1';
+					end if;
+				when ADDR_21(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(20) <= '1';
+					end if;
+				when ADDR_22(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(21) <= '1';
+					end if;
+				when ADDR_23(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(22) <= '1';
+					end if;
+				when ADDR_24(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(23) <= '1';
+					end if;
+				when ADDR_25(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(24) <= '1';
+					end if;
+				when ADDR_26(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(25) <= '1';
+					end if;
+				when ADDR_27(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(26) <= '1';
+					end if;
+				when ADDR_28(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(27) <= '1';
+					end if;
+				when ADDR_29(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(28) <= '1';
+					end if;
+				when ADDR_30(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(29) <= '1';
+					end if;
+				when ADDR_31(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(30) <= '1';
+					end if;
+				when ADDR_32(regSize'range) =>
+					if (addr_or_data = '1') then
+						selectRegisters(31) <= '1';
+					end if;
 			--Send value to Output
 				when RETURN_REG(regSize'range) =>
 					if (addr_or_data = '1') then
@@ -90,17 +205,11 @@ begin
 						
 			end case;
 			
-			--for j in 0 to MAX_WIDTH-1 loop
-				--temp(j) := selectRegisters(j);
-			--end loop;
 			temp := selectRegisters;
-			
 			temp_out := sel_out_reg;
 		end if;
 		
 		selects <= temp;
-		--sel_a <= temp_a;
-		--sel_b <= temp_b;
 		sel_out <= temp_out;
 	end process;
 	

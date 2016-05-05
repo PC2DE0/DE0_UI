@@ -11,7 +11,9 @@ entity top_level_application_test is
 	port(
 		rst : in std_logic;
 		led_hi_a 	: out std_logic_vector(6 downto 0);
-		led_lo_a 	: out std_logic_vector(6 downto 0)
+		led_lo_a 	: out std_logic_vector(6 downto 0);
+		led_hi_b 	: out std_logic_vector(6 downto 0);
+		led_lo_b 	: out std_logic_vector(6 downto 0)
 	);
 end entity;
 
@@ -38,6 +40,7 @@ begin
 		port map(
 			input0 => jtag0_reg_out(0),
 			input1 => jtag0_reg_out(1),
+			input2 => jtag0_reg_out(2),
 			output => design_output
 		);
 
@@ -53,4 +56,14 @@ begin
 	  port map(
 		input => design_output(3 downto 0),
 		output => led_lo_a);
+		
+	U_LED_HI_b : entity work.decoder7seg
+	  port map(
+		input => jtag0_reg_out(1)(3 downto 0),
+		output => led_hi_b);
+		
+	U_LED_LO_b : entity work.decoder7seg
+	  port map(
+		input => jtag0_reg_out(0)(3 downto 0),
+		output => led_lo_b);
 end str;
