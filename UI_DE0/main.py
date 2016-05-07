@@ -156,7 +156,8 @@ class App(Frame):
                 regName.grid(row=j, column=1, padx=5, pady=5)
                 self.regNames.append(regName)
                 #Values to be sent to the register
-                regValue = Entry(master, width=10)
+                #regValue = Entry(master, width=10)
+                regValue = Entry(master, width=34)
                 regValue.bind('<Key>', keyPress)    # don't allow any key presses for non-int chars
                 regValue.grid(row=j, column=2, padx=5, pady=5)
                 self.regValues.append(regValue)
@@ -247,7 +248,8 @@ class App(Frame):
                 self.writeOut(int(self.regValues[array_location].get()))
 
     def reciveData(self, event):
-        self.writeOut(int('0xFF', 16))
+        #self.writeOut(int('0xFFFFFFFF', 16))
+        self.writeOut(int('0xFFFFFFFF', 16))
         self.writeOut(int(0))
 
 
@@ -255,7 +257,7 @@ class App(Frame):
         if (self.start_count == 1):
             # This will take an integer input and convert it to a binary string.
             # It will also cut off the 0b at the beginning of the string.
-            size = 8
+            size = 32
             bStrVal = bin(val).lstrip('0b').zfill(size)                             # Convert from int to binary string
             self.conn.send(bStrVal.encode('utf-8') + b'\n')                         # Newline is required to flush the buffer on the Tcl server
             self.data = self.conn.recv(size + 2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.

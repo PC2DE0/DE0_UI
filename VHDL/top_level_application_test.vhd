@@ -59,11 +59,11 @@ begin
 		
 	U_LED_HI_b : entity work.decoder7seg
 	  port map(
-		input => jtag0_reg_out(1)(3 downto 0),
+		input => design_output(15 downto 12),
 		output => led_hi_b);
 		
 	U_LED_LO_b : entity work.decoder7seg
 	  port map(
-		input => jtag0_reg_out(0)(3 downto 0),
+		input => design_output(11 downto 8),
 		output => led_lo_b);
 end str;
