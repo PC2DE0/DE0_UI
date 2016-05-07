@@ -16,13 +16,13 @@ entity seriel_to_parallel_reg is
 		udr			: in std_logic;				-- When = 1 then data is valid to output
 		output 		: out std_logic_vector
 	);
-	
+
 end seriel_to_parallel_reg;
 
 architecture SEQ_LOG of seriel_to_parallel_reg is
 
 	signal temp : std_logic_vector(DATA_WIDTH-1 downto 0);
-	
+
 begin
 	process(clk, rst)
 	begin
@@ -39,5 +39,3 @@ begin
 		end if;
 	end process;
 end SEQ_LOG;
-			
-				

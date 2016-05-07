@@ -166,7 +166,6 @@ begin
 
 			when OUT_9 =>
 
-				next_data <= data;
 				next_state <= OUT_10;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -177,7 +176,6 @@ begin
 				end if;
 
 			when OUT_10 =>
-
 
 				next_state <= OUT_11;
 				if (v_sdr = '1') then
@@ -190,7 +188,6 @@ begin
 
 			when OUT_11 =>
 
-
 				next_state <= OUT_12;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -201,7 +198,6 @@ begin
 				end if;
 
 			when OUT_12 =>
-
 
 				next_state <= OUT_13;
 				if (v_sdr = '1') then
@@ -214,7 +210,6 @@ begin
 
 			when OUT_13 =>
 
-
 				next_state <= OUT_14;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -225,7 +220,6 @@ begin
 				end if;
 
 			when OUT_14 =>
-
 
 				next_state <= OUT_15;
 				if (v_sdr = '1') then
@@ -238,8 +232,7 @@ begin
 
 			when OUT_15 =>
 
-
-				next_state <= START;
+				next_state <= OUT_16;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(15) & temp_reg(DATA_WIDTH-1 downto 1);
@@ -249,7 +242,6 @@ begin
 				end if;
 
 			when OUT_16 =>
-
 
 				next_state <= OUT_17;
 				if (v_sdr = '1') then
@@ -262,7 +254,6 @@ begin
 
 			when OUT_17 =>
 
-
 				next_state <= OUT_18;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -273,7 +264,6 @@ begin
 				end if;
 
 			when OUT_18 =>
-
 
 				next_state <= OUT_19;
 				if (v_sdr = '1') then
@@ -286,7 +276,6 @@ begin
 
 			when OUT_19 =>
 
-
 				next_state <= OUT_20;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -297,7 +286,6 @@ begin
 				end if;
 
 			when OUT_20 =>
-
 
 				next_state <= OUT_21;
 				if (v_sdr = '1') then
@@ -310,7 +298,6 @@ begin
 
 			when OUT_21 =>
 
-
 				next_state <= OUT_22;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -321,7 +308,6 @@ begin
 				end if;
 
 			when OUT_22 =>
-
 
 				next_state <= OUT_23;
 				if (v_sdr = '1') then
@@ -334,7 +320,6 @@ begin
 
 			when OUT_23 =>
 
-
 				next_state <= OUT_24;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -345,7 +330,6 @@ begin
 				end if;
 
 			when OUT_24 =>
-
 
 				next_state <= OUT_25;
 				if (v_sdr = '1') then
@@ -358,7 +342,6 @@ begin
 
 			when OUT_25 =>
 
-
 				next_state <= OUT_26;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -369,7 +352,6 @@ begin
 				end if;
 
 			when OUT_26 =>
-
 
 				next_state <= OUT_27;
 				if (v_sdr = '1') then
@@ -382,7 +364,6 @@ begin
 
 			when OUT_27 =>
 
-
 				next_state <= OUT_28;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -393,7 +374,6 @@ begin
 				end if;
 
 			when OUT_28 =>
-
 
 				next_state <= OUT_29;
 				if (v_sdr = '1') then
@@ -406,7 +386,6 @@ begin
 
 			when OUT_29 =>
 
-
 				next_state <= OUT_30;
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
@@ -417,7 +396,6 @@ begin
 				end if;
 
 			when OUT_30 =>
-
 
 				next_state <= OUT_31;
 				if (v_sdr = '1') then
