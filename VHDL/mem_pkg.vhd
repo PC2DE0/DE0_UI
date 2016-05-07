@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 package mem_pkg is
-	
 
-	
-	constant DATA_WIDTH 		: positive := 8;
+
+
+	constant DATA_WIDTH 		: positive := 32;
 	subtype DATA_RANGE is natural range DATA_WIDTH-1 downto 0;
-	
+
 	constant MAX_WIDTH			: positive := 32;
 	constant SDR_COUNT			: positive := 3;
-	
+
 	type registerArray is array (0 to 31) of std_logic_vector(DATA_WIDTH-1 downto 0);
 	type selectArray is array (0 to 31) of std_logic;
 
@@ -51,9 +51,8 @@ package mem_pkg is
 	constant ADDR_30				: std_logic_vector(MAX_WIDTH-1 downto 0) := X"0000001E";
 	constant ADDR_31				: std_logic_vector(MAX_WIDTH-1 downto 0) := X"0000001F";
 	constant ADDR_32				: std_logic_vector(MAX_WIDTH-1 downto 0) := X"00000020";
-	
+
 		--The return address will always be the last memory location
 	constant RETURN_REG			: std_logic_vector(MAX_WIDTH-1 downto 0) := X"FFFFFFFF";
-	
-end mem_pkg;
 
+end mem_pkg;
