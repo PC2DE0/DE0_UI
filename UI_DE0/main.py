@@ -251,8 +251,10 @@ class App(Frame):
                 self.writeOut(int(self.regValues[array_location].get()))
 
     def reciveData(self, event):
-        self.writeOut(int('0xFF', 16))
+        self.writeOut(int('0xFF',16))
         self.writeOut(int(0))
+        #self.writeToText("Receive data: \n Register : %s \n Value : %s \n" % ())
+
 
 
     def writeOut(self, val):

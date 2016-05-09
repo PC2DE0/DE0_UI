@@ -13,7 +13,7 @@ entity d_logic is
 		counter 		: in std_logic_vector(SDR_COUNT-1 downto 0);
 		addr_in 		: in std_logic_vector(DATA_WIDTH-1 downto 0);
 		out_data_rdy 	: out std_logic;
-		
+
 		--These will be changed on the application basses
 		selects			: out selectArray;
 		sel_out 		: out std_logic
@@ -21,21 +21,21 @@ entity d_logic is
 end d_logic;
 
 architecture SEQ_LOGIC of d_logic is
-	
+
 	signal regSize         : std_logic_vector(DATA_RANGE);
 	signal selectRegisters : selectArray;
 	signal sel_out_reg : std_logic;
 	signal sel_sr_reg : std_logic;
 	signal addr_or_data : std_logic;
 	signal addr_reg : std_logic_vector(DATA_WIDTH-1 downto 0);
-	
+
 begin
 
 	process(clk, rst)
 		variable temp : selectArray;
 		variable temp_out : std_logic;
 	begin
-		
+
 		if (rst = '1') then
 			-- MAX_WIDTH due to 32 registers...probably will need to change soon
 			for i in 0 to MAX_WIDTH-1 loop
@@ -56,7 +56,7 @@ begin
 				addr_reg <= addr_in;
 			end if;
 			case addr_reg is
-			--This is a dummy memory location for loading addresses				
+			--This is a dummy memory location for loading addresses
 				when MMAP_ADDR(regSize'range) =>
 					if (addr_or_data = '1') then
 						for i in 0 to MAX_WIDTH-1 loop
@@ -65,12 +65,12 @@ begin
 						sel_out_reg <= '0';
 						sel_sr_reg <= '0';
 					end if;
-			--Send value to REG_1	
+			--Send value to REG_1
 				when ADDR_1(regSize'range) =>
 					if (addr_or_data = '1') then
 						selectRegisters(0) <= '1';
 					end if;
-			--Send value to REG_2			
+			--Send value to REG_2
 				when ADDR_2(regSize'range) =>
 					if (addr_or_data = '1') then
 						selectRegisters(1) <= '1';
@@ -191,6 +191,7 @@ begin
 					if (addr_or_data = '1') then
 						selectRegisters(30) <= '1';
 					end if;
+				-- when register address value is 32, we map to register 31, 0 idxed
 				when ADDR_32(regSize'range) =>
 					if (addr_or_data = '1') then
 						selectRegisters(31) <= '1';
@@ -198,21 +199,21 @@ begin
 			--Send value to Output
 				when RETURN_REG(regSize'range) =>
 					if (addr_or_data = '1') then
-						sel_out_reg <= '1';					
-					end if;	
-					
+						sel_out_reg <= '1';
+					end if;
+
 				when others => null;
-						
+
 			end case;
-			
+
 			temp := selectRegisters;
 			temp_out := sel_out_reg;
 		end if;
-		
+
 		selects <= temp;
 		sel_out <= temp_out;
 	end process;
-	
+
 	process(addr_in, sel_out_reg)
 	begin
 		if (unsigned(addr_in) = unsigned(RETURN_REG(regSize'range)) and sel_out_reg = '0') then
