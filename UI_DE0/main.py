@@ -5,6 +5,7 @@ if _platform == "linux":
 else:
     from tkinter import *
     import socketserver
+    import os
 
 import logging
 from threading import Thread
@@ -134,10 +135,10 @@ class App(Frame):
         if (checkRegRange(self.numregisterentry.get())==1):
             pass
         else:
-            self.regLabel = Label(master, text="Register Name", compound=CENTER)
+            self.regLabel = Label(master, text="Register Address (Decimal)", compound=CENTER)
             self.regLabel.grid(row=0, column=1)
 
-            self.valueLabel = Label(master, text="Value", compound=CENTER)
+            self.valueLabel = Label(master, text="Value (Decimal)", compound=CENTER)
             self.valueLabel.grid(row=0, column=2)
 
             self.regNames = []
@@ -151,8 +152,8 @@ class App(Frame):
                 j = i+1
                 self.array.append(i)
                 #Register Labels - these will be able to be changed by user and then later saved and reloaded.
-                regName = Entry(master, width=15, justify=CENTER)
-                regName.insert(0, 'Register %s' % j)
+                regName = Entry(master, width=10)
+                regName.bind('<Key>', keyPress)
                 regName.grid(row=j, column=1, padx=5, pady=5)
                 self.regNames.append(regName)
                 #Values to be sent to the register
@@ -209,6 +210,8 @@ class App(Frame):
         if (self.start_count == 0):
             pass
         elif (self.start_count == 1):
+            #os.system('kill jtagserver')
+            #os.system('kill quartus_stp')
             self.writeToText("Disconnected")
             self.start_count = 0
             self.tcl.kill()
@@ -243,7 +246,8 @@ class App(Frame):
                 pass
             else:
                 self.writeToText("Send data: \n Register : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
-                self.writeOut(int(array_location + 1))
+                #self.writeOut(int(array_location + 1))
+                self.writeOut(int(self.regNames[array_location].get()))
                 self.writeOut(int(self.regValues[array_location].get()))
 
     def reciveData(self, event):
