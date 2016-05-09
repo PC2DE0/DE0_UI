@@ -247,7 +247,8 @@ class App(Frame):
             else:
                 self.writeToText("Send data: \n Register : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
                 #self.writeOut(int(array_location + 1))
-                self.writeOut(int(self.regNames[array_location].get()))
+                #write out 1 for 0, so that the vhdl will see 1 and write to the 0th register
+                self.writeOut(int(self.regNames[array_location].get())+1)
                 self.writeOut(int(self.regValues[array_location].get()))
 
     def reciveData(self, event):
