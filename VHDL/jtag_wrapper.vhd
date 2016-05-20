@@ -10,8 +10,8 @@ use work.mem_pkg.all;
 entity jtag_wrapper is
   port(
 	 clk : out std_logic;
-    rst : in std_logic;
-    design_output : in std_logic_vector(DATA_WIDTH-1 downto 0);
+   rst : in std_logic;
+   design_output : in std_logic_vector(DATA_WIDTH-1 downto 0);
 
 	 -- OUTPUTS TO DESIGN CIRCUIT
 	 registers_out : out registerArray
