@@ -11,10 +11,20 @@ end jtag_tb;
 architecture TB of jtag_tb is
 
   signal ir_out : std_logic_vector(7 downto 0);
-  signal tdo : std_logic;
+  signal tdo : std_logic := '0';
   signal ir_in : std_logic_vector(0 downto 0);
   signal tck : std_logic;
   signal tdi : std_logic;
+	signal addr_top_in 	: std_logic_vector(DATA_WIDTH-1 downto 0);		--
+	signal sdr 			: std_logic;
+	signal cdr 			: std_logic;
+	signal udr 			: std_logic;
+	signal out_data_rdy : std_logic;
+	signal selects 	: selectArray;
+  signal registers_out : registerArray;
+	signal sel_out 		: std_logic;
+  signal rst : std_logic := '1';
+  signal design_output : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal virtual_state_cdr : std_logic;
   signal virtual_state_cir : std_logic;
   signal virtual_state_e1dr : std_logic;
@@ -25,6 +35,14 @@ architecture TB of jtag_tb is
 
 begin
 
+  rst <= '0';
+
+  process(tck)
+  begin
+    if(rising_edge(tck)) then
+      tdo <= not tdo;
+    end if;
+  end process;
 
 	U_vJTAG : entity work.vJTAG
 		port map(
@@ -36,7 +54,8 @@ begin
 			virtual_state_sdr 	=> sdr,
 			virtual_state_udr 	=> udr,
 			virtual_state_cdr 	=> cdr
-		);	U_SR_V2 : entity work.seriel_to_parallel_reg
+		);
+    U_SR_V2 : entity work.seriel_to_parallel_reg
 		generic map (
 			DATA_WIDTH 			=> DATA_WIDTH)
 		port map(

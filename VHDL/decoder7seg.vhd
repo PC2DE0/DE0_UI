@@ -47,6 +47,7 @@ begin
 				output <= "0110000";	--E
 			when "1111" =>
 				output <= "0111000";	--F
+			when others => null;
 		end case;
 	end process;
 		

@@ -1,5 +1,5 @@
 Fitter report for vJTAG_ALU
-Fri May 20 22:52:06 2016
+Sat May 21 13:01:58 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -69,17 +69,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri May 20 22:52:06 2016           ;
+; Fitter Status                      ; Successful - Sat May 21 13:01:58 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 262 / 15,408 ( 2 % )                            ;
-;     Total combinational functions  ; 184 / 15,408 ( 1 % )                            ;
-;     Dedicated logic registers      ; 178 / 15,408 ( 1 % )                            ;
-; Total registers                    ; 178                                             ;
+; Total logic elements               ; 258 / 15,408 ( 2 % )                            ;
+;     Total combinational functions  ; 183 / 15,408 ( 1 % )                            ;
+;     Dedicated logic registers      ; 175 / 15,408 ( 1 % )                            ;
+; Total registers                    ; 175                                             ;
 ; Total pins                         ; 29 / 347 ( 8 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
@@ -222,8 +222,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 442 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 442 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 438 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 438 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -247,8 +247,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 228     ; 0                 ; N/A                     ; Source File       ;
-; sld_hub:auto_hub               ; 204     ; 0                 ; N/A                     ; Post-Synthesis    ;
+; Top                            ; 225     ; 0                 ; N/A                     ; Source File       ;
+; sld_hub:auto_hub               ; 203     ; 0                 ; N/A                     ; Post-Synthesis    ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -264,26 +264,26 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 262 / 15,408 ( 2 % ) ;
-;     -- Combinational with no register       ; 84                   ;
-;     -- Register only                        ; 78                   ;
+; Total logic elements                        ; 258 / 15,408 ( 2 % ) ;
+;     -- Combinational with no register       ; 83                   ;
+;     -- Register only                        ; 75                   ;
 ;     -- Combinational with a register        ; 100                  ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
 ;     -- 4 input functions                    ; 79                   ;
 ;     -- 3 input functions                    ; 56                   ;
-;     -- <=2 input functions                  ; 49                   ;
-;     -- Register only                        ; 78                   ;
+;     -- <=2 input functions                  ; 48                   ;
+;     -- Register only                        ; 75                   ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 162                  ;
+;     -- normal mode                          ; 161                  ;
 ;     -- arithmetic mode                      ; 22                   ;
 ;                                             ;                      ;
-; Total registers*                            ; 178 / 17,068 ( 1 % ) ;
-;     -- Dedicated logic registers            ; 178 / 15,408 ( 1 % ) ;
+; Total registers*                            ; 175 / 17,068 ( 1 % ) ;
+;     -- Dedicated logic registers            ; 175 / 15,408 ( 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )    ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 25 / 963 ( 3 % )     ;
+; Total LABs:  partially or completely used   ; 23 / 963 ( 2 % )     ;
 ; Virtual pins                                ; 0                    ;
 ; I/O pins                                    ; 29 / 347 ( 8 % )     ;
 ;     -- Clock pins                           ; 0 / 8 ( 0 % )        ;
@@ -301,11 +301,11 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 2% / 1% / 2%         ;
-; Maximum fan-out                             ; 172                  ;
-; Highest non-global fan-out                  ; 92                   ;
-; Total fan-out                               ; 1322                 ;
-; Average fan-out                             ; 2.65                 ;
+; Peak interconnect usage (total/H/V)         ; 2% / 2% / 2%         ;
+; Maximum fan-out                             ; 169                  ;
+; Highest non-global fan-out                  ; 89                   ;
+; Total fan-out                               ; 1302                 ;
+; Average fan-out                             ; 2.68                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -318,25 +318,25 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +---------------------------------------------+-----------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                   ; Low                            ;
 ;                                             ;                       ;                       ;                                ;
-; Total logic elements                        ; 120 / 15408 ( < 1 % ) ; 142 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 28                    ; 56                    ; 0                              ;
-;     -- Register only                        ; 54                    ; 24                    ; 0                              ;
+; Total logic elements                        ; 117 / 15408 ( < 1 % ) ; 141 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 28                    ; 55                    ; 0                              ;
+;     -- Register only                        ; 51                    ; 24                    ; 0                              ;
 ;     -- Combinational with a register        ; 38                    ; 62                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                       ;                                ;
 ;     -- 4 input functions                    ; 31                    ; 48                    ; 0                              ;
 ;     -- 3 input functions                    ; 24                    ; 32                    ; 0                              ;
-;     -- <=2 input functions                  ; 11                    ; 38                    ; 0                              ;
-;     -- Register only                        ; 54                    ; 24                    ; 0                              ;
+;     -- <=2 input functions                  ; 11                    ; 37                    ; 0                              ;
+;     -- Register only                        ; 51                    ; 24                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                       ;                                ;
-;     -- normal mode                          ; 52                    ; 110                   ; 0                              ;
+;     -- normal mode                          ; 52                    ; 109                   ; 0                              ;
 ;     -- arithmetic mode                      ; 14                    ; 8                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
-; Total registers                             ; 92                    ; 86                    ; 0                              ;
-;     -- Dedicated logic registers            ; 92 / 15408 ( < 1 % )  ; 86 / 15408 ( < 1 % )  ; 0 / 15408 ( 0 % )              ;
+; Total registers                             ; 89                    ; 86                    ; 0                              ;
+;     -- Dedicated logic registers            ; 89 / 15408 ( < 1 % )  ; 86 / 15408 ( < 1 % )  ; 0 / 15408 ( 0 % )              ;
 ;                                             ;                       ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 13 / 963 ( 1 % )      ; 14 / 963 ( 1 % )      ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 12 / 963 ( 1 % )      ; 14 / 963 ( 1 % )      ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                     ; 0                              ;
 ; I/O pins                                    ; 29                    ; 0                     ; 0                              ;
@@ -347,17 +347,17 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 ; Clock control block                         ; 2 / 24 ( 8 % )        ; 0 / 24 ( 0 % )        ; 0 / 24 ( 0 % )                 ;
 ;                                             ;                       ;                       ;                                ;
 ; Connections                                 ;                       ;                       ;                                ;
-;     -- Input Connections                    ; 100                   ; 127                   ; 0                              ;
-;     -- Registered Input Connections         ; 90                    ; 89                    ; 0                              ;
-;     -- Output Connections                   ; 219                   ; 8                     ; 0                              ;
+;     -- Input Connections                    ; 97                    ; 127                   ; 0                              ;
+;     -- Registered Input Connections         ; 86                    ; 90                    ; 0                              ;
+;     -- Output Connections                   ; 216                   ; 8                     ; 0                              ;
 ;     -- Registered Output Connections        ; 1                     ; 7                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Internal Connections                        ;                       ;                       ;                                ;
-;     -- Total Connections                    ; 777                   ; 677                   ; 5                              ;
-;     -- Registered Connections               ; 205                   ; 420                   ; 0                              ;
+;     -- Total Connections                    ; 765                   ; 669                   ; 5                              ;
+;     -- Registered Connections               ; 202                   ; 421                   ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; External Connections                        ;                       ;                       ;                                ;
-;     -- Top                                  ; 184                   ; 135                   ; 0                              ;
+;     -- Top                                  ; 178                   ; 135                   ; 0                              ;
 ;     -- sld_hub:auto_hub                     ; 135                   ; 0                     ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                     ; 0                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
@@ -387,7 +387,7 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; rst  ; D2    ; 1        ; 0            ; 25           ; 0            ; 92                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; rst  ; D2    ; 1        ; 0            ; 25           ; 0            ; 89                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -979,13 +979,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 262 (1)     ; 178 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; 84 (1)       ; 78 (0)            ; 100 (0)          ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 258 (1)     ; 175 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; 83 (1)       ; 75 (0)            ; 100 (0)          ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |application_test:U_ADDER|                                    ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |top_level_application_test|application_test:U_ADDER                                                                                                                 ; work         ;
 ;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_b|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|decoder7seg:U_LED_LO_b                                                                                                                   ; work         ;
-;    |jtag_wrapper:U_jtag_wrapper|                                 ; 105 (0)     ; 92 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 54 (0)            ; 38 (0)           ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
-;       |address_wrapper:U_ADDR_TOP|                               ; 28 (0)      ; 27 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (0)        ; 13 (0)            ; 14 (0)           ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP                                                                                   ; work         ;
-;          |d_logic:U_logic|                                       ; 20 (20)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 7 (7)             ; 12 (12)          ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic                                                                   ; work         ;
+;    |jtag_wrapper:U_jtag_wrapper|                                 ; 102 (0)     ; 89 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 51 (0)            ; 38 (0)           ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
+;       |address_wrapper:U_ADDR_TOP|                               ; 25 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (0)        ; 10 (0)            ; 14 (0)           ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP                                                                                   ; work         ;
+;          |d_logic:U_logic|                                       ; 17 (17)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 12 (12)          ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic                                                                   ; work         ;
 ;          |reg_gen:U_addrreg|                                     ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg                                                                 ; work         ;
 ;          |sdr_count:U_addrcount|                                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount                                                             ; work         ;
 ;       |reg_gen:\REG_GEN:0:REG_i|                                 ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 5 (5)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i                                                                                     ; work         ;
@@ -996,8 +996,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
 ;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
 ;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
-;    |sld_hub:auto_hub|                                            ; 142 (1)     ; 86 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (1)       ; 24 (0)            ; 62 (0)           ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 141 (99)    ; 86 (58)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 55 (41)      ; 24 (24)           ; 62 (39)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;    |sld_hub:auto_hub|                                            ; 141 (1)     ; 86 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 55 (1)       ; 24 (0)            ; 62 (0)           ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 140 (98)    ; 86 (58)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (40)      ; 24 (24)           ; 62 (39)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                               ; 21 (21)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 9 (9)            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 21 (21)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 19 (19)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -1037,109 +1037,106 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_lo_b[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led_lo_b[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led_lo_b[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; rst         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; rst         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                                                 ;
-+--------------------------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                                              ; Pad To Core Index ; Setting ;
-+--------------------------------------------------------------------------------------------------+-------------------+---------+
-; rst                                                                                              ;                   ;         ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[4]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[0]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[1]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[2]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[3]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[4]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[5]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[6]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[7]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[0]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[1]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[2]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[3]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[4]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[5]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[6]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[7]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[0]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[1]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[2]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[3]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[4]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[5]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[6]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[7]                            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[1]            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[0]            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[3]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[2]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[1]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[0]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[2]            ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[5]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[6]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[7]                      ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[1]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.START                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_1                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_2                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_3                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_4                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_5                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_6                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[4]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|selectRegisters[1] ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|selectRegisters[0] ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[3]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[2]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[1]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[0]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|selectRegisters[2] ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[5]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[6]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[7]                        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[2]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_or_data       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[7]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[6]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[5]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[4]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[3]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[2]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[1]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[0]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[3]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[0]     ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[1]     ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[7]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[6]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[5]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[4]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[3]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[2]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[1]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[0]        ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[4]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|output       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[5]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[6]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|valid_reg                         ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[7]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[6]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[5]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[4]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[1]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[3]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[2]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[0]                       ; 0                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg        ; 0                 ; 6       ;
-+--------------------------------------------------------------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                             ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                          ; Pad To Core Index ; Setting ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
+; rst                                                                                          ;                   ;         ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[4]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[0]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[1]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[2]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[3]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[4]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[5]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[6]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i|output[7]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[0]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[1]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[2]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[3]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[4]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[5]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[6]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i|output[7]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[0]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[1]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[2]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[3]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[4]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[5]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[6]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i|output[7]                        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[1]        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[0]        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[3]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[2]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[1]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[0]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[2]        ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[5]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[6]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|output[7]                  ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[1]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.START                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_1                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_2                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_3                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_4                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_5                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_6                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[4]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_or_data   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[7]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[6]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[5]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[4]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[3]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[2]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[1]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[0]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[3]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[2]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[1]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[0]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[5]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[6]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[7]                    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[2]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[0] ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[1] ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[7]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[6]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[5]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[4]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[3]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[2]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[1]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[0]    ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[3]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|output   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[4]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[5]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[6]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|valid_reg                     ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[7]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[6]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[5]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[4]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[1]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[3]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[2]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[0]                   ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg    ; 1                 ; 6       ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1147,39 +1144,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                                                         ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 172     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 169     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 ; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 4       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 23      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Equal0~0                                                                              ; LCCOMB_X16_Y17_N12 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[0]                                                                               ; FF_X14_Y17_N3      ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[1]                                                                               ; FF_X14_Y17_N9      ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[2]                                                                               ; FF_X14_Y17_N5      ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|output                                                                          ; FF_X16_Y17_N13     ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|process_0~0                                                                                       ; LCCOMB_X17_Y20_N8  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                                                                                          ; FF_X15_Y19_N11     ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]~0                                                                                        ; LCCOMB_X16_Y19_N4  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr   ; LCCOMB_X17_Y21_N24 ; 3       ; Clock                      ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; LCCOMB_X17_Y21_N12 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; rst                                                                                                                                                          ; PIN_D2             ; 92      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; FF_X17_Y21_N9      ; 21      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; LCCOMB_X16_Y21_N24 ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; LCCOMB_X16_Y21_N28 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; LCCOMB_X17_Y23_N30 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; LCCOMB_X19_Y22_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; LCCOMB_X19_Y22_N12 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; LCCOMB_X17_Y22_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2                                                                                  ; LCCOMB_X16_Y22_N18 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10                                                                           ; LCCOMB_X16_Y21_N20 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~9                                                                            ; LCCOMB_X19_Y23_N2  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]~15                                                          ; LCCOMB_X16_Y21_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~13                                                     ; LCCOMB_X16_Y23_N4  ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~20                                                     ; LCCOMB_X16_Y21_N18 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; FF_X15_Y21_N17     ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; FF_X19_Y21_N17     ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; FF_X17_Y21_N3      ; 24      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; FF_X17_Y21_N29     ; 9       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0                                                                      ; LCCOMB_X19_Y21_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; FF_X16_Y21_N7      ; 13      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Equal0~0                                                                              ; LCCOMB_X16_Y21_N10 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[0]                                                                               ; FF_X16_Y21_N27     ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[1]                                                                               ; FF_X16_Y21_N1      ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp[2]                                                                               ; FF_X16_Y21_N29     ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|output                                                                          ; FF_X16_Y21_N11     ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|process_0~0                                                                                       ; LCCOMB_X16_Y22_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                                                                                          ; FF_X20_Y22_N3      ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]~0                                                                                        ; LCCOMB_X16_Y22_N4  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr   ; LCCOMB_X16_Y23_N12 ; 3       ; Clock                      ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; LCCOMB_X16_Y23_N28 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; rst                                                                                                                                                          ; PIN_D2             ; 89      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; FF_X16_Y23_N25     ; 21      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; LCCOMB_X14_Y23_N2  ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; LCCOMB_X14_Y23_N22 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; LCCOMB_X15_Y23_N20 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; LCCOMB_X15_Y23_N28 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; LCCOMB_X15_Y23_N18 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; LCCOMB_X14_Y21_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~2                                                                                  ; LCCOMB_X15_Y21_N20 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~7                                                                            ; LCCOMB_X16_Y25_N28 ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~8                                                                            ; LCCOMB_X14_Y23_N6  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]~15                                                          ; LCCOMB_X14_Y23_N18 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~13                                                     ; LCCOMB_X14_Y24_N4  ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~20                                                     ; LCCOMB_X15_Y24_N2  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; FF_X17_Y23_N5      ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; FF_X17_Y22_N23     ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; FF_X16_Y23_N23     ; 24      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; FF_X15_Y23_N13     ; 9       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0                                                                      ; LCCOMB_X17_Y22_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; FF_X14_Y23_N31     ; 13      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1188,8 +1185,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                                                       ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; altera_internal_jtag~TCKUTAP                                                                                                                               ; JTAG_X1_Y15_N0     ; 172     ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr ; LCCOMB_X17_Y21_N24 ; 3       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
+; altera_internal_jtag~TCKUTAP                                                                                                                               ; JTAG_X1_Y15_N0     ; 169     ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr ; LCCOMB_X16_Y23_N12 ; 3       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1198,7 +1195,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                                         ; Fan-Out ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; rst~input                                                                                                                                                    ; 92      ;
+; rst~input                                                                                                                                                    ; 89      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; 24      ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                 ; 23      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]                                                             ; 22      ;
@@ -1211,14 +1208,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                                                                                          ; 11      ;
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Equal0~0                                                                              ; 10      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; 9       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]                                                                              ; 9       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                              ; 9       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]                                                                              ; 9       ;
 ; ~GND                                                                                                                                                         ; 9       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|clear_signal                                                           ; 8       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; 8       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]                                                                                    ; 8       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]                                                                              ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]                                                                              ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                              ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                              ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|output                                                                          ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|process_0~0                                                                                       ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; 8       ;
@@ -1237,13 +1235,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg                                                                            ; 7       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[1]                                                                                    ; 7       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                    ; 7       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                              ; 7       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]~0                                                                                        ; 7       ;
 ; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr   ; 6       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~20                                                     ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~13                                                     ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10                                                                           ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~9                                                                            ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~8                                                                            ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~7                                                                            ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                    ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]                                                        ; 5       ;
@@ -1254,7 +1251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; 4       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~12                                                                          ; 4       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~5                                                                           ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]                                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0                                                                           ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                                        ; 4       ;
@@ -1284,7 +1281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; altera_internal_jtag~TCKUTAP                                                                                                                                 ; 3       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                                                                                          ; 3       ;
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[0]                                                                        ; 3       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux0~1                                                                                ; 3       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp~1                                                                                ; 3       ;
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_or_data                                                                          ; 3       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|WideNor0~1                                                                                           ; 3       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_6                                                                                          ; 3       ;
@@ -1299,8 +1296,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[1]                                                                  ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~6                                                              ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~5                                                              ; 2       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~14                                                                             ; 2       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13                                                                             ; 2       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6                                                                              ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0                                                                ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~1                                                                                  ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]                                                                                 ; 2       ;
@@ -1341,18 +1337,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[6]                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[7]                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[1]                                                                        ; 2       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[2]                                                                           ; 2       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[3]                                                                           ; 2       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[4]                                                                           ; 2       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[5]                                                                           ; 2       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[6]                                                                           ; 2       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[7]                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[7]                                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[6]                                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[5]                                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[1]                                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[2]                                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[3]                                                                                           ; 2       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[2]                                                                           ; 2       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[3]                                                                           ; 2       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[4]                                                                           ; 2       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[5]                                                                           ; 2       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[6]                                                                           ; 2       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_reg[7]                                                                           ; 2       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[4]                                                                                           ; 2       ;
 ; altera_reserved_tdi~input                                                                                                                                    ; 1       ;
 ; altera_reserved_tck~input                                                                                                                                    ; 1       ;
@@ -1360,16 +1356,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]~1                                                                               ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]~0                                                                               ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~20                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~19                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~18                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~17                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~15                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~14                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~14                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~13                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~12                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~3                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~16                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~15                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[3]                                                                 ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~11                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~10                                                             ; 1       ;
@@ -1378,6 +1372,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[3]                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~2                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[3]                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~11                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[2]                                                                 ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~2                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~1                                                            ; 1       ;
@@ -1388,6 +1385,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]~4                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|Equal3~0                                                                                       ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[1]                                                                 ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~7                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~0                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~3                                                                              ; 1       ;
@@ -1413,10 +1412,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~0                                                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~0                                                                               ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~11                                                                          ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9                                                                              ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~4                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]                                                                 ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~12                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~11                                                             ; 1       ;
@@ -1466,8 +1462,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~13                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~12                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~11                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~8                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~7                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~10                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~9                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~6                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~5                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                             ; 1       ;
@@ -1478,9 +1474,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|addr_or_data~0                                                                        ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_1~0                                                                                        ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.START~0                                                                                        ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux32~2                                                                               ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux32~1                                                                               ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux32~0                                                                               ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg~2                                                                         ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg~1                                                                         ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg~0                                                                         ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|valid_reg~0                                                                                          ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|Selector8~10                                                                                         ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|Selector8~9                                                                                          ; 1       ;
@@ -1506,18 +1502,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[7]                                                                                          ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[6]                                                                                          ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[5]                                                                                          ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[1]~0                                                                      ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[4]                                                                                          ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[1]~0                                                                      ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[3]                                                                                          ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux2~0                                                                                ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux0~2                                                                                ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux1~0                                                                                ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|Mux0~0                                                                                ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[2]                                                                                          ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|selectRegisters[2]                                                                    ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp~4                                                                                ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2|temp[0]                                                                                           ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|selectRegisters[0]                                                                    ; 1       ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|selectRegisters[1]                                                                    ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp~3                                                                                ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp~2                                                                                ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|temp~0                                                                                ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[1]                                                                                          ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]                                                                                          ; 1       ;
 ; decoder7seg:U_LED_LO_b|Mux0~0                                                                                                                                ; 1       ;
@@ -1588,146 +1581,143 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 257 / 47,787 ( < 1 % ) ;
-; C16 interconnects           ; 4 / 1,804 ( < 1 % )    ;
-; C4 interconnects            ; 121 / 31,272 ( < 1 % ) ;
-; Direct links                ; 74 / 47,787 ( < 1 % )  ;
+; Block interconnects         ; 255 / 47,787 ( < 1 % ) ;
+; C16 interconnects           ; 0 / 1,804 ( 0 % )      ;
+; C4 interconnects            ; 118 / 31,272 ( < 1 % ) ;
+; Direct links                ; 65 / 47,787 ( < 1 % )  ;
 ; Global clocks               ; 2 / 20 ( 10 % )        ;
-; Local interconnects         ; 149 / 15,408 ( < 1 % ) ;
-; R24 interconnects           ; 4 / 1,775 ( < 1 % )    ;
-; R4 interconnects            ; 150 / 41,310 ( < 1 % ) ;
+; Local interconnects         ; 145 / 15,408 ( < 1 % ) ;
+; R24 interconnects           ; 1 / 1,775 ( < 1 % )    ;
+; R4 interconnects            ; 134 / 41,310 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.48) ; Number of LABs  (Total = 25) ;
+; Number of Logic Elements  (Average = 11.22) ; Number of LABs  (Total = 23) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 2                            ;
 ; 2                                           ; 0                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 1                            ;
+; 7                                           ; 4                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 3                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 9                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 10                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.92) ; Number of LABs  (Total = 25) ;
+; LAB-wide Signals  (Average = 1.96) ; Number of LABs  (Total = 23) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 13                           ;
-; 1 Clock                            ; 19                           ;
-; 1 Clock enable                     ; 5                            ;
+; 1 Clock                            ; 17                           ;
+; 1 Clock enable                     ; 2                            ;
 ; 1 Sync. clear                      ; 2                            ;
-; 1 Sync. load                       ; 2                            ;
-; 2 Clock enables                    ; 5                            ;
-; 2 Clocks                           ; 2                            ;
+; 1 Sync. load                       ; 1                            ;
+; 2 Clock enables                    ; 7                            ;
+; 2 Clocks                           ; 3                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.40) ; Number of LABs  (Total = 25) ;
+; Number of Signals Sourced  (Average = 17.26) ; Number of LABs  (Total = 23) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 1                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 2                            ;
-; 12                                           ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 1                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 2                            ;
 ; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 1                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 1                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.72) ; Number of LABs  (Total = 25) ;
+; Number of Signals Sourced Out  (Average = 6.17) ; Number of LABs  (Total = 23) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 1                            ;
 ; 1                                               ; 3                            ;
-; 2                                               ; 3                            ;
+; 2                                               ; 2                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 3                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 3                            ;
+; 4                                               ; 0                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 5                            ;
 ; 8                                               ; 4                            ;
-; 9                                               ; 4                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 0                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 1                            ;
 ; 12                                              ; 0                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 1                            ;
+; 14                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.76) ; Number of LABs  (Total = 25) ;
+; Number of Distinct Inputs  (Average = 9.30) ; Number of LABs  (Total = 23) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 3                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 2                            ;
 ; 4                                           ; 2                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 2                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
+; 5                                           ; 3                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 2                            ;
 ; 12                                          ; 4                            ;
 ; 13                                          ; 3                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 1                            ;
 ; 16                                          ; 0                            ;
 ; 17                                          ; 1                            ;
-; 18                                          ; 1                            ;
-; 19                                          ; 1                            ;
+; 18                                          ; 0                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1870,8 +1860,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------+----------------------+-------------------+
 ; Source Clock(s)         ; Destination Clock(s) ; Delay Added in ns ;
 +-------------------------+----------------------+-------------------+
-; altera_reserved_tck     ; altera_reserved_tck  ; 6.7               ;
-; altera_reserved_tck,I/O ; altera_reserved_tck  ; 3.4               ;
+; altera_reserved_tck     ; altera_reserved_tck  ; 3.4               ;
+; altera_reserved_tck,I/O ; altera_reserved_tck  ; 2.4               ;
 +-------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
@@ -1882,59 +1872,57 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                       ; Destination Register                                                                             ; Delay Added in ns ;
 +-------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+-------------------+
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                     ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.184             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[3]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[3] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 1.090             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1] ; 0.818             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[8]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[8]                        ; 0.750             ;
-; altera_reserved_tdi                                                                                   ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[8]                        ; 0.750             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.614             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.614             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]                         ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.614             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.614             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0] ; 0.579             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|valid_reg                                     ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[7]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[6]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[5]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[4]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[1]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[3]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[2]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0                        ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.START                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_1                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_2                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_3                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_4                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_5                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_6                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.523             ;
-; altera_reserved_tms                                                                                   ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[5] ; 0.521             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg                          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg                     ; 0.510             ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[0]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[1]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[2]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[7]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[0]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[6]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[5]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[4]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[3]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.398             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[3]      ; 0.219             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[3]      ; 0.219             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[1]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[3]      ; 0.219             ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg                     ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[3]      ; 0.219             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                     ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg                      ; 0.749             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[3] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.714             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.714             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.714             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[3]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.620             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.620             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.620             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.620             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2] ; 0.620             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[5] ; 0.526             ;
+; altera_reserved_tms                                                                                   ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[5] ; 0.526             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg                          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg                     ; 0.514             ;
+; altera_reserved_tdi                                                                                   ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg                     ; 0.514             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0] ; 0.437             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|valid_reg                                     ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[7]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[6]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[5]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[4]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[1]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[3]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[2]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0                        ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.START                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_1                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_2                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_3                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_4                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_5                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_6                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_7                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.431             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1] ; 0.344             ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[0]                                   ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[1]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[2]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[7]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[0]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[6]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[5]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[4]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg|output[3]                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|sel_out_reg                    ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[7]                              ; 0.306             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[8]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[8]                        ; 0.188             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[5]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg                      ; 0.159             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[7]      ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg                      ; 0.159             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.124             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                             ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.124             ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]                         ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                        ; 0.124             ;
 +-------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 51 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 49 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2003,7 +1991,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "output[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "output[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "ov_flag" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2011,12 +1999,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X10_Y20 to location X20_Y29
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X10_Y20 to location X20_Y29
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2025,9 +2013,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG_ALU_Generic_restored/output_files/vJTAG_ALU.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 774 megabytes
-    Info: Processing ended: Fri May 20 22:52:07 2016
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 770 megabytes
+    Info: Processing ended: Sat May 21 13:01:59 2016
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
 
 

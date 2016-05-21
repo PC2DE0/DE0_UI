@@ -39,7 +39,7 @@ begin
 		if (rst = '1') then
 			-- MAX_WIDTH due to 32 registers...probably will need to change soon
 			for i in 0 to MAX_WIDTH-1 loop
-				selectRegisters(i) <= '0';
+				temp(i) := '0';
 			end loop;
 			sel_out_reg <= '0';
 			sel_sr_reg <= '0';
@@ -47,7 +47,7 @@ begin
 			addr_reg <= (others => '0');
 		elsif (rising_edge(clk)) then
 			for i in 0 to MAX_WIDTH-1 loop
-				selectRegisters(i) <= '0';
+				temp(i) := '0';
 			end loop;
 			sel_out_reg <= '0';
 			sel_sr_reg <= '0';
@@ -55,158 +55,302 @@ begin
 				addr_or_data <= not addr_or_data;
 				addr_reg <= addr_in;
 			end if;
-			case addr_reg is
-			--This is a dummy memory location for loading addresses
-				when MMAP_ADDR(regSize'range) =>
-					if (addr_or_data = '1') then
-						for i in 0 to MAX_WIDTH-1 loop
-							selectRegisters(i) <= '0';
-						end loop;
-						sel_out_reg <= '0';
-						sel_sr_reg <= '0';
-					end if;
-			--Send value to REG_1
-				when ADDR_1(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(0) <= '1';
-					end if;
-			--Send value to REG_2
-				when ADDR_2(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(1) <= '1';
-					end if;
-				when ADDR_3(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(2) <= '1';
-					end if;
-				when ADDR_4(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(3) <= '1';
-					end if;
-				when ADDR_5(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(4) <= '1';
-					end if;
-				when ADDR_6(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(5) <= '1';
-					end if;
-				when ADDR_7(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(6) <= '1';
-					end if;
-				when ADDR_8(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(7) <= '1';
-					end if;
-				when ADDR_9(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(8) <= '1';
-					end if;
-				when ADDR_10(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(9) <= '1';
-					end if;
-				when ADDR_11(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(10) <= '1';
-					end if;
-				when ADDR_12(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(11) <= '1';
-					end if;
-				when ADDR_13(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(12) <= '1';
-					end if;
-				when ADDR_14(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(13) <= '1';
-					end if;
-				when ADDR_15(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(14) <= '1';
-					end if;
-				when ADDR_16(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(15) <= '1';
-					end if;
-				when ADDR_17(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(16) <= '1';
-					end if;
-				when ADDR_18(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(17) <= '1';
-					end if;
-				when ADDR_19(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(18) <= '1';
-					end if;
-				when ADDR_20(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(19) <= '1';
-					end if;
-				when ADDR_21(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(20) <= '1';
-					end if;
-				when ADDR_22(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(21) <= '1';
-					end if;
-				when ADDR_23(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(22) <= '1';
-					end if;
-				when ADDR_24(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(23) <= '1';
-					end if;
-				when ADDR_25(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(24) <= '1';
-					end if;
-				when ADDR_26(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(25) <= '1';
-					end if;
-				when ADDR_27(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(26) <= '1';
-					end if;
-				when ADDR_28(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(27) <= '1';
-					end if;
-				when ADDR_29(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(28) <= '1';
-					end if;
-				when ADDR_30(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(29) <= '1';
-					end if;
-				when ADDR_31(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(30) <= '1';
-					end if;
-				-- when register address value is 32, we map to register 31, 0 idxed
-				when ADDR_32(regSize'range) =>
-					if (addr_or_data = '1') then
-						selectRegisters(31) <= '1';
-					end if;
-			--Send value to Output
-				when RETURN_REG(regSize'range) =>
-					if (addr_or_data = '1') then
-						sel_out_reg <= '1';
-					end if;
+			
+			if(addr_reg  = MMAP_ADDR(regSize'range)) then
+				if (addr_or_data = '1') then
+					for i in 0 to MAX_WIDTH-1 loop
+						temp(i) := '0';
+					end loop;
+					sel_out_reg <= '0';
+					sel_sr_reg <= '0';
+				end if;
+			elsif(addr_reg = ADDR_1(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(0) := '1';
+				end if;
+			elsif(addr_reg = ADDR_2(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(1) := '1';
+				end if;
+			elsif(addr_reg = ADDR_3(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(2) := '1';
+				end if;
+			elsif(addr_reg = ADDR_4(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(3) := '1';
+				end if;
+			elsif(addr_reg = ADDR_5(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(4) := '1';
+				end if;
+			elsif(addr_reg = ADDR_6(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(5) := '1';
+				end if;
+			elsif(addr_reg = ADDR_7(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(6) := '1';
+				end if;
+			elsif(addr_reg = ADDR_8(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(7) := '1';
+				end if;
+			elsif(addr_reg = ADDR_9(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(8) := '1';
+				end if;
+			elsif(addr_reg = ADDR_10(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(9) := '1';
+				end if;
+			elsif(addr_reg = ADDR_11(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(10) := '1';
+				end if;
+			elsif(addr_reg = ADDR_12(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(11) := '1';
+				end if;
+			elsif(addr_reg = ADDR_13(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(12) := '1';
+				end if;
+			elsif(addr_reg = ADDR_14(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(13) := '1';
+				end if;
+			elsif(addr_reg = ADDR_15(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(14) := '1';
+				end if;
+			elsif(addr_reg = ADDR_16(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(15) := '1';
+				end if;
+			elsif(addr_reg = ADDR_17(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(16) := '1';
+				end if;
+			elsif(addr_reg = ADDR_18(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(17) := '1';
+				end if;
+			elsif(addr_reg = ADDR_19(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(18) := '1';
+				end if;
+			elsif(addr_reg = ADDR_20(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(19) := '1';
+				end if;
+			elsif(addr_reg = ADDR_21(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(20) := '1';
+				end if;
+			elsif(addr_reg = ADDR_22(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(21) := '1';
+				end if;
+			elsif(addr_reg = ADDR_23(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(22) := '1';
+				end if;
+			elsif(addr_reg = ADDR_24(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(23) := '1';
+				end if;
+			elsif(addr_reg = ADDR_25(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(24) := '1';
+				end if;
+			elsif(addr_reg = ADDR_26(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(25) := '1';
+				end if;
+			elsif(addr_reg = ADDR_27(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(26) := '1';
+				end if;
+			elsif(addr_reg = ADDR_28(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(27) := '1';
+				end if;
+			elsif(addr_reg = ADDR_29(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(28) := '1';
+				end if;
+			elsif(addr_reg = ADDR_30(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(29) := '1';
+				end if;
+			elsif(addr_reg = ADDR_31(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(30) := '1';
+				end if;
+			elsif(addr_reg = ADDR_32(regSize'range)) then
+				if (addr_or_data = '1') then
+					temp(31) := '1';
+				end if;
+			elsif(addr_reg = RETURN_REG(regSize'range)) then
+				if (addr_or_data = '1') then
+					sel_out_reg <= '1';
+				end if;
+			end if;
+			
+			
+--			case addr_reg is
+--			--This is a dummy memory location for loading addresses
+--				when MMAP_ADDR(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						for i in 0 to MAX_WIDTH-1 loop
+--							temp(i) := '0';
+--						end loop;
+--						sel_out_reg <= '0';
+--						sel_sr_reg <= '0';
+--					end if;
+--			--Send value to REG_1
+--				when ADDR_1(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(0) := '1';
+--					end if;
+--			--Send value to REG_2
+--				when ADDR_2(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(1) := '1';
+--					end if;
+--				when ADDR_3(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(2) := '1';
+--					end if;
+--				when ADDR_4(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(3) := '1';
+--					end if;
+--				when ADDR_5(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(4) := '1';
+--					end if;
+--				when ADDR_6(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(5) := '1';
+--					end if;
+--				when ADDR_7(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(6) := '1';
+--					end if;
+--				when ADDR_8(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(7) := '1';
+--					end if;
+--				when ADDR_9(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(8) := '1';
+--					end if;
+--				when ADDR_10(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(9) := '1';
+--					end if;
+--				when ADDR_11(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(10) := '1';
+--					end if;
+--				when ADDR_12(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(11) := '1';
+--					end if;
+--				when ADDR_13(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(12) := '1';
+--					end if;
+--				when ADDR_14(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(13) := '1';
+--					end if;
+--				when ADDR_15(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(14) := '1';
+--					end if;
+--				when ADDR_16(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(15) := '1';
+--					end if;
+--				when ADDR_17(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(16) := '1';
+--					end if;
+--				when ADDR_18(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(17) := '1';
+--					end if;
+--				when ADDR_19(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(18) := '1';
+--					end if;
+--				when ADDR_20(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(19) := '1';
+--					end if;
+--				when ADDR_21(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(20) := '1';
+--					end if;
+--				when ADDR_22(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(21) := '1';
+--					end if;
+--				when ADDR_23(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(22) := '1';
+--					end if;
+--				when ADDR_24(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(23) := '1';
+--					end if;
+--				when ADDR_25(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(24) := '1';
+--					end if;
+--				when ADDR_26(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(25) := '1';
+--					end if;
+--				when ADDR_27(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(26) := '1';
+--					end if;
+--				when ADDR_28(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(27) := '1';
+--					end if;
+--				when ADDR_29(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(28) := '1';
+--					end if;
+--				when ADDR_30(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(29) := '1';
+--					end if;
+--				when ADDR_31(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(30) := '1';
+--					end if;
+--				-- when register address value is 32, we map to register 31, 0 idxed
+--				when ADDR_32(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						temp(31) := '1';
+--					end if;
+--			--Send value to Output
+--				when RETURN_REG(regSize'range) =>
+--					if (addr_or_data = '1') then
+--						sel_out_reg <= '1';
+--					end if;
+--
+--				when others => null;
+--
+--			end case;
 
-				when others => null;
-
-			end case;
-
-			temp := selectRegisters;
+			--temp := selectRegisters;
 			temp_out := sel_out_reg;
 		end if;
 

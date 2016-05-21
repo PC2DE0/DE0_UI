@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri May 20 22:52:06 2016
+Fitter Status : Successful - Sat May 21 13:01:58 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : vJTAG_ALU
 Top-level Entity Name : top_level_application_test
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 262 / 15,408 ( 2 % )
-    Total combinational functions : 184 / 15,408 ( 1 % )
-    Dedicated logic registers : 178 / 15,408 ( 1 % )
-Total registers : 178
+Total logic elements : 258 / 15,408 ( 2 % )
+    Total combinational functions : 183 / 15,408 ( 1 % )
+    Dedicated logic registers : 175 / 15,408 ( 1 % )
+Total registers : 175
 Total pins : 29 / 347 ( 8 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )

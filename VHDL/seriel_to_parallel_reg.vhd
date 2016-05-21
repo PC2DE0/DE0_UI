@@ -14,7 +14,7 @@ entity seriel_to_parallel_reg is
 		v_sdr 		: in std_logic;				-- When v_sdr and ir_in are 1 then data
 		ir_in 		: in std_logic;				-- will be shifting in
 		udr			: in std_logic;				-- When = 1 then data is valid to output
-		output 		: out std_logic_vector
+		output 		: out std_logic_vector(DATA_WIDTH-1 downto 0)
 	);
 	
 end seriel_to_parallel_reg;
