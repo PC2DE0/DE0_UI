@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed May 04 20:09:28 2016
+Analysis & Synthesis Status : Successful - Fri May 20 22:51:58 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : vJTAG_ALU
 Top-level Entity Name : top_level_application_test
 Family : Cyclone III
-Total logic elements : 296
-    Total combinational functions : 200
+Total logic elements : 280
+    Total combinational functions : 184
     Dedicated logic registers : 178
 Total registers : 178
 Total pins : 29

@@ -1,6 +1,10 @@
 -- Jayson Salkey
 -- 19:03 May 20, 2016
 
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
 entity reset_vhd is
   port(
     clk : in std_logic;
@@ -19,10 +23,10 @@ architecture BHVR of reset_vhd is
     reset <= '1' when reset_counter = "0000" else '0';
 
     process(clk)
-
+		begin
       if (rising_edge(clk)) then
         if(unsigned(reset_counter) > 0) then
-          reset_counter <= reset_counter - '1';
+          reset_counter <= std_logic_vector(unsigned(reset_counter) - 1);
         end if;
       end if;
 

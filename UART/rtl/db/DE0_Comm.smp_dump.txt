@@ -1,0 +1,10 @@
+
+State Machine - |DE0_Comm|fsm_jtag_vhd:U_FSM_JTAG|state
+Name state.S_WRITE state.S_SETTLE state.S_READ state.S_WAIT state.S_CNT state.S_STROBE state.S_INIT 
+state.S_INIT 0 0 0 0 0 0 0 
+state.S_STROBE 0 0 0 0 0 1 1 
+state.S_CNT 0 0 0 0 1 0 1 
+state.S_WAIT 0 0 0 1 0 0 1 
+state.S_READ 0 0 1 0 0 0 1 
+state.S_SETTLE 0 1 0 0 0 0 1 
+state.S_WRITE 1 0 0 0 0 0 1 

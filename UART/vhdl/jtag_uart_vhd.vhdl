@@ -1,6 +1,9 @@
 -- Jayson Salkey
 -- 19:03 May 20, 2016
 
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity jtag_uart_vhd is
   port(
@@ -80,7 +83,7 @@ architecture STR of jtag_uart_vhd is
         virtual_state_sdr => virtual_state_sdr,
         virtual_state_udr => virtual_state_udr,
         virtual_state_uir => virtual_state_uir
-      )
+      );
 
 
     t <= '1' when (ir = "01") else '0';
@@ -154,7 +157,7 @@ architecture STR of jtag_uart_vhd is
                   if(cdr_delayed = '1') then
                     shift_buffer <= out_data;
                   else
-                    if(sdr_delayed) then
+                    if(sdr_delayed = '1') then
                       shift_buffer <= tdi&shift_buffer(7 downto 1);
                     end if;
                   end if;

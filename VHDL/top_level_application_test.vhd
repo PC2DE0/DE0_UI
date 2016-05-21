@@ -37,22 +37,16 @@ begin
 		port map(
 			clk => jtag_clock,
 			rst => rst,
-			design_output => (others => '0'),
+			design_output => design_output,
 			registers_out => jtag0_reg_out
 		);
 
-	U_SMALL8_CTRL_DATAPATH : entity work.small8_top
+	U_ADDER : entity work.application_test
     port map(
-      clock => clock,
-      rst => rst,
-      input1 => jtag0_reg_out(0),
-			input2 => jtag0_reg_out(1),
-      input1_en => jtag0_reg_out(2)(0),
-      input2_en => jtag0_reg_out(3)(0),
-      led0 => led0,
-      led1 => led1,
-      led2 => led2,
-      led3 => led3
+      input0 => jtag0_reg_out(0),
+		input1 => jtag0_reg_out(1),
+      input2 => jtag0_reg_out(2),
+		output => design_output
     );
 
 			--The following is used only for debugging purposes
@@ -70,12 +64,12 @@ begin
 
 	U_LED_HI_b : entity work.decoder7seg
 	  port map(
-		input => led3,
+		input => design_output(7 downto 4),
 		output => led_hi_b);
 
 	U_LED_LO_b : entity work.decoder7seg
 	  port map(
-		input => led2,
+		input => design_output(3 downto 0),
 		output => led_lo_b);
 
 end str;
