@@ -30,7 +30,7 @@ architecture BHVR of heartbeat_vhd is
           heartbeat_arch <= '0';
         else
           counter <= counter + '1';
-          if(counter = ) then
+          if(unsigned(counter) = 100000000) then
             counter <= (others => '0');
             heartbeat_arch <= not heartbeat_arch;
           end if;

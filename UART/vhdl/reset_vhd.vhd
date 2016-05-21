@@ -12,16 +12,16 @@ end reset_vhd;
 architecture BHVR of reset_vhd is
 
   signal reset_counter : std_logic_vector(3 downto 0) := "1111";
-  
+
   begin
 
     -- reset is low until reset counter is 0
-    reset <= '1' when reset_counter = '0' else '0';
+    reset <= '1' when reset_counter = "0000" else '0';
 
     process(clk)
 
       if (rising_edge(clk)) then
-        if(reset_counter > '0') then
+        if(unsigned(reset_counter) > 0) then
           reset_counter <= reset_counter - '1';
         end if;
       end if;
