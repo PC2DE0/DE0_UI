@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vJTAG_ALU
-Sat May 21 13:01:50 2016
+Thu May 26 16:41:03 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -59,11 +59,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  51. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:30:REG_i
  52. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:31:REG_i
  53. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP"
- 54. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
- 55. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper"
- 56. Virtual JTAG Settings
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
+ 54. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|memory_map:U_MEMORY_MAP"
+ 55. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
+ 56. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper"
+ 57. Virtual JTAG Settings
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
 
 
 
@@ -89,15 +90,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 21 13:01:50 2016           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 26 16:41:03 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 276                                             ;
-;     Total combinational functions  ; 183                                             ;
-;     Dedicated logic registers      ; 175                                             ;
-; Total registers                    ; 175                                             ;
+; Total logic elements               ; 236                                             ;
+;     Total combinational functions  ; 159                                             ;
+;     Dedicated logic registers      ; 150                                             ;
+; Total registers                    ; 150                                             ;
 ; Total pins                         ; 29                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -209,6 +210,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path       ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                  ; Library ;
 +----------------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------+---------+
+; ../VHDL/memory_map.vhd                 ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd                 ;         ;
 ; ../VHDL/jtag_wrapper.vhd               ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd               ;         ;
 ; ../VHDL/decoder7seg.vhd                ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd                ;         ;
 ; ../VHDL/vJTAG.vhd                      ; yes             ; User Wizard-Generated File  ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd                      ;         ;
@@ -219,7 +221,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ../VHDL/mem_pkg.vhd                    ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd                    ;         ;
 ; ../VHDL/d_logic.vhd                    ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/d_logic.vhd                    ;         ;
 ; ../VHDL/address_wrapper.vhd            ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/address_wrapper.vhd            ;         ;
-; ../VHDL/application_test.vhd           ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/application_test.vhd           ;         ;
 ; ../VHDL/top_level_application_test.vhd ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd ;         ;
 ; sld_virtual_jtag.v                     ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_virtual_jtag.v          ;         ;
 ; sld_virtual_jtag_basic.v               ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v    ;         ;
@@ -234,28 +235,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 276                      ;
+; Estimated Total logic elements              ; 236                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 183                      ;
+; Total combinational functions               ; 159                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 79                       ;
-;     -- 3 input functions                    ; 56                       ;
-;     -- <=2 input functions                  ; 48                       ;
+;     -- 4 input functions                    ; 75                       ;
+;     -- 3 input functions                    ; 40                       ;
+;     -- <=2 input functions                  ; 44                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 161                      ;
-;     -- arithmetic mode                      ; 22                       ;
+;     -- normal mode                          ; 151                      ;
+;     -- arithmetic mode                      ; 8                        ;
 ;                                             ;                          ;
-; Total registers                             ; 175                      ;
-;     -- Dedicated logic registers            ; 175                      ;
+; Total registers                             ; 150                      ;
+;     -- Dedicated logic registers            ; 150                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 29                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 195                      ;
-; Total fan-out                               ; 1236                     ;
-; Average fan-out                             ; 2.91                     ;
+; Maximum fan-out                             ; 170                      ;
+; Total fan-out                               ; 1069                     ;
+; Average fan-out                             ; 2.84                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -264,20 +265,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 183 (1)           ; 175 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
-;    |application_test:U_ADDER|                                    ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|application_test:U_ADDER                                                                                                                 ; work         ;
-;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
-;    |decoder7seg:U_LED_LO_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_b                                                                                                                   ; work         ;
-;    |jtag_wrapper:U_jtag_wrapper|                                 ; 35 (0)            ; 89 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
-;       |address_wrapper:U_ADDR_TOP|                               ; 15 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP                                                                                   ; work         ;
-;          |d_logic:U_logic|                                       ; 13 (13)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic                                                                   ; work         ;
+; |top_level_application_test                                      ; 159 (1)           ; 150 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
+;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
+;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
+;    |jtag_wrapper:U_jtag_wrapper|                                 ; 27 (0)            ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
+;       |address_wrapper:U_ADDR_TOP|                               ; 14 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP                                                                                   ; work         ;
+;          |d_logic:U_logic|                                       ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic                                                                   ; work         ;
 ;          |reg_gen:U_addrreg|                                     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg                                                                 ; work         ;
 ;          |sdr_count:U_addrcount|                                 ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount                                                             ; work         ;
 ;       |reg_gen:\REG_GEN:0:REG_i|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:0:REG_i                                                                                     ; work         ;
-;       |reg_gen:\REG_GEN:1:REG_i|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:1:REG_i                                                                                     ; work         ;
-;       |reg_gen:\REG_GEN:2:REG_i|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|reg_gen:\REG_GEN:2:REG_i                                                                                     ; work         ;
 ;       |seriel_to_parallel_reg:U_SR_V2|                           ; 1 (1)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2                                                                               ; work         ;
-;       |tdo_shifter:U_DESIGN_TO_TDO|                              ; 17 (17)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO                                                                                  ; work         ;
+;       |tdo_shifter:U_DESIGN_TO_TDO|                              ; 10 (10)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO                                                                                  ; work         ;
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
 ;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
 ;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
@@ -339,38 +337,40 @@ Encoding Type:  One-Hot
 +--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                             ;
-+---------------------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                                         ; Reason for Removal                     ;
-+---------------------------------------------------------------------------------------+----------------------------------------+
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[2] ; Stuck at GND due to stuck port data_in ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_8                   ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_9                   ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_10                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_11                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_12                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_13                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_14                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_15                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_16                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_17                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_18                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_19                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_20                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_21                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_22                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_23                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_24                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_25                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_26                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_27                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_28                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_29                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_30                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_31                  ; Lost fanout                            ;
-; Total Number of Removed Registers = 25                                                ;                                        ;
-+---------------------------------------------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                               ;
++---------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                           ; Reason for Removal                     ;
++---------------------------------------------------------------------------------------------------------+----------------------------------------+
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[0..7]                                  ; Stuck at GND due to stuck port data_in ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[2]                   ; Stuck at GND due to stuck port data_in ;
+; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic|address_register_to_memmap[1..7] ; Stuck at GND due to stuck port data_in ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_8                                     ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_9                                     ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_10                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_11                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_12                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_13                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_14                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_15                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_16                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_17                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_18                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_19                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_20                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_21                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_22                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_23                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_24                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_25                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_26                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_27                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_28                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_29                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_30                                    ; Lost fanout                            ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_31                                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 40                                                                  ;                                        ;
++---------------------------------------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -378,12 +378,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 175   ;
+; Total registers                              ; 150   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 123   ;
+; Number of registers using Asynchronous Clear ; 98    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 131   ;
+; Number of registers using Clock Enable       ; 107   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -400,19 +400,13 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]                                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -822,6 +816,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|memory_map:U_MEMORY_MAP"                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; wr_en   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rd_en   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rd_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; go      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; n       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; result  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; done    ; Input  ; Info     ; Stuck at GND                                                                        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"                                                        ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -843,7 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port                 ; Type   ; Severity ; Details                                                                             ;
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; clk                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; registers_out[3..31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; registers_out[1..31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -856,14 +865,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------+------------------+----------+---------+-----------------+-------------------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; sld_hub:auto_hub ; 00:00:00     ;
-; Top              ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -872,9 +880,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 21 13:01:45 2016
+    Info: Processing started: Thu May 26 16:41:00 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vJTAG_ALU -c vJTAG_ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/memory_map.vhd
+    Info (12022): Found design unit 1: memory_map-BHV
+    Info (12023): Found entity 1: memory_map
 Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/jtag_wrapper.vhd
     Info (12022): Found design unit 1: jtag_wrapper-bhvr
     Info (12023): Found entity 1: jtag_wrapper
@@ -915,11 +926,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: top_level_application_test
 Info (12127): Elaborating entity "top_level_application_test" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(23): object "jtag_clock" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at top_level_application_test.vhd(29): used implicit default value for signal "led0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at top_level_application_test.vhd(30): used implicit default value for signal "led1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_application_test.vhd(27): used implicit default value for signal "design_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "jtag_wrapper" for hierarchy "jtag_wrapper:U_jtag_wrapper"
-Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(29): object "cdr" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(33): object "sel_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(30): object "cdr" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(34): object "sel_out" assigned a value but never read
 Info (12128): Elaborating entity "vJTAG" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
 Warning (10296): VHDL warning at vJTAG.vhd(123): ignored assignment of value to null range
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
@@ -936,6 +946,49 @@ Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "jtag_wr
 Info (12131): Elaborated megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
 Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst"
 Info (12131): Elaborated megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
+Info (12128): Elaborating entity "memory_map" for hierarchy "jtag_wrapper:U_jtag_wrapper|memory_map:U_MEMORY_MAP"
+Warning (10631): VHDL Process Statement warning at memory_map.vhd(49): inferring latch(es) for signal or variable "reg_n", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at memory_map.vhd(49): inferring latch(es) for signal or variable "rd_data", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "rd_data[0]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[1]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[2]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[3]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[4]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[5]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[6]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "rd_data[7]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[0]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[1]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[2]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[3]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[4]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[5]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[6]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[7]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[8]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[9]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[10]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[11]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[12]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[13]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[14]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[15]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[16]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[17]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[18]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[19]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[20]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[21]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[22]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[23]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[24]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[25]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[26]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[27]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[28]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[29]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[30]" at memory_map.vhd(49)
+Info (10041): Inferred latch for "reg_n[31]" at memory_map.vhd(49)
 Info (12128): Elaborating entity "seriel_to_parallel_reg" for hierarchy "jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2"
 Info (12128): Elaborating entity "tdo_shifter" for hierarchy "jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO"
 Info (12128): Elaborating entity "address_wrapper" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP"
@@ -943,40 +996,30 @@ Info (12128): Elaborating entity "reg_gen" for hierarchy "jtag_wrapper:U_jtag_wr
 Info (12128): Elaborating entity "sdr_count" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount"
 Info (12128): Elaborating entity "d_logic" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic"
 Warning (10036): Verilog HDL or VHDL warning at d_logic.vhd(28): object "sel_sr_reg" assigned a value but never read
-Info (12128): Elaborating entity "application_test" for hierarchy "application_test:U_ADDER"
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED_HI_a"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led_hi_a[0]" is stuck at VCC
-    Warning (13410): Pin "led_hi_a[1]" is stuck at GND
-    Warning (13410): Pin "led_hi_a[2]" is stuck at GND
-    Warning (13410): Pin "led_hi_a[3]" is stuck at GND
-    Warning (13410): Pin "led_hi_a[4]" is stuck at GND
-    Warning (13410): Pin "led_hi_a[5]" is stuck at GND
-    Warning (13410): Pin "led_hi_a[6]" is stuck at GND
-    Warning (13410): Pin "led_lo_a[0]" is stuck at VCC
-    Warning (13410): Pin "led_lo_a[1]" is stuck at GND
-    Warning (13410): Pin "led_lo_a[2]" is stuck at GND
-    Warning (13410): Pin "led_lo_a[3]" is stuck at GND
-    Warning (13410): Pin "led_lo_a[4]" is stuck at GND
-    Warning (13410): Pin "led_lo_a[5]" is stuck at GND
-    Warning (13410): Pin "led_lo_a[6]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[0]" is stuck at VCC
+    Warning (13410): Pin "led_hi_b[1]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[2]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[3]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[4]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[5]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[6]" is stuck at GND
+    Warning (13410): Pin "led_lo_b[0]" is stuck at VCC
+    Warning (13410): Pin "led_lo_b[4]" is stuck at GND
+    Warning (13410): Pin "led_lo_b[5]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 24 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 322 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 274 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 288 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 515 megabytes
-    Info: Processing ended: Sat May 21 13:01:50 2016
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21061): Implemented 240 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 521 megabytes
+    Info: Processing ended: Thu May 26 16:41:03 2016
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -14,7 +14,8 @@ entity jtag_wrapper is
    design_output : in std_logic_vector(DATA_WIDTH-1 downto 0);
 
 	 -- OUTPUTS TO DESIGN CIRCUIT
-	 registers_out : out registerArray
+	 registers_out : out registerArray;
+   address_register_out : out std_logic_vector(DATA_WIDTH-1 downto 0)
 	 );
 end jtag_wrapper;
 
@@ -31,6 +32,10 @@ architecture bhvr of jtag_wrapper is
 	signal out_data_rdy : std_logic;
 	signal selects 	: selectArray;
 	signal sel_out 		: std_logic;
+  signal address_register : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal data_register : std_logic_vector(DATA_WIDTH-1 downto 0);
+
+  signal registers_out_intermediate : registerArray;
 begin
 	--vJTAG Megafunction call
 	U_vJTAG : entity work.vJTAG
@@ -44,6 +49,22 @@ begin
 			virtual_state_udr 	=> udr,
 			virtual_state_cdr 	=> cdr
 		);
+
+  U_MEMORY_MAP : entity work.memory_map
+    port map(
+      clk => tck,
+      rst => rst,
+      wr_en => '1',
+      wr_addr => address_register,
+      wr_data => data_register,
+      rd_en => '0',
+      rd_addr => address_register,
+      rd_data => open,
+      go => open,
+      n => open,
+      result => (others => '0'),
+      done => '0'
+    );
 
 --This shift register take in a serial input and outpus in parallel
 	U_SR_V2 : entity work.seriel_to_parallel_reg
@@ -86,7 +107,8 @@ begin
 			input 				=> addr_top_in,
 			out_data_rdy 		=> out_data_rdy,
 			selects 				=> selects,
-			sel_out 			=> sel_out
+			sel_out 			=> sel_out,
+      address_register_to_memmap => address_register
 		);
 
 	-- The following are the memory mapped registers
@@ -100,8 +122,12 @@ begin
 				rst => rst,
 				en => selects(i),
 				input => addr_top_in,
-				output => registers_out(i)
+				output => registers_out_intermediate(i)
 			);
 	end generate REG_GEN;
+
+  registers_out <= registers_out_intermediate;
+  data_register <= registers_out_intermediate(0);
+  address_register_out <= address_register;
 	clk <= tck;
 end bhvr;

@@ -13,7 +13,7 @@ entity d_logic is
 		counter 		: in std_logic_vector(SDR_COUNT-1 downto 0);
 		addr_in 		: in std_logic_vector(DATA_WIDTH-1 downto 0);
 		out_data_rdy 	: out std_logic;
-
+		address_register_to_memmap : out std_logic_vector(DATA_WIDTH-1 downto 0);
 		--These will be changed on the application basses
 		selects			: out selectArray;
 		sel_out 		: out std_logic
@@ -44,6 +44,7 @@ begin
 			sel_out_reg <= '0';
 			sel_sr_reg <= '0';
 			addr_or_data <= '0';
+			address_register_to_memmap <= (others => '0');
 			addr_reg <= (others => '0');
 		elsif (rising_edge(clk)) then
 			for i in 0 to MAX_WIDTH-1 loop
@@ -55,7 +56,7 @@ begin
 				addr_or_data <= not addr_or_data;
 				addr_reg <= addr_in;
 			end if;
-			
+
 			if(addr_reg  = MMAP_ADDR(regSize'range)) then
 				if (addr_or_data = '1') then
 					for i in 0 to MAX_WIDTH-1 loop
@@ -67,6 +68,7 @@ begin
 			elsif(addr_reg = ADDR_1(regSize'range)) then
 				if (addr_or_data = '1') then
 					temp(0) := '1';
+					address_register_to_memmap <= addr_reg;
 				end if;
 			elsif(addr_reg = ADDR_2(regSize'range)) then
 				if (addr_or_data = '1') then
@@ -197,160 +199,6 @@ begin
 					sel_out_reg <= '1';
 				end if;
 			end if;
-			
-			
---			case addr_reg is
---			--This is a dummy memory location for loading addresses
---				when MMAP_ADDR(regSize'range) =>
---					if (addr_or_data = '1') then
---						for i in 0 to MAX_WIDTH-1 loop
---							temp(i) := '0';
---						end loop;
---						sel_out_reg <= '0';
---						sel_sr_reg <= '0';
---					end if;
---			--Send value to REG_1
---				when ADDR_1(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(0) := '1';
---					end if;
---			--Send value to REG_2
---				when ADDR_2(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(1) := '1';
---					end if;
---				when ADDR_3(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(2) := '1';
---					end if;
---				when ADDR_4(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(3) := '1';
---					end if;
---				when ADDR_5(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(4) := '1';
---					end if;
---				when ADDR_6(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(5) := '1';
---					end if;
---				when ADDR_7(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(6) := '1';
---					end if;
---				when ADDR_8(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(7) := '1';
---					end if;
---				when ADDR_9(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(8) := '1';
---					end if;
---				when ADDR_10(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(9) := '1';
---					end if;
---				when ADDR_11(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(10) := '1';
---					end if;
---				when ADDR_12(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(11) := '1';
---					end if;
---				when ADDR_13(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(12) := '1';
---					end if;
---				when ADDR_14(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(13) := '1';
---					end if;
---				when ADDR_15(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(14) := '1';
---					end if;
---				when ADDR_16(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(15) := '1';
---					end if;
---				when ADDR_17(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(16) := '1';
---					end if;
---				when ADDR_18(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(17) := '1';
---					end if;
---				when ADDR_19(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(18) := '1';
---					end if;
---				when ADDR_20(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(19) := '1';
---					end if;
---				when ADDR_21(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(20) := '1';
---					end if;
---				when ADDR_22(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(21) := '1';
---					end if;
---				when ADDR_23(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(22) := '1';
---					end if;
---				when ADDR_24(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(23) := '1';
---					end if;
---				when ADDR_25(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(24) := '1';
---					end if;
---				when ADDR_26(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(25) := '1';
---					end if;
---				when ADDR_27(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(26) := '1';
---					end if;
---				when ADDR_28(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(27) := '1';
---					end if;
---				when ADDR_29(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(28) := '1';
---					end if;
---				when ADDR_30(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(29) := '1';
---					end if;
---				when ADDR_31(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(30) := '1';
---					end if;
---				-- when register address value is 32, we map to register 31, 0 idxed
---				when ADDR_32(regSize'range) =>
---					if (addr_or_data = '1') then
---						temp(31) := '1';
---					end if;
---			--Send value to Output
---				when RETURN_REG(regSize'range) =>
---					if (addr_or_data = '1') then
---						sel_out_reg <= '1';
---					end if;
---
---				when others => null;
---
---			end case;
-
-			--temp := selectRegisters;
 			temp_out := sel_out_reg;
 		end if;
 
