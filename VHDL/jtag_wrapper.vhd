@@ -12,10 +12,8 @@ entity jtag_wrapper is
 	 clk : out std_logic;
    rst : in std_logic;
    design_output : in std_logic_vector(DATA_WIDTH-1 downto 0);
-
-	 -- OUTPUTS TO DESIGN CIRCUIT
-	 registers_out : out registerArray;
-   address_register_out : out std_logic_vector(DATA_WIDTH-1 downto 0)
+	 data_register : out std_logic_vector(DATA_WIDTH-1 downto 0);
+   address_register : out std_logic_vector(DATA_WIDTH-1 downto 0)
 	 );
 end jtag_wrapper;
 
@@ -24,18 +22,15 @@ architecture bhvr of jtag_wrapper is
 	signal tck 			: std_logic; 									-- JTAG clock
 	signal tdo 			: std_logic;									--Serial output to vJTAG
 	signal tdi 			: std_logic;									--Serial input to vJTAG
-	signal ir_in 		: std_logic_vector(0 downto 0);					--vJTAG Instruction register input
-	signal addr_top_in 	: std_logic_vector(DATA_WIDTH-1 downto 0);		--
 	signal sdr 			: std_logic;
 	signal cdr 			: std_logic;
 	signal udr 			: std_logic;
 	signal out_data_rdy : std_logic;
-	signal selects 	: selectArray;
+	signal selects 	: std_logic;
 	signal sel_out 		: std_logic;
-  signal address_register : std_logic_vector(DATA_WIDTH-1 downto 0);
-  signal data_register : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal ir_in 		: std_logic_vector(0 downto 0);					--vJTAG Instruction register input
+	signal addr_top_in 	: std_logic_vector(DATA_WIDTH-1 downto 0);
 
-  signal registers_out_intermediate : registerArray;
 begin
 	--vJTAG Megafunction call
 	U_vJTAG : entity work.vJTAG
@@ -49,22 +44,6 @@ begin
 			virtual_state_udr 	=> udr,
 			virtual_state_cdr 	=> cdr
 		);
-
-  U_MEMORY_MAP : entity work.memory_map
-    port map(
-      clk => tck,
-      rst => rst,
-      wr_en => '1',
-      wr_addr => address_register,
-      wr_data => data_register,
-      rd_en => '0',
-      rd_addr => address_register,
-      rd_data => open,
-      go => open,
-      n => open,
-      result => (others => '0'),
-      done => '0'
-    );
 
 --This shift register take in a serial input and outpus in parallel
 	U_SR_V2 : entity work.seriel_to_parallel_reg
@@ -111,23 +90,14 @@ begin
       address_register_to_memmap => address_register
 		);
 
-	-- The following are the memory mapped registers
-	-- Max Width here because we are just going to use 32 registers to test for now.
-	REG_GEN:
-	for i in 0 to MAX_WIDTH-1 generate
-		REG_i : entity work.reg_gen
-			generic map( DATA_WIDTH => DATA_WIDTH)
-			port map(
-				clk => tck,
-				rst => rst,
-				en => selects(i),
-				input => addr_top_in,
-				output => registers_out_intermediate(i)
-			);
-	end generate REG_GEN;
-
-  registers_out <= registers_out_intermediate;
-  data_register <= registers_out_intermediate(0);
-  address_register_out <= address_register;
+  REG_I : entity work.REG_GEN
+    generic map ( DATA_WIDTH => DATA_WIDTH)
+    port map(
+      clk => tck,
+      rst => rst,
+      en => selects,
+      input => addr_top_in,
+      output => data_register
+    );
 	clk <= tck;
 end bhvr;

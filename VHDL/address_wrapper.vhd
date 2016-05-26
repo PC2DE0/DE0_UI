@@ -12,7 +12,7 @@ entity address_wrapper is
 		sdr					: in std_logic;
 		input 				: in std_logic_vector(DATA_WIDTH-1 downto 0);
 		out_data_rdy 		: out std_logic;
-		selects				: out selectArray;
+		selects				: out std_logic;
 		sel_out 			: out std_logic;
 		address_register_to_memmap	: out std_logic_vector(DATA_WIDTH-1 downto 0)
 	);

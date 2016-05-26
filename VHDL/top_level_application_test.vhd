@@ -22,7 +22,7 @@ architecture str of top_level_application_test is
 
 	signal jtag_clock : std_logic;
 
-	signal jtag0_reg_out : registerArray;
+	signal data_register : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 	signal design_output : std_logic_vector(DATA_WIDTH-1 downto 0);
 
@@ -40,29 +40,38 @@ begin
 			clk => jtag_clock,
 			rst => rst,
 			design_output => design_output,
-			registers_out => jtag0_reg_out,
-			address_register_out => address_register
+			data_register => data_register,
+			address_register => address_register
 		);
 
-	-- U_ADDER : entity work.application_test
-  --   port map(
-  --     input0 => jtag0_reg_out(0),
-	-- 	input1 => jtag0_reg_out(1),
-  --     input2 => jtag0_reg_out(2),
-	-- 	output => design_output
-  --   );
+	U_MEMORY_MAP : entity work.memory_map
+    port map(
+      clk => jtag_clock,
+      rst => rst,
+      wr_en => '1',
+      wr_addr => address_register,
+      wr_data => data_register,
+      rd_en => '0',
+      rd_addr => address_register,
+      rd_data => open,
+      go => open,
+      n => open,
+      result => (others => '0'),
+      done => '0'
+    );
 
-			--The following is used only for debugging purposes
-			--it can be removed and there will not be any functional
-			--effects
+		--The following is used only for debugging purposes
+		--it can be removed and there will not be any functional
+		--effects
+
 	U_LED_HI_a : entity work.decoder7seg
 	  port map(
-		input => jtag0_reg_out(0)(7 downto 4),
+		input => data_register(7 downto 4),
 		output => led_hi_a);
 
 	U_LED_LO_a : entity work.decoder7seg
 	  port map(
-		input => jtag0_reg_out(0)(3 downto 0),
+		input => data_register(3 downto 0),
 		output => led_lo_a);
 
 	U_LED_HI_b : entity work.decoder7seg
