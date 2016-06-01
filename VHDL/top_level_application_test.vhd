@@ -22,9 +22,9 @@ architecture str of top_level_application_test is
 
 	signal jtag_clock : std_logic;
 
-	signal data_register : std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal address_register : std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal design_output : std_logic_vector(DATA_WIDTH-1 downto 0);
+	signal data_register : std_logic_vector(INSTR_WIDTH-1 downto 0);
+	signal address_register : std_logic_vector(INSTR_WIDTH-1 downto 0);
+	signal design_output : std_logic_vector(INSTR_WIDTH-1 downto 0);
 	signal wr_en : std_logic;
 	signal done : std_logic;
 
@@ -39,7 +39,8 @@ begin
 		port map(
 			clk => jtag_clock,
 			rst => rst,
-			design_output => design_output,
+			design_output => data_register,
+			--design_output => design_output,
 			data_register => data_register,
 			address_register => address_register,
 			w_r_en => wr_en,

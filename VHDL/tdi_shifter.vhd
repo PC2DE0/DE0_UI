@@ -12,7 +12,7 @@ entity tdi_shifter is
 		ir_in : in std_logic;
 		udr : in std_logic;
 		output_data 		: out std_logic_vector(DATA_WIDTH-1 downto 0);
-		output_address 		: out std_logic_vector(DATA_WIDTH-1 downto 0);
+		output_address 		: out std_logic_vector(ADDR_WIDTH-1 downto 0);
 		w_r_en : out std_logic;
 		done : out std_logic
 	);
@@ -60,23 +60,23 @@ begin
 					end if;
 
 				when GET_ADDR_WRITE =>
-					output_address <= temp_RW(16 downto 2);
+					output_address <= temp_RW(9 downto 1);
 					done <= '0';
 					state <= WRITE_DATA;
 
 				when GET_ADDR_READ =>
-					output_address <= temp_RW(16 downto 2);
+					output_address <= temp_RW(9 downto 1);
 					done <= '0';
 					state <= READ_DATA;
 
 				when WRITE_DATA =>
-					output_data <= temp_RW(31 downto 17);
+					output_data <= temp_RW(31 downto 10);
 					w_r_en <= '1';
 					done <= '1';
 					state <= INIT;
 
 				when READ_DATA =>
-					output_data <= temp_RW(31 downto 17);
+					output_data <= temp_RW(31 downto 10);
 					w_r_en <= '0';
 					done <= '1';
 					state <= INIT;

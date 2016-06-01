@@ -23,11 +23,11 @@ entity memory_map is
         wr_en   : in  std_logic;
         --wr_addr : in  std_logic_vector(MMAP_ADDR_RANGE);
         --wr_data : in  std_logic_vector(MMAP_DATA_RANGE);
-        wr_addr : in std_logic_vector(DATA_WIDTH-1 downto 0);
-        wr_data : in std_logic_vector(DATA_WIDTH-1 downto 0);
+        wr_addr : in std_logic_vector(INSTR_WIDTH-1 downto 0);
+        wr_data : in std_logic_vector(INSTR_WIDTH-1 downto 0);
         rd_en   : in  std_logic;
-        rd_addr : in std_logic_vector(DATA_WIDTH-1 downto 0);
-        rd_data : out std_logic_vector(DATA_WIDTH-1 downto 0);
+        rd_addr : in std_logic_vector(INSTR_WIDTH-1 downto 0);
+        rd_data : out std_logic_vector(INSTR_WIDTH-1 downto 0);
         --rd_addr : in  std_logic_vector(MMAP_ADDR_RANGE);
         --rd_data : out std_logic_vector(MMAP_DATA_RANGE);
 

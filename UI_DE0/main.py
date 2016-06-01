@@ -252,9 +252,9 @@ class App(Frame):
                 pass
             else:
                 self.writeToText("Send data: \n Register : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
-                wr = self.toBin(int(1), 2)
-                addr = self.toBin(int(self.regNames[array_location].get()), 15)
-                data = self.toBin(int(self.regValues[array_location].get()), 15)
+                wr = self.toBin(int(1), 1)
+                addr = self.toBin(int(self.regNames[array_location].get()), 9)
+                data = self.toBin(int(self.regValues[array_location].get()), 22)
                 self.writeOut(data+addr+wr)
 
     def reciveData(self, event, array_location):
@@ -269,10 +269,10 @@ class App(Frame):
             if(checkVal(self.regValues[array_location].get()) == 1):
                 pass
             else:
-                zero = self.toBin(int(0), 2)
-                zero = self.toBin(int(0), 15)
-                addr = self.toBin(int(self.regNames[array_location].get()), 15)
-                self.writeOut(zero_sixtn+addr+zero)
+                zero = self.toBin(int(0), 1)
+                zero_tt = self.toBin(int(0), 22)
+                addr = self.toBin(int(self.regNames[array_location].get()), 9)
+                self.writeOut(zero_tt+addr+zero)
                 self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
         #self.writeOut(int('0xFF',16))
         #self.writeOut(int(0))

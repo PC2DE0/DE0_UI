@@ -4,8 +4,9 @@ use ieee.std_logic_1164.all;
 package mem_pkg is
 
 
-
-	constant DATA_WIDTH 		: positive := 15;
+	constant ADDR_WIDTH : positive := 9;
+	constant DATA_WIDTH 		: positive := 22;
+	constant RW_WIDTH : positive := 1;
 	constant INSTR_WIDTH : positive := 32;
 	subtype DATA_RANGE is natural range DATA_WIDTH-1 downto 0;
 

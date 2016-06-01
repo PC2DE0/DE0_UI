@@ -11,9 +11,9 @@ entity jtag_wrapper is
   port(
 	 clk : out std_logic;
    rst : in std_logic;
-   design_output : in std_logic_vector(DATA_WIDTH-1 downto 0);
-   address_register : out std_logic_vector(DATA_WIDTH-1 downto 0);
-	 data_register : out std_logic_vector(DATA_WIDTH-1 downto 0);
+   design_output : in std_logic_vector(INSTR_WIDTH-1 downto 0);
+   address_register : out std_logic_vector(INSTR_WIDTH-1 downto 0);
+	 data_register : out std_logic_vector(INSTR_WIDTH-1 downto 0);
    w_r_en : out std_logic;
    done : out std_logic
 	 );
@@ -30,9 +30,20 @@ architecture bhvr of jtag_wrapper is
   signal ir_in 		: std_logic_vector(0 downto 0);					--vJTAG Instruction register input
 
   signal wr_en : std_logic;
+  signal done_iter : std_logic;
+  signal d_reg_inter : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal addr_reg_inter : std_logic_vector(ADDR_WIDTH-1 downto 0);
+
+  signal valid : std_logic;
+
 begin
 
   w_r_en <= wr_en;
+
+  data_register <= "0000000000" & d_reg_inter;
+  address_register <= "00000000000000000000000" & addr_reg_inter;
+  done <= done_iter;
+  valid <= (not wr_en) and done_iter;
 	--vJTAG Megafunction call
 	U_vJTAG : entity work.vJTAG
 		port map(
@@ -54,10 +65,10 @@ begin
       v_sdr => sdr,
       ir_in => ir_in(0),
       udr => udr,
-      output_data => data_register,
-      output_address => address_register,
+      output_data => d_reg_inter,
+      output_address => addr_reg_inter,
       w_r_en => wr_en,
-      done => done
+      done => done_iter
     );
 
 	U_TDO_SHIFTER : entity work.tdo_shifter
@@ -68,7 +79,7 @@ begin
 			rst 				=> rst,
 			tdi 				=> tdi,
 			v_sdr 				=> sdr,
-			valid 				=> (not wr_en) and (done),
+			valid 				=> valid,
 			data 				=> design_output,
 			output 				=> tdo
 		);
