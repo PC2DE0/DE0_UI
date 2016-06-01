@@ -1,8 +1,9 @@
 
 State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|state
-Name state.READ_DATA state.WRITE_DATA state.GET_ADDR_READ state.GET_ADDR_WRITE state.INIT 
-state.INIT 0 0 0 0 0 
-state.GET_ADDR_WRITE 0 0 0 1 1 
-state.GET_ADDR_READ 0 0 1 0 1 
-state.WRITE_DATA 0 1 0 0 1 
-state.READ_DATA 1 0 0 0 1 
+Name state.STALL state.READ_DATA state.WRITE_DATA state.GET_ADDR_READ state.GET_ADDR_WRITE state.INIT 
+state.INIT 0 0 0 0 0 0 
+state.GET_ADDR_WRITE 0 0 0 0 1 1 
+state.GET_ADDR_READ 0 0 0 1 0 1 
+state.WRITE_DATA 0 0 1 0 0 1 
+state.READ_DATA 0 1 0 0 0 1 
+state.STALL 1 0 0 0 0 1 

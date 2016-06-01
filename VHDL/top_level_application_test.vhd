@@ -26,6 +26,7 @@ architecture str of top_level_application_test is
 	signal address_register : std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal design_output : std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal wr_en : std_logic;
+	signal done : std_logic;
 
 	signal led0 : std_logic_vector(3 downto 0);
 	signal led1 : std_logic_vector(3 downto 0);
@@ -41,17 +42,18 @@ begin
 			design_output => design_output,
 			data_register => data_register,
 			address_register => address_register,
-			w_r_en => wr_en
+			w_r_en => wr_en,
+			done => done
 		);
 
 	U_MEMORY_MAP : entity work.memory_map
     port map(
       clk => jtag_clock,
       rst => rst,
-      wr_en => wr_en,
+      wr_en => wr_en and done,
       wr_addr => address_register,
       wr_data => data_register,
-      rd_en => wr_en,
+      rd_en => (not wr_en) and done,
       rd_addr => address_register,
       rd_data => design_output,
       go => open,

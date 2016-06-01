@@ -1,11 +1,11 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="a00d37aa50f2f7bf21a5"/>
+    <hash md5_digest_80b="c2130f6034047b53e474"/>
   </project>
   <file_info>
     <file device="EP3C16F484C6" path="vJTAG_ALU.sof" usercode="0xFFFFFFFF"/>
   </file_info>
-  <hub_info hub_ir_width="8" ir_width="8" node_addr_width="1" node_count="1"/>
+  <hub_info hub_ir_width="4" ir_width="1" node_addr_width="1" node_count="1"/>
   <node_info>
     <node hpath="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" instance_id="0" mfg_id="110" node_id="8" sld_node_info="0x406E00" version="0">
       <parameters>
@@ -14,19 +14,12 @@
         <parameter name="sld_version" type="dec" value="0"/>
         <parameter name="sld_instance_index" type="dec" value="0"/>
         <parameter name="sld_auto_instance_index" type="string" value="YES"/>
-        <parameter name="sld_ir_width" type="dec" value="8"/>
+        <parameter name="sld_ir_width" type="dec" value="1"/>
         <parameter name="SLD_NODE_INFO" type="dec" value="4222464"/>
       </parameters>
       <inputs>
         <port name="usr_tdo" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|tdo"/>
         <port name="usr_ir_out[0]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[0]"/>
-        <port name="usr_ir_out[1]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[1]"/>
-        <port name="usr_ir_out[2]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[2]"/>
-        <port name="usr_ir_out[3]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[3]"/>
-        <port name="usr_ir_out[4]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[4]"/>
-        <port name="usr_ir_out[5]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[5]"/>
-        <port name="usr_ir_out[6]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[6]"/>
-        <port name="usr_ir_out[7]" source="jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|ir_out[7]"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_raw_tck" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_raw_tck"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_raw_tms" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_raw_tms"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_tdi" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_tdi"/>
@@ -50,25 +43,11 @@
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_clr" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_clr"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ena" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ena"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_0_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_0_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_1_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_1_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_2_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_2_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_3_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_3_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_4_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_4_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_5_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_5_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_6_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_6_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_7_" source="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_in_7_"/>
       </inputs>
       <outputs>
         <port name="usr_tck"/>
         <port name="usr_tdi"/>
         <port name="usr_ir_in[0]"/>
-        <port name="usr_ir_in[1]"/>
-        <port name="usr_ir_in[2]"/>
-        <port name="usr_ir_in[3]"/>
-        <port name="usr_ir_in[4]"/>
-        <port name="usr_ir_in[5]"/>
-        <port name="usr_ir_in[6]"/>
-        <port name="usr_ir_in[7]"/>
         <port name="usr_virtual_state_cdr"/>
         <port name="usr_virtual_state_sdr"/>
         <port name="usr_virtual_state_e1dr"/>
@@ -96,13 +75,6 @@
         <port name="usr_jtag_state_uir"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_tdo"/>
         <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_0_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_1_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_2_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_3_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_4_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_5_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_6_"/>
-        <port name="jtag.bp.U_jtag_wrapper_U_vJTAG_sld_virtual_jtag_component_sld_virtual_jtag_basic_inst_sld_virtual_jtag_impl_inst_ir_out_7_"/>
       </outputs>
     </node>
   </node_info>

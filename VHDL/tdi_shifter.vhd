@@ -13,20 +13,21 @@ entity tdi_shifter is
 		udr : in std_logic;
 		output_data 		: out std_logic_vector(DATA_WIDTH-1 downto 0);
 		output_address 		: out std_logic_vector(DATA_WIDTH-1 downto 0);
-		w_r_en : out std_logic
+		w_r_en : out std_logic;
+		done : out std_logic
 	);
 
 end tdi_shifter;
 
 architecture FSMD2 of tdi_shifter is
 
-	type STATE_TYPE is (INIT, GET_ADDR_WRITE, GET_ADDR_READ, WRITE_DATA, READ_DATA);
+	type STATE_TYPE is (INIT, GET_ADDR_WRITE, GET_ADDR_READ, WRITE_DATA, READ_DATA, STALL);
 
 	signal state : STATE_TYPE;
 
-	signal temp_RW : std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal temp_addr : std_logic_vector(DATA_WIDTH-1 downto 0);
-	signal temp_data : std_logic_vector(DATA_WIDTH-1 downto 0);
+	signal temp_RW : std_logic_vector(INSTR_WIDTH-1 downto 0);
+--	signal temp_addr : std_logic_vector(DATA_WIDTH-1 downto 0);
+--	signal temp_data : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
 
@@ -35,7 +36,7 @@ begin
 		if(rst = '1') then
 			state <= INIT;
 			temp_RW <= (others => '0');
-			temp_addr <= (others => '0');
+			--temp_addr <= (others => '0');
 			output_data <= (others => '0');
 			output_address <= (others => '0');
 
@@ -44,15 +45,14 @@ begin
 				-- default is to read
 
 				when INIT =>
-					output_address <= x"01";
+					done <= '0';
 					if(v_sdr = '1' and ir_in = '1') then
-						temp_RW <= tdi & temp_RW(DATA_WIDTH-1 downto 1);
+						temp_RW <= tdi & temp_RW(INSTR_WIDTH-1 downto 1);
 					end if;
 					if(udr = '1') then
-						-- output is ready
-						if(unsigned(temp_rw) = 1) then
+						if(temp_rw(0) = '1') then
 							state <= GET_ADDR_WRITE;
-						elsif(unsigned(temp_rw) = 0) then
+						elsif(temp_rw(0) = '0') then
 							state <= GET_ADDR_READ;
 						end if;
 					else
@@ -60,59 +60,30 @@ begin
 					end if;
 
 				when GET_ADDR_WRITE =>
-					output_address <= x"02";
-					if(v_sdr = '1' and ir_in = '1') then
-						temp_addr <= tdi & temp_addr(DATA_WIDTH-1 downto 1);
-					end if;
-					if(udr = '1') then
-						-- output is ready
-						--output_address <= temp_addr;
-						state <= WRITE_DATA;
-					else
-						state <= GET_ADDR_WRITE;
-					end if;
+					output_address <= temp_RW(16 downto 2);
+					done <= '0';
+					state <= WRITE_DATA;
 
 				when GET_ADDR_READ =>
-					output_address <= x"03";
-					if(v_sdr = '1' and ir_in = '1') then
-						temp_addr <= tdi & temp_addr(DATA_WIDTH-1 downto 1);
-					end if;
-					if(udr = '1') then
-						-- output is ready
-						--output_address <= temp_addr;
-						state <= READ_DATA;
-					else
-						state <= GET_ADDR_READ;
-					end if;
-
+					output_address <= temp_RW(16 downto 2);
+					done <= '0';
+					state <= READ_DATA;
 
 				when WRITE_DATA =>
-				output_address <= x"04";
-					if(v_sdr = '1' and ir_in = '1') then
-						temp_data <= tdi & temp_data(DATA_WIDTH-1 downto 1);
-					end if;
-					if(udr = '1') then
-						-- output is ready
-						output_data <= temp_data;
-						w_r_en <= '1';
-						state <= INIT;
-					else
-						state <= WRITE_DATA;
-					end if;
+					output_data <= temp_RW(31 downto 17);
+					w_r_en <= '1';
+					done <= '1';
+					state <= INIT;
 
 				when READ_DATA =>
-				output_address <= x"05";
-					if(v_sdr = '1' and ir_in = '1') then
-						temp_data <= tdi & temp_data(DATA_WIDTH-1 downto 1);
-					end if;
-					if(udr = '1') then
-						-- output is ready
-						output_data <= (others => '0');
-						w_r_en <= '0';
-						state <= INIT;
-					else
-						state <= READ_DATA;
-					end if;
+					output_data <= temp_RW(31 downto 17);
+					w_r_en <= '0';
+					done <= '1';
+					state <= INIT;
+
+				when STALL =>
+					output_data <= (others => '1');
+					state <= STALL;
 
 				when others =>
 					w_r_en <= '0';

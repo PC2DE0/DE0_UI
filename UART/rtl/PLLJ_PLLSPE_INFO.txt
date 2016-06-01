@@ -1,5 +1,0 @@
-PLL_Name	pll_vhd_clk:U_PLL_CLOCK|altpll:altpll_component|pll_vhd_clk_altpll:auto_generated|pll1
-PLLJITTER	30
-PLLSPEmax	84
-PLLSPEmin	-53
-

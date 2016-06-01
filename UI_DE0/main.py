@@ -147,8 +147,7 @@ class App(Frame):
         self.checkVar = IntVar()
         self.checkReturns = []
         self.array = []
-        #for i in range(0, int(self.numregisterentry.get())):
-        for i in range(0, 2):
+        for i in range(0, 1):
             j = i+1
             self.array.append(i)
             #Register Labels - these will be able to be changed by user and then later saved and reloaded.
@@ -204,10 +203,10 @@ class App(Frame):
             time.sleep(2) #delays for 2 seconds
 
             self.start_count = 1                                                #This is a flag that when set lets other functions know that there is a connection to the board
-            for i in range(0, 100):
+            '''for i in range(0, 100):
                 self.writeOut(int(1))
                 self.writeOut(int(10))
-                self.writeOut(int(14))
+                self.writeOut(int(14))'''
 
     def close_server(self):
         if (self.start_count == 0):
@@ -236,6 +235,10 @@ class App(Frame):
                 self.writeToText("There was a problem connecting to device, retrying")
         return self.s
 
+
+    def toBin(self, x, size):
+        return bin(x).lstrip('0b').zfill(size)
+
     def sendData(self, event, array_location):
         if (self.start_count == 0):
             noConn = Toplevel()
@@ -249,9 +252,10 @@ class App(Frame):
                 pass
             else:
                 self.writeToText("Send data: \n Register : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
-                self.writeOut(int(1))
-                self.writeOut(int(self.regNames[array_location].get()))
-                self.writeOut(int(self.regValues[array_location].get()))
+                wr = self.toBin(int(1), 2)
+                addr = self.toBin(int(self.regNames[array_location].get()), 15)
+                data = self.toBin(int(self.regValues[array_location].get()), 15)
+                self.writeOut(data+addr+wr)
 
     def reciveData(self, event, array_location):
         if(self.start_count == 0):
@@ -265,25 +269,21 @@ class App(Frame):
             if(checkVal(self.regValues[array_location].get()) == 1):
                 pass
             else:
-                self.writeOut(int(0))
-                self.writeOut(int(self.regNames[array_location].get()))
-                self.writeOut(int(0))
+                zero = self.toBin(int(0), 2)
+                zero = self.toBin(int(0), 15)
+                addr = self.toBin(int(self.regNames[array_location].get()), 15)
+                self.writeOut(zero_sixtn+addr+zero)
                 self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
         #self.writeOut(int('0xFF',16))
         #self.writeOut(int(0))
         #self.writeToText("Receive data: \n Register : %s \n Value : %s \n" % ())
 
-
-
     def writeOut(self, val):
         if (self.start_count == 1):
             # This will take an integer input and convert it to a binary string.
             # It will also cut off the 0b at the beginning of the string.
-            size = 8
-            bStrVal = bin(val).lstrip('0b').zfill(size)                             # Convert from int to binary string
-            self.conn.send(bStrVal.encode('utf-8') + b'\n')                         # Newline is required to flush the buffer on the Tcl server
+            self.conn.send(val.encode('utf-8') + b'\n')                         # Newline is required to flush the buffer on the Tcl server
             self.data = self.conn.recv(size + 2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.
-
             #return self.data
         else:
             pass

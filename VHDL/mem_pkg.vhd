@@ -5,7 +5,8 @@ package mem_pkg is
 
 
 
-	constant DATA_WIDTH 		: positive := 8;
+	constant DATA_WIDTH 		: positive := 15;
+	constant INSTR_WIDTH : positive := 32;
 	subtype DATA_RANGE is natural range DATA_WIDTH-1 downto 0;
 
 	constant MAX_WIDTH			: positive := 32;

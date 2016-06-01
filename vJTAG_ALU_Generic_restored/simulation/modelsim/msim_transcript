@@ -1,0 +1,177 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do vJTAG_ALU_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder7seg
+# -- Compiling architecture case_statment of decoder7seg
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vJTAG
+# -- Compiling architecture SYN of vjtag
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mem_pkg
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity tdi_shifter
+# -- Compiling architecture FSMD2 of tdi_shifter
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity memory_map
+# -- Compiling architecture BHV of memory_map
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package mem_pkg
+# -- Compiling entity jtag_wrapper
+# -- Compiling architecture bhvr of jtag_wrapper
+# -- Loading entity vJTAG
+# -- Loading package NUMERIC_STD
+# -- Loading entity tdi_shifter
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity top_level_application_test
+# -- Compiling architecture str of top_level_application_test
+# -- Loading entity jtag_wrapper
+# -- Loading entity memory_map
+# -- Loading entity decoder7seg
+# 
+vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jtag_wrapper
+# vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jtag_wrapper 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mem_pkg
+# Loading ieee.numeric_std(body)
+# Loading work.jtag_wrapper(bhvr)
+# Loading work.vjtag(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.sld_node(body)
+# Loading altera_mf.sld_virtual_jtag(structural)
+# Loading altera_mf.signal_gen(simmodel)
+# Loading altera_mf.jtag_tap_controller(fsm)
+# Loading altera_mf.dummy_hub(behavior)
+# Loading work.tdi_shifter(fsmd2)
+# do vJTAG_ALU_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder7seg
+# -- Compiling architecture case_statment of decoder7seg
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vJTAG
+# -- Compiling architecture SYN of vjtag
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mem_pkg
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity tdi_shifter
+# -- Compiling architecture FSMD2 of tdi_shifter
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity memory_map
+# -- Compiling architecture BHV of memory_map
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package mem_pkg
+# -- Compiling entity jtag_wrapper
+# -- Compiling architecture bhvr of jtag_wrapper
+# -- Loading entity vJTAG
+# -- Loading package NUMERIC_STD
+# -- Loading entity tdi_shifter
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity top_level_application_test
+# -- Compiling architecture str of top_level_application_test
+# -- Loading entity jtag_wrapper
+# -- Loading entity memory_map
+# -- Loading entity decoder7seg
+# 
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/clk
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/rst
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/tdi
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/v_sdr
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/ir_in
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/udr
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/output_data
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/output_address
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/w_r_en
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/state
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/temp_RW
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/temp_addr
+add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/temp_data
+run -all
+# Break key hit 

@@ -33,7 +33,7 @@ foreach device_name [get_device_names -hardware_name $usbblaster_name] {
 puts "\nSelect device: $test_device.\n";
 
 
-# Open device 
+# Open device
 proc openport {} {
 	global usbblaster_name
         global test_device
@@ -66,29 +66,29 @@ proc set_reg_val {send_data} {
 
 	# Shift through DR.  Note that -dr_value is unimportant since we're not actually capturing the value inside the part, just seeing what shifts out
 	set hex [bin2hex $send_data]
-	puts "Writing : \t\t 0b $send_data \t 0h $hex" 
+	puts "Writing : \t\t 0b $send_data \t 0h $hex"
 	device_virtual_ir_shift -instance_index 0 -ir_value 1 -no_captured_ir_value
-	
-	device_virtual_dr_shift -dr_value $send_data -instance_index 0  -length 8 -no_captured_dr_value
+
+	device_virtual_dr_shift -dr_value $send_data -instance_index 0  -length 32 -no_captured_dr_value
 
 	# Set IR back to 0, which is bypass mode
-	device_virtual_ir_shift -instance_index 0 -ir_value 0 -no_captured_ir_value
+	# device_virtual_ir_shift -instance_index 0 -ir_value 0 -no_captured_ir_value
 
 }
 
 proc return_data {send_data} {
 
 	device_virtual_ir_shift -instance_index 0 -ir_value 1 -no_captured_ir_value
-	
-	set return [device_virtual_dr_shift -dr_value $send_data -instance_index 0  -length 8]
+
+	set return [device_virtual_dr_shift -dr_value $send_data -instance_index 0  -length 32]
 	set hex [bin2hex $return]
 	puts "Read (in return) : \t 0b $return \t 0h $hex"
-	
+
 	device_virtual_ir_shift -instance_index 0 -ir_value 0 -no_captured_ir_value
 
 	return return
 }
-	
+
 ##############################################################################################
 
 ##############################################################################################
@@ -103,14 +103,14 @@ proc Start_Server {port} {
 	vwait forever
 }
 
-	
+
 proc ConnAccept {sock addr port} {
     global conn
 
 	puts "Connection: from $addr port $port"
 	openport
 	device_lock -timeout 10000
-	
+
     # Record the client's information
 
     puts "Accept $sock from $addr port $port"
@@ -144,14 +144,14 @@ proc IncomingData {sock} {
 	if {$data_len != "0"} then {
 		#Extract the first bit
 		set line [string range $line 0 31]
-		
-		
+
+
 		#Send the vJTAG commands to update the registers
 		set_reg_val $line
-		
+
 		set recdata [return_data $line]
 		puts $sock $recdata
-		
+
 	}
     }
 }
@@ -160,4 +160,3 @@ proc IncomingData {sock} {
 Start_Server 2540
 
 ##############################################################################################
-

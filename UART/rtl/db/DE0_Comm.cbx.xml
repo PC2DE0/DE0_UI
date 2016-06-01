@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="DE0_Comm">
-		<CBX_INST_ENTRY INSTANCE_NAME="|DE0_Comm|fsm_jtag_vhd:U_FSM_JTAG|jtag_uart_vhd:U_JTAG_UART|buf:U_BUFFER_IN|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m0k1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|DE0_Comm|fsm_jtag_vhd:U_FSM_JTAG|jtag_uart_vhd:U_JTAG_UART|buf:U_BUFFER_OUT|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m0k1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|DE0_Comm|pll_vhd_clk:U_PLL_CLOCK|altpll:altpll_component" CBX_FILE_NAME="pll_vhd_clk_altpll.v"/>
-	</PROJECT>
-</LOG_ROOT>
