@@ -283,7 +283,7 @@ class App(Frame):
             # This will take an integer input and convert it to a binary string.
             # It will also cut off the 0b at the beginning of the string.
             self.conn.send(val.encode('utf-8') + b'\n')                         # Newline is required to flush the buffer on the Tcl server
-            self.data = self.conn.recv(size + 2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.
+            self.data = self.conn.recv(4+2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.
             #return self.data
         else:
             pass

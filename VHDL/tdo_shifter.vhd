@@ -12,7 +12,6 @@ entity tdo_shifter is
 	port(
 		clk 		: in std_logic;
 		rst 		: in std_logic;
-		tdi 		: in std_logic;
 		v_sdr 		: in std_logic;
 		valid 		: in std_logic;
 		data 		: in std_logic_vector(INSTR_WIDTH-1 downto 0);
@@ -50,7 +49,7 @@ begin
 
 	end process;
 
-	process(state, v_sdr, tdi, temp_reg, valid_reg, data_reg, data, valid)
+	process(state, v_sdr, temp_reg, valid_reg, data_reg, data, valid)
 	begin
 
 		next_state <= state;
@@ -68,11 +67,6 @@ begin
 					if (valid = '1') then
 						next_valid <= valid;
 						next_temp <= data_reg(0) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						if ((valid_reg = '1') and (valid = '0')) then
-							next_valid <= '0';
-						end if;
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -82,8 +76,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(1) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -93,8 +85,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(2) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -104,8 +94,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(3) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -115,8 +103,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(4) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -126,8 +112,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(5) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -137,8 +121,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(6) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -149,8 +131,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(7) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -161,8 +141,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(8) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -173,8 +151,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(9) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -185,8 +161,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(10) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -197,8 +171,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(11) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -209,8 +181,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(12) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -221,8 +191,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(13) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -233,8 +201,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(14) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -245,8 +211,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(15) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -257,8 +221,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(16) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -269,8 +231,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(17) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -281,8 +241,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(18) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -293,8 +251,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(19) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -305,8 +261,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(20) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -317,8 +271,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(21) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -329,8 +281,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(22) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -341,8 +291,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(23) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -353,8 +301,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(24) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -365,8 +311,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(25) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -377,8 +321,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(26) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -389,8 +331,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(27) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -401,8 +341,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(28) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -413,8 +351,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(29) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -425,8 +361,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(30) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 
@@ -437,8 +371,6 @@ begin
 				if (v_sdr = '1') then
 					if (valid_reg = '1') then
 						next_temp <= data_reg(31) & temp_reg(INSTR_WIDTH-1 downto 1);
-					else
-						next_temp <= tdi & temp_reg(INSTR_WIDTH-1 downto 1);
 					end if;
 				end if;
 

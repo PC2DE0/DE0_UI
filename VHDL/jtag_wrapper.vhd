@@ -77,7 +77,6 @@ begin
 		port map (
 			clk 				=> tck,
 			rst 				=> rst,
-			tdi 				=> tdi,
 			v_sdr 				=> sdr,
 			valid 				=> valid,
 			data 				=> design_output,
