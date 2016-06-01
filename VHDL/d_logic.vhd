@@ -15,6 +15,7 @@ entity d_logic is
 		out_data_rdy 	: out std_logic;
 		address_register_to_memmap : out std_logic_vector(DATA_WIDTH-1 downto 0);
 		selects			: out std_logic;
+		address_ready : out std_logic;
 		sel_out 		: out std_logic
 	);
 end d_logic;
@@ -65,6 +66,9 @@ begin
 				if (addr_or_data = '1') then
 					temp := '1';
 					address_register_to_memmap <= addr_reg;
+					address_ready <= '1';
+				else
+					address_ready <= '0';
 				end if;
 			end if;
 			temp_out := sel_out_reg;

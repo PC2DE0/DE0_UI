@@ -14,6 +14,7 @@ entity address_wrapper is
 		out_data_rdy 		: out std_logic;
 		selects				: out std_logic;
 		sel_out 			: out std_logic;
+		address_ready : out std_logic;
 		address_register_to_memmap	: out std_logic_vector(DATA_WIDTH-1 downto 0)
 	);
 end address_wrapper;
@@ -29,7 +30,7 @@ architecture STR of address_wrapper is
 
 begin
 
-	U_addrreg : entity work.reg_gen
+	U_addrreg : entity work.reg
 		generic map (
 			DATA_WIDTH => DATA_WIDTH)
 		port map (
@@ -63,6 +64,7 @@ begin
 			out_data_rdy 	=> out_data_rdy,
 			selects => selects,
 			sel_out 		=> sel_out,
+			address_ready => address_ready,
 			address_register_to_memmap => address_register_to_memmap
 		);
 end STR;

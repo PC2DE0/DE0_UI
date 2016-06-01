@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vJTAG_ALU
-Thu May 26 18:12:51 2016
+Wed Jun 01 02:30:17 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,25 +14,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state
+  9. State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|state
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component
- 15. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2
- 16. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO
- 17. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP
- 18. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg
- 19. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount
- 20. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic
- 21. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|reg_gen:REG_I
- 22. Port Connectivity Checks: "memory_map:U_MEMORY_MAP"
- 23. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP"
- 24. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
- 25. Virtual JTAG Settings
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 15. Port Connectivity Checks: "memory_map:U_MEMORY_MAP"
+ 16. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
+ 17. Virtual JTAG Settings
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -58,15 +50,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 26 18:12:51 2016           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 01 02:30:17 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 257                                             ;
-;     Total combinational functions  ; 172                                             ;
-;     Dedicated logic registers      ; 157                                             ;
-; Total registers                    ; 157                                             ;
+; Total logic elements               ; 204                                             ;
+;     Total combinational functions  ; 162                                             ;
+;     Dedicated logic registers      ; 118                                             ;
+; Total registers                    ; 118                                             ;
 ; Total pins                         ; 29                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -178,17 +170,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path       ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                  ; Library ;
 +----------------------------------------+-----------------+-----------------------------+-------------------------------------------------------------------------------+---------+
+; ../VHDL/tdi_shifter.vhd                ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd                ;         ;
 ; ../VHDL/memory_map.vhd                 ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd                 ;         ;
 ; ../VHDL/jtag_wrapper.vhd               ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd               ;         ;
 ; ../VHDL/decoder7seg.vhd                ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd                ;         ;
 ; ../VHDL/vJTAG.vhd                      ; yes             ; User Wizard-Generated File  ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd                      ;         ;
-; ../VHDL/tdo_shifter.vhd                ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd                ;         ;
-; ../VHDL/seriel_to_parallel_reg.vhd     ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/seriel_to_parallel_reg.vhd     ;         ;
-; ../VHDL/sdr_count.vhd                  ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/sdr_count.vhd                  ;         ;
-; ../VHDL/reg_gen.vhd                    ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/reg_gen.vhd                    ;         ;
 ; ../VHDL/mem_pkg.vhd                    ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd                    ;         ;
-; ../VHDL/d_logic.vhd                    ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/d_logic.vhd                    ;         ;
-; ../VHDL/address_wrapper.vhd            ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/address_wrapper.vhd            ;         ;
 ; ../VHDL/top_level_application_test.vhd ; yes             ; User VHDL File              ; C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd ;         ;
 ; sld_virtual_jtag.v                     ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_virtual_jtag.v          ;         ;
 ; sld_virtual_jtag_basic.v               ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v    ;         ;
@@ -203,28 +190,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 257                      ;
+; Estimated Total logic elements              ; 204                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 172                      ;
+; Total combinational functions               ; 162                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 91                       ;
-;     -- 3 input functions                    ; 36                       ;
-;     -- <=2 input functions                  ; 45                       ;
+;     -- 4 input functions                    ; 70                       ;
+;     -- 3 input functions                    ; 42                       ;
+;     -- <=2 input functions                  ; 50                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 164                      ;
+;     -- normal mode                          ; 154                      ;
 ;     -- arithmetic mode                      ; 8                        ;
 ;                                             ;                          ;
-; Total registers                             ; 157                      ;
-;     -- Dedicated logic registers            ; 157                      ;
+; Total registers                             ; 118                      ;
+;     -- Dedicated logic registers            ; 118                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 29                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 177                      ;
-; Total fan-out                               ; 1162                     ;
-; Average fan-out                             ; 2.93                     ;
+; Maximum fan-out                             ; 139                      ;
+; Total fan-out                               ; 947                      ;
+; Average fan-out                             ; 2.73                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -233,24 +220,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 172 (1)           ; 157 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 162 (1)           ; 118 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
-;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_b                                                                                                                   ; work         ;
-;    |jtag_wrapper:U_jtag_wrapper|                                 ; 27 (0)            ; 71 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
-;       |address_wrapper:U_ADDR_TOP|                               ; 14 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP                                                                                   ; work         ;
-;          |d_logic:U_logic|                                       ; 12 (12)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic                                                                   ; work         ;
-;          |reg_gen:U_addrreg|                                     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg                                                                 ; work         ;
-;          |sdr_count:U_addrcount|                                 ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount                                                             ; work         ;
-;       |reg_gen:REG_I|                                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|reg_gen:REG_I                                                                                                ; work         ;
-;       |seriel_to_parallel_reg:U_SR_V2|                           ; 1 (1)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2                                                                               ; work         ;
-;       |tdo_shifter:U_DESIGN_TO_TDO|                              ; 10 (10)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO                                                                                  ; work         ;
-;       |vJTAG:U_vJTAG|                                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
-;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
-;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
-;    |sld_hub:auto_hub|                                            ; 116 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 115 (78)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;    |jtag_wrapper:U_jtag_wrapper|                                 ; 23 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
+;       |tdi_shifter:U_TDI_SHIFTER|                                ; 22 (22)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER                                                                                    ; work         ;
+;       |vJTAG:U_vJTAG|                                            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
+;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
+;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
+;    |sld_hub:auto_hub|                                            ; 117 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 116 (79)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                               ; 20 (20)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -267,79 +247,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state                                                                                                                                                                                                                                                                                                                                                                                          ;
-+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-; Name         ; state.OUT_31 ; state.OUT_30 ; state.OUT_29 ; state.OUT_28 ; state.OUT_27 ; state.OUT_26 ; state.OUT_25 ; state.OUT_24 ; state.OUT_23 ; state.OUT_22 ; state.OUT_21 ; state.OUT_20 ; state.OUT_19 ; state.OUT_18 ; state.OUT_17 ; state.OUT_16 ; state.OUT_15 ; state.OUT_14 ; state.OUT_13 ; state.OUT_12 ; state.OUT_11 ; state.OUT_10 ; state.OUT_9 ; state.OUT_8 ; state.OUT_7 ; state.OUT_6 ; state.OUT_5 ; state.OUT_4 ; state.OUT_3 ; state.OUT_2 ; state.OUT_1 ; state.START ;
-+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-; state.START  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
-; state.OUT_1  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
-; state.OUT_2  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
-; state.OUT_3  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
-; state.OUT_4  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_5  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_6  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_7  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_8  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_9  ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_10 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_11 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_12 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_13 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_14 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_15 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_16 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_17 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_18 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_19 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_20 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_21 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_22 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_23 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_24 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_25 ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_26 ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_27 ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_28 ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_29 ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_30 ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; state.OUT_31 ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
++---------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|state             ;
++----------------------+-----------------+------------------+---------------------+----------------------+------------+
+; Name                 ; state.READ_DATA ; state.WRITE_DATA ; state.GET_ADDR_READ ; state.GET_ADDR_WRITE ; state.INIT ;
++----------------------+-----------------+------------------+---------------------+----------------------+------------+
+; state.INIT           ; 0               ; 0                ; 0                   ; 0                    ; 0          ;
+; state.GET_ADDR_WRITE ; 0               ; 0                ; 0                   ; 1                    ; 1          ;
+; state.GET_ADDR_READ  ; 0               ; 0                ; 1                   ; 0                    ; 1          ;
+; state.WRITE_DATA     ; 0               ; 1                ; 0                   ; 0                    ; 1          ;
+; state.READ_DATA      ; 1               ; 0                ; 0                   ; 0                    ; 1          ;
++----------------------+-----------------+------------------+---------------------+----------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                             ;
-+---------------------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                                         ; Reason for Removal                     ;
-+---------------------------------------------------------------------------------------+----------------------------------------+
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|data_reg[0..7]                ; Stuck at GND due to stuck port data_in ;
-; jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount|count[2] ; Stuck at GND due to stuck port data_in ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_8                   ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_9                   ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_10                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_11                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_12                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_13                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_14                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_15                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_16                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_17                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_18                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_19                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_20                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_21                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_22                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_23                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_24                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_25                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_26                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_27                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_28                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_29                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_30                  ; Lost fanout                            ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|state.OUT_31                  ; Lost fanout                            ;
-; Total Number of Removed Registers = 33                                                ;                                        ;
-+---------------------------------------------------------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                  ;
++----------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                              ; Reason for Removal                     ;
++----------------------------------------------------------------------------+----------------------------------------+
+; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[3..7] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5                                      ;                                        ;
++----------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -347,12 +275,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 157   ;
+; Total registers                              ; 118   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 105   ;
+; Number of registers using Asynchronous Clear ; 58    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 115   ;
+; Number of registers using Clock Enable       ; 85    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -374,12 +302,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO|temp_reg[0]                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_data[7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[7]                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|state                                           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
@@ -401,99 +331,16 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2 ;
-+----------------+-------+--------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                           ;
-+----------------+-------+--------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                 ;
-+----------------+-------+--------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; sdr_count      ; 3     ; Signed Integer                                                                                   ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                       ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                                             ;
-; sdr_count      ; 3     ; Signed Integer                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|reg_gen:REG_I ;
-+----------------+-------+---------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                          ;
-+----------------+-------+---------------------------------------------------------------+
-; data_width     ; 8     ; Signed Integer                                                ;
-+----------------+-------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "memory_map:U_MEMORY_MAP"                                                               ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; wr_en   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; rd_en   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rd_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; go      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; n       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; result  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; done    ; Input  ; Info     ; Stuck at GND                                                                        ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP"                                ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; sel_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memory_map:U_MEMORY_MAP"                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; go     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; n      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; result ; Input  ; Info     ; Stuck at GND                                                                        ;
+; done   ; Input  ; Info     ; Stuck at GND                                                                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -536,9 +383,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 26 18:12:46 2016
+    Info: Processing started: Wed Jun 01 02:30:12 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vJTAG_ALU -c vJTAG_ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/reg.vhd
+    Info (12022): Found design unit 1: reg-SEQ_LOGIC
+    Info (12023): Found entity 1: reg
+Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/tdi_shifter.vhd
+    Info (12022): Found design unit 1: tdi_shifter-FSMD2
+    Info (12023): Found entity 1: tdi_shifter
 Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/memory_map.vhd
     Info (12022): Found design unit 1: memory_map-BHV
     Info (12023): Found entity 1: memory_map
@@ -560,9 +413,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/sdr_count.vhd
     Info (12022): Found design unit 1: sdr_count-count
     Info (12023): Found entity 1: sdr_count
-Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/reg_gen.vhd
-    Info (12022): Found design unit 1: reg_gen-SEQ_LOGIC
-    Info (12023): Found entity 1: reg_gen
 Info (12021): Found 1 design units, including 0 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/mem_pkg.vhd
     Info (12022): Found design unit 1: mem_pkg
 Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/d_logic.vhd
@@ -581,10 +431,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: top_level_application_test-str
     Info (12023): Found entity 1: top_level_application_test
 Info (12127): Elaborating entity "top_level_application_test" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at top_level_application_test.vhd(27): used implicit default value for signal "design_output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "jtag_wrapper" for hierarchy "jtag_wrapper:U_jtag_wrapper"
-Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(28): object "cdr" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(32): object "sel_out" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at jtag_wrapper.vhd(24): used implicit default value for signal "tdo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(27): object "cdr" assigned a value but never read
 Info (12128): Elaborating entity "vJTAG" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
 Warning (10296): VHDL warning at vJTAG.vhd(123): ignored assignment of value to null range
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
@@ -601,13 +450,7 @@ Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "jtag_wr
 Info (12131): Elaborated megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
 Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst"
 Info (12131): Elaborated megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
-Info (12128): Elaborating entity "seriel_to_parallel_reg" for hierarchy "jtag_wrapper:U_jtag_wrapper|seriel_to_parallel_reg:U_SR_V2"
-Info (12128): Elaborating entity "tdo_shifter" for hierarchy "jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_DESIGN_TO_TDO"
-Info (12128): Elaborating entity "address_wrapper" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP"
-Info (12128): Elaborating entity "reg_gen" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|reg_gen:U_addrreg"
-Info (12128): Elaborating entity "sdr_count" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|sdr_count:U_addrcount"
-Info (12128): Elaborating entity "d_logic" for hierarchy "jtag_wrapper:U_jtag_wrapper|address_wrapper:U_ADDR_TOP|d_logic:U_logic"
-Warning (10036): Verilog HDL or VHDL warning at d_logic.vhd(28): object "sel_sr_reg" assigned a value but never read
+Info (12128): Elaborating entity "tdi_shifter" for hierarchy "jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER"
 Info (12128): Elaborating entity "memory_map" for hierarchy "memory_map:U_MEMORY_MAP"
 Warning (10631): VHDL Process Statement warning at memory_map.vhd(49): inferring latch(es) for signal or variable "reg_n", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at memory_map.vhd(49): inferring latch(es) for signal or variable "rd_data", which holds its previous value in one or more paths through the process
@@ -652,8 +495,15 @@ Info (10041): Inferred latch for "reg_n[29]" at memory_map.vhd(49)
 Info (10041): Inferred latch for "reg_n[30]" at memory_map.vhd(49)
 Info (10041): Inferred latch for "reg_n[31]" at memory_map.vhd(49)
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED_HI_a"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led_hi_b[0]" is stuck at VCC
+    Warning (13410): Pin "led_hi_b[1]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[2]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[3]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[4]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[5]" is stuck at GND
+    Warning (13410): Pin "led_hi_b[6]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 24 registers lost all their fanouts during netlist optimizations.
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -661,13 +511,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 296 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 241 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 262 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 516 megabytes
-    Info: Processing ended: Thu May 26 18:12:51 2016
+    Info (21061): Implemented 207 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Wed Jun 01 02:30:17 2016
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

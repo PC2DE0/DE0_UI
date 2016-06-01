@@ -2,9 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.mem_pkg.all;
 
-entity reg_gen is
+entity reg is
 
-	generic ( 
+	generic (
 		DATA_WIDTH : positive
 	);
 	port (
@@ -14,10 +14,10 @@ entity reg_gen is
 		input : in std_logic_vector(DATA_WIDTH-1 downto 0);
 		output : out std_logic_vector(DATA_WIDTH-1 downto 0)
 	);
-	
-end reg_gen;
 
-architecture SEQ_LOGIC of reg_gen is
+end reg;
+
+architecture SEQ_LOGIC of reg is
 begin
 
 	process(clk, rst)
@@ -31,5 +31,3 @@ begin
 		end if;
 	end process;
 end SEQ_LOGIC;
-	
-	

@@ -36,7 +36,7 @@ class App(Frame):
 
         ##File##
         self.menu.add_cascade(label="File", menu=self.fileMenu)
-        self.fileMenu.add_command(label="Reset", command=lambda: (self.clearFrame(), self.configWin(self.master)))
+        self.fileMenu.add_command(label="Reset", command=lambda: (self.clearFrame()))
         self.fileMenu.add_command(label="Save Log")
         self.fileMenu.add_command(label="Preferences", command=self.clickPref)
         self.fileMenu.add_separator()
@@ -74,8 +74,9 @@ class App(Frame):
         self.textscroll.config(command=self.text_console.yview)
         initTXT = open("Documents\Start.txt").read()
         self.writeToText(initTXT)
+        self.inputFrame(self.middleleftFrame)
 
-        self.configWin(self.master)
+        #self.configWin(self.master)
 
 #####Start Textbox write#############
     def writeToText(self, msg):
@@ -114,62 +115,62 @@ class App(Frame):
 #Popup window to setup the number of registers
     def configWin(self, master):
         #make a popup window asking for the register values
-        self.setupWindow = Toplevel(master)
-        self.setupWindow.title("Set the number of registers")
+        #self.setupWindow = Toplevel(master)
+        #self.setupWindow.title("Set the number of registers")
         ##Enter the number of registers##
-        self.reglabel = Label(self.setupWindow, text="Number of Registers")
-        self.reglabel.grid(row=2, column=0, sticky=E, columnspan=2)
-        self.numregisterentry = Entry(self.setupWindow)
-        self.numregisterentry.bind('<Key>', keyPress)
-        self.numregisterentry.grid(row=2, column=2)
+        #self.reglabel = Label(self.setupWindow, text="Number of Registers")
+        #self.reglabel.grid(row=2, column=0, sticky=E, columnspan=2)
+        #self.numregisterentry = Entry(self.setupWindow)
+        #self.numregisterentry.bind('<Key>', keyPress)
+        #self.numregisterentry.grid(row=2, column=2)
 
         self.setup_button = Button(self.setupWindow, text="Setup", command=lambda: (self.inputFrame(self.middleleftFrame), self.setupWindow.destroy()))
-        self.Quit_button = Button(self.setupWindow, text="Quit", command=self.master.quit)
-        self.setup_button.grid(row=4, column=0, padx=10, pady=5, sticky=E)
-        self.Quit_button.grid(row=4, column=2, padx=10, pady=5, sticky=E)
+        #self.Quit_button = Button(self.setupWindow, text="Quit", command=self.master.quit)
+        #self.setup_button.grid(row=4, column=0, padx=10, pady=5, sticky=E)
+        #self.Quit_button.grid(row=4, column=2, padx=10, pady=5, sticky=E)
 
 ## This class will be used to take in the input specifications for the glue logic
 ## based on address decoding. It will only appear after the setup button is hit,
 ## where it takes in the number of registers defined by the user.
     def inputFrame(self, master):
-        if (checkRegRange(self.numregisterentry.get())==1):
-            pass
-        else:
-            self.regLabel = Label(master, text="Register Address (Decimal)", compound=CENTER)
-            self.regLabel.grid(row=0, column=1)
+        self.regLabel = Label(master, text="Register Address (Decimal)", compound=CENTER)
+        self.regLabel.grid(row=0, column=1)
 
-            self.valueLabel = Label(master, text="Value (Decimal)", compound=CENTER)
-            self.valueLabel.grid(row=0, column=2)
+        self.valueLabel = Label(master, text="Value (Decimal)", compound=CENTER)
+        self.valueLabel.grid(row=0, column=2)
 
-            self.regNames = []
-            self.regValues = []
-            self.sendButtons = []
-            self.var = []
-            self.checkVar = IntVar()
-            self.checkReturns = []
-            self.array = []
-            for i in range(0, int(self.numregisterentry.get())):
-                j = i+1
-                self.array.append(i)
-                #Register Labels - these will be able to be changed by user and then later saved and reloaded.
-                regName = Entry(master, width=10)
-                regName.bind('<Key>', keyPress)
-                regName.grid(row=j, column=1, padx=5, pady=5)
-                self.regNames.append(regName)
-                #Values to be sent to the register
-                regValue = Entry(master, width=10)
-                regValue.bind('<Key>', keyPress)    # don't allow any key presses for non-int chars
-                regValue.grid(row=j, column=2, padx=5, pady=5)
-                self.regValues.append(regValue)
-                #Send button that will only work for reg in the same row
-                self.sendButton = Button(master, text="Send")
-                self.sendButton.bind("<Button-1>", lambda event, x=i: self.sendData(event, x))
-                self.sendButton.grid(row=j, column=3)
-                self.sendButtons.append(self.sendButton)
+        self.regNames = []
+        self.regValues = []
+        self.sendButtons = []
+        self.reciveButtons = []
+        self.var = []
+        self.checkVar = IntVar()
+        self.checkReturns = []
+        self.array = []
+        #for i in range(0, int(self.numregisterentry.get())):
+        for i in range(0, 2):
+            j = i+1
+            self.array.append(i)
+            #Register Labels - these will be able to be changed by user and then later saved and reloaded.
+            regName = Entry(master, width=10)
+            regName.bind('<Key>', keyPress)
+            regName.grid(row=j, column=1, padx=5, pady=5)
+            self.regNames.append(regName)
+            #Values to be sent to the register
+            regValue = Entry(master, width=10)
+            regValue.bind('<Key>', keyPress)    # don't allow any key presses for non-int chars
+            regValue.grid(row=j, column=2, padx=5, pady=5)
+            self.regValues.append(regValue)
+            #Send button that will only work for reg in the same row
+            self.sendButton = Button(master, text="Write")
+            self.sendButton.bind("<Button-1>", lambda event, x=i: self.sendData(event, x))
+            self.sendButton.grid(row=j, column=3, padx=3)
+            self.sendButtons.append(self.sendButton)
 
-            self.reciveButton = Button(master, text="Receive Data")
-            self.reciveButton.bind("<Button-1>", lambda event: self.reciveData(event))
-            self.reciveButton.grid(row=j+1, column=2)
+            self.reciveButton = Button(master, text="Read")
+            self.reciveButton.bind("<Button-1>", lambda event, x=i: self.reciveData(event, x))
+            self.reciveButton.grid(row=j, column=4, padx=3)
+            self.reciveButtons.append(self.reciveButton)
 
 
 #####Start Menu Bar Commands##############
@@ -204,7 +205,9 @@ class App(Frame):
 
             self.start_count = 1                                                #This is a flag that when set lets other functions know that there is a connection to the board
             for i in range(0, 100):
-                self.writeOut(int(0))
+                self.writeOut(int(1))
+                self.writeOut(int(10))
+                self.writeOut(int(14))
 
     def close_server(self):
         if (self.start_count == 0):
@@ -246,14 +249,28 @@ class App(Frame):
                 pass
             else:
                 self.writeToText("Send data: \n Register : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
-                #self.writeOut(int(array_location + 1))
-                #write out 1 for 0, so that the vhdl will see 1 and write to the 0th register
-                self.writeOut(int(self.regNames[array_location].get())+1)
+                self.writeOut(int(1))
+                self.writeOut(int(self.regNames[array_location].get()))
                 self.writeOut(int(self.regValues[array_location].get()))
 
-    def reciveData(self, event):
-        self.writeOut(int('0xFF',16))
-        self.writeOut(int(0))
+    def reciveData(self, event, array_location):
+        if(self.start_count == 0):
+            noConn = Toplevel()
+            noConn.title("No Connection")
+            msg = Label(noConn, text="There is no connection established to the DE0 board")
+            msg.pack()
+            button = Button(noConn, text="close", command=noConn.destroy)
+            button.pack()
+        else:
+            if(checkVal(self.regValues[array_location].get()) == 1):
+                pass
+            else:
+                self.writeOut(int(0))
+                self.writeOut(int(self.regNames[array_location].get()))
+                self.writeOut(int(0))
+                self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
+        #self.writeOut(int('0xFF',16))
+        #self.writeOut(int(0))
         #self.writeToText("Receive data: \n Register : %s \n Value : %s \n" % ())
 
 

@@ -116,7 +116,7 @@
 --		);
 --
 ----The following are the memory maped registers		
---	U_A_REG : entity work.reg_gen
+--	U_A_REG : entity work.reg
 --		generic map (
 --			DATA_WIDTH 			=> DATA_WIDTH)
 --		port map(
@@ -127,7 +127,7 @@
 --			output 				=> reg_a_out
 --		);
 --		
---	U_B_REG : entity work.reg_gen
+--	U_B_REG : entity work.reg
 --		generic map (
 --			DATA_WIDTH 			=> DATA_WIDTH)
 --		port map(
@@ -138,7 +138,7 @@
 --			output 				=> reg_b_out
 --		);
 --		
---	U_OUT_REG : entity work.reg_gen
+--	U_OUT_REG : entity work.reg
 --		generic map (
 --			DATA_WIDTH 			=> DATA_WIDTH)
 --		port map(

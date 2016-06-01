@@ -12,8 +12,9 @@ entity jtag_wrapper is
 	 clk : out std_logic;
    rst : in std_logic;
    design_output : in std_logic_vector(DATA_WIDTH-1 downto 0);
+   address_register : out std_logic_vector(DATA_WIDTH-1 downto 0);
 	 data_register : out std_logic_vector(DATA_WIDTH-1 downto 0);
-   address_register : out std_logic_vector(DATA_WIDTH-1 downto 0)
+   w_r_en : out std_logic
 	 );
 end jtag_wrapper;
 
@@ -45,59 +46,73 @@ begin
 			virtual_state_cdr 	=> cdr
 		);
 
---This shift register take in a serial input and outpus in parallel
-	U_SR_V2 : entity work.seriel_to_parallel_reg
-		generic map (
-			DATA_WIDTH 			=> DATA_WIDTH)
-		port map(
-			clk 				=> tck,
-			rst 				=> rst,
-			input 				=> tdi,
-			v_sdr 				=> sdr,
-			ir_in 				=> ir_in(0),
-			udr 				=> udr,
-			output 				=> addr_top_in
-		);
-
---This will take a parallel signal and send it out in series
---This is based on the vJTAG clock. If data is coming form another
---clock domain please be aware of metastbility issues
-	U_DESIGN_TO_TDO : entity work.tdo_shifter
-		generic map (
-			DATA_WIDTH 			=> DATA_WIDTH)
-		port map (
-			clk 				=> tck,
-			rst 				=> rst,
-			tdi 				=> tdi,
-			v_sdr 				=> sdr,
-			valid 				=> out_data_rdy,
-			data 				=> design_output,
-			output 				=> tdo
-		);
-
-	U_ADDR_TOP : entity work.address_wrapper
-		generic map (
-			DATA_WIDTH 			=> DATA_WIDTH)
-		port map(
-			tck 				=> tck,
-			rst 				=> rst,
-			sdr 				=> sdr,
-			--ir_in 			=> ir_in(0),
-			input 				=> addr_top_in,
-			out_data_rdy 		=> out_data_rdy,
-			selects 				=> selects,
-			sel_out 			=> sel_out,
-      address_register_to_memmap => address_register
-		);
-
-  REG_I : entity work.REG_GEN
-    generic map ( DATA_WIDTH => DATA_WIDTH)
+  U_TDI_SHIFTER : entity work.tdi_shifter
     port map(
       clk => tck,
       rst => rst,
-      en => selects,
-      input => addr_top_in,
-      output => data_register
+      tdi => tdi,
+      v_sdr => sdr,
+      ir_in => ir_in(0),
+      udr => udr,
+      output_data => data_register,
+      output_address => address_register,
+      w_r_en => w_r_en
     );
+-- --This shift register take in a serial input and outpus in parallel
+-- 	U_SR_V2 : entity work.seriel_to_parallel_reg
+-- 		generic map (
+-- 			DATA_WIDTH 			=> DATA_WIDTH)
+-- 		port map(
+-- 			clk 				=> tck,
+-- 			rst 				=> rst,
+-- 			input 				=> tdi,
+-- 			v_sdr 				=> sdr,
+-- 			ir_in 				=> ir_in(0),
+-- 			udr 				=> udr,
+-- 			output 				=> addr_top_in
+-- 		);
+--
+-- --This will take a parallel signal and send it out in series
+-- --This is based on the vJTAG clock. If data is coming form another
+-- --clock domain please be aware of metastbility issues
+-- 	U_DESIGN_TO_TDO : entity work.tdo_shifter
+-- 		generic map (
+-- 			DATA_WIDTH 			=> DATA_WIDTH)
+-- 		port map (
+-- 			clk 				=> tck,
+-- 			rst 				=> rst,
+-- 			tdi 				=> tdi,
+-- 			v_sdr 				=> sdr,
+-- 			valid 				=> out_data_rdy,
+-- 			data 				=> design_output,
+-- 			output 				=> tdo
+-- 		);
+--
+-- 	U_ADDR_TOP : entity work.address_wrapper
+-- 		generic map (
+-- 			DATA_WIDTH 			=> DATA_WIDTH)
+-- 		port map(
+-- 			tck 				=> tck,
+-- 			rst 				=> rst,
+-- 			sdr 				=> sdr,
+-- 			--ir_in 			=> ir_in(0),
+-- 			input 				=> addr_top_in,
+-- 			out_data_rdy 		=> out_data_rdy,
+-- 			selects 				=> selects,
+-- 			sel_out 			=> sel_out,
+--       address_ready => address_ready,
+--       address_register_to_memmap => address_register
+-- 		);
+--
+--   REG_I : entity work.reg
+--     generic map ( DATA_WIDTH => DATA_WIDTH)
+--     port map(
+--       clk => tck,
+--       rst => rst,
+--       en => selects,
+--       output_ready => data_ready,
+--       input => addr_top_in,
+--       output => data_register
+--     );
 	clk <= tck;
 end bhvr;

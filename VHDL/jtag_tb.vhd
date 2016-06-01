@@ -94,9 +94,9 @@ begin
 			sel_out 			=> sel_out
 		);
 
-	REG_GEN:
+	reg:
 	for i in 0 to MAX_WIDTH-1 generate
-		REG_i : entity work.reg_gen
+		REG_i : entity work.reg
 			generic map( DATA_WIDTH => DATA_WIDTH)
 			port map(
 				clk => tck,
@@ -105,6 +105,6 @@ begin
 				input => addr_top_in,
 				output => registers_out(i)
 			);
-	end generate REG_GEN;
+	end generate reg;
 
 end TB;
