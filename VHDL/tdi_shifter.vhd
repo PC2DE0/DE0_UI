@@ -27,40 +27,47 @@ architecture FSMD2 of tdi_shifter is
 
 	signal temp_RW : std_logic_vector(INSTR_WIDTH-1 downto 0);
 --	signal temp_addr : std_logic_vector(DATA_WIDTH-1 downto 0);
---	signal temp_data : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
-
+		
 	process(clk, rst)
+	
+	variable ctr : integer := 0;
+	
 	begin
 		if(rst = '1') then
 			state <= INIT;
 			temp_RW <= (others => '0');
-			--temp_addr <= (others => '0');
 			output_data <= (others => '0');
 			output_address <= (others => '0');
-
 		elsif(rising_edge(clk)) then
 			case state is
 				-- default is to read
 
 				when INIT =>
-					done <= '0';
 					if(v_sdr = '1' and ir_in = '1') then
+						--temp_data <= "0"&temp_data(INSTR_WIDTH-1 downto 1);
 						temp_RW <= tdi & temp_RW(INSTR_WIDTH-1 downto 1);
 					end if;
 					if(udr = '1') then
 						if(temp_rw(0) = '1') then
-							state <= GET_ADDR_WRITE;
+							w_r_en <= '1';
+							output_address <= temp_RW(9 downto 1);
+							output_data <= temp_RW(31 downto 10);
+							state <= INIT;
 						elsif(temp_rw(0) = '0') then
-							state <= GET_ADDR_READ;
+							output_address <= temp_RW(9 downto 1);
+							w_r_en <= '0';
+							state <= INIT;
 						end if;
+						done <= '1';
 					else
+						done <= '0';
 						state <= INIT;
 					end if;
 
 				when GET_ADDR_WRITE =>
-					output_address <= temp_RW(9 downto 1);
+					
 					done <= '0';
 					state <= WRITE_DATA;
 
@@ -71,13 +78,10 @@ begin
 
 				when WRITE_DATA =>
 					output_data <= temp_RW(31 downto 10);
-					w_r_en <= '1';
 					done <= '1';
 					state <= INIT;
 
 				when READ_DATA =>
-					output_data <= temp_RW(31 downto 10);
-					w_r_en <= '0';
 					done <= '1';
 					state <= INIT;
 

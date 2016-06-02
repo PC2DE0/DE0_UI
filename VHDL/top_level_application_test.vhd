@@ -27,6 +27,9 @@ architecture str of top_level_application_test is
 	signal design_output : std_logic_vector(INSTR_WIDTH-1 downto 0);
 	signal wr_en : std_logic;
 	signal done : std_logic;
+	
+	signal w_en : std_logic;
+	signal r_en : std_logic;
 
 	signal led0 : std_logic_vector(3 downto 0);
 	signal led1 : std_logic_vector(3 downto 0);
@@ -35,11 +38,13 @@ architecture str of top_level_application_test is
 
 begin
 
+	w_en <= wr_en and done;
+	r_en <= (not wr_en) and done;
 	U_jtag_wrapper : entity work.jtag_wrapper
 		port map(
 			clk => jtag_clock,
 			rst => rst,
-			design_output => address_register,
+			design_output => data_register,
 			--design_output => design_output,
 			data_register => data_register,
 			address_register => address_register,
@@ -51,10 +56,10 @@ begin
     port map(
       clk => jtag_clock,
       rst => rst,
-      wr_en => wr_en and done,
+      wr_en => w_en,
       wr_addr => address_register,
       wr_data => data_register,
-      rd_en => (not wr_en) and done,
+      rd_en => r_en,
       rd_addr => address_register,
       rd_data => design_output,
       go => open,

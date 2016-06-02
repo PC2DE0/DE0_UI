@@ -1,5 +1,5 @@
 Assembler report for vJTAG_ALU
-Wed Jun 01 16:49:00 2016
+Thu Jun 02 12:39:00 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jun 01 16:49:00 2016 ;
+; Assembler Status      ; Successful - Thu Jun 02 12:39:00 2016 ;
 ; Revision Name         ; vJTAG_ALU                             ;
 ; Top-level Entity Name ; top_level_application_test            ;
 ; Family                ; Cyclone III                           ;
@@ -102,8 +102,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                  ;
 +----------------+----------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                             ;
-; JTAG usercode  ; 0x000E2DE7                                                                                               ;
-; Checksum       ; 0x000E2DE7                                                                                               ;
+; JTAG usercode  ; 0x000EA613                                                                                               ;
+; Checksum       ; 0x000EA613                                                                                               ;
 +----------------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -113,13 +113,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 01 16:48:59 2016
+    Info: Processing started: Thu Jun 02 12:38:58 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off vJTAG_ALU -c vJTAG_ALU
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 433 megabytes
-    Info: Processing ended: Wed Jun 01 16:49:01 2016
+    Info: Processing ended: Thu Jun 02 12:39:00 2016
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -15,7 +15,7 @@ L4
 VYN3Y9;W99KE?20gh750UO0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1464799478.939000
+Z8 !s108 1464833527.877000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd|
 Z10 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd|
 Z11 o-93 -work work -O0
@@ -39,8 +39,8 @@ R12
 !s100 nodM2=OBJ?:g^`MWhi`O<3
 !i10b 1
 Ejtag_wrapper
-Z14 w1464796241
-Z15 DPx4 work 7 mem_pkg 0 22 [IaR]:EjFoVJ;VYmKhEN;3
+Z14 w1464824753
+Z15 DPx4 work 7 mem_pkg 0 22 Cd=JV;Ec82A>3=nbUoXNB2
 R2
 R3
 R4
@@ -48,27 +48,28 @@ Z16 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd
 Z17 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd
 l0
 L10
-Vz`z4AehQlVM>KQ?h?n@>:1
+VCT75]>h_;GU>N6i7]W62>1
 R7
 31
-Z18 !s108 1464799480.072000
+Z18 !s108 1464833529.647000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd|
 Z20 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd|
 R11
 R12
-!s100 mi0lj]VfVcNF8M=DfL8HU2
+!s100 `QYF8<1:QEF2l<Pmj05=H3
 !i10b 1
 Abhvr
-Z21 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z22 DEx4 work 11 tdi_shifter 0 22 _jY9VE^G9VV;6P]Hnz>8W0
-Z23 DEx4 work 5 vjtag 0 22 zh4Vz6C1Zl88gdca]3>HP0
+Z21 DEx4 work 11 tdo_shifter 0 22 dU;3D?Y1h9dEWA2E1;a^I2
+Z22 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z23 DEx4 work 11 tdi_shifter 0 22 R8bnPem[z]Toi=fc>mT7Z0
+Z24 DEx4 work 5 vjtag 0 22 zh4Vz6C1Zl88gdca]3>HP0
 R15
 R2
 R3
-Z24 DEx4 work 12 jtag_wrapper 0 22 z`z4AehQlVM>KQ?h?n@>:1
-l35
-L22
-V5]OiWM2R_:_7cSn>ddfUY1
+Z25 DEx4 work 12 jtag_wrapper 0 22 CT75]>h_;GU>N6i7]W62>1
+l39
+L23
+VZ;i^WPBi>R^4g6D9@JTG43
 R7
 31
 R18
@@ -76,114 +77,153 @@ R19
 R20
 R11
 R12
-!s100 N`Mj:Ob;JKY<]EKK1S^Fc3
+!s100 fNz5D483lFlA3_C9^XXP40
 !i10b 1
 Pmem_pkg
 R2
 R3
-w1463810017
+w1464810884
 R4
 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd
 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd
 l0
 L4
-V[IaR]:EjFoVJ;VYmKhEN;3
+VCd=JV;Ec82A>3=nbUoXNB2
 R7
 31
 R11
 R12
-!s100 @88?W1kzVgf_e=dAmURN70
+!s100 >7ehXg88fmGMNZi:6U^[_1
 !i10b 1
-!s108 1464799479.415000
+!s108 1464833528.662000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd|
 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd|
 Ememory_map
-Z25 w1464293554
+Z26 w1464811129
 R15
-R21
+R22
 R2
 R3
 R4
-Z26 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd
-Z27 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd
+Z27 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd
+Z28 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd
 l0
 L19
-VJEe2E5k`]?9nZ_3^lL[8?2
+V@601jf^4I4VV949:dXK6^2
 R7
 31
-Z28 !s108 1464799479.806000
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd|
-Z30 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd|
+Z29 !s108 1464833529.086000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd|
+Z31 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd|
 R11
 R12
-!s100 hZf_APdzUao9=>JfJ_1jL2
+!s100 kYBEmURlj_Df3hVEVDY=Q1
 !i10b 1
 Abhv
 R15
-R21
+R22
 R2
 R3
-Z31 DEx4 work 10 memory_map 0 22 JEe2E5k`]?9nZ_3^lL[8?2
+Z32 DEx4 work 10 memory_map 0 22 @601jf^4I4VV949:dXK6^2
 l47
 L42
 V_S>==>^H:=RZSRWN<aOEj1
 R7
 31
-R28
 R29
 R30
+R31
 R11
 R12
 !s100 k2l_nQeo3l11emK8G]gNA3
 !i10b 1
 Etdi_shifter
-Z32 w1464798902
+Z33 w1464823592
 R15
-R21
+R22
 R2
 R3
 R4
-Z33 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd
-Z34 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd
+Z34 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd
+Z35 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd
 l0
 L6
-V_jY9VE^G9VV;6P]Hnz>8W0
+VR8bnPem[z]Toi=fc>mT7Z0
 R7
 31
-Z35 !s108 1464799479.551000
-Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd|
-Z37 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd|
+Z36 !s108 1464833528.815000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd|
+Z38 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd|
 R11
 R12
-!s100 Ae`N3o>0OIFVc`HY?Nb0c3
+!s100 MK[iZ6Z]0CoH^a^Ib[T^h3
 !i10b 1
 Afsmd2
 R15
-R21
+R22
 R2
 R3
-R22
-l31
-L21
-VJ4XZzT:z8Q7eDjSFRcZ>D3
+R23
+l32
+L22
+V?ibSO;[z5A3=6AE[U[Nzn3
 R7
 31
-R35
 R36
 R37
+R38
 R11
 R12
-!s100 D[emS@5RHLcV[JK9QVJF93
+!s100 IA8ll1>fnfUjH@FJd:Icd1
 !i10b 1
-Etop_level_application_test
-Z38 w1464761818
+Etdo_shifter
+Z39 w1464832156
 R15
-R21
+R22
 R2
 R3
 R4
-Z39 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd
-Z40 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd
+Z40 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd
+Z41 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd
+l0
+L9
+VdU;3D?Y1h9dEWA2E1;a^I2
+R7
+31
+Z42 !s108 1464833529.353000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd|
+Z44 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd|
+R11
+R12
+!s100 S4eaHcKikZ=W:dIZCYBE23
+!i10b 1
+Afsmd2
+R15
+R22
+R2
+R3
+R21
+l31
+L21
+V=ONQofKCaYm?@9LbO1oZ;2
+R7
+31
+R42
+R43
+R44
+R11
+R12
+!s100 k=IXoK?FHoeQ472]hS7ii3
+!i10b 1
+Etop_level_application_test
+Z45 w1464824345
+R15
+R22
+R2
+R3
+R4
+Z46 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd
+Z47 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd
 l0
 L10
 Vmn0`C5PanB[>kTaXA]<GL0
@@ -191,47 +231,47 @@ Vmn0`C5PanB[>kTaXA]<GL0
 R7
 31
 !i10b 1
-Z41 !s108 1464799480.460000
-Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd|
-Z43 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd|
+Z48 !s108 1464833529.882000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd|
+Z50 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd|
 R11
 R12
 Astr
 R13
-R31
-R24
+R32
+R25
 R15
-R21
+R22
 R2
 R3
 DEx4 work 26 top_level_application_test 0 22 mn0`C5PanB[>kTaXA]<GL0
-l35
+l39
 L21
-VlzOnk8_Ek`Q:lmBcKfdQS1
-!s100 D@E@Mg[62;PzO]k35JLQa3
+VBcUW?[BA=3b[zIe@3@AzC2
+!s100 3HFEXi]Pb@jRKnn=7X8dU1
 R7
 31
 !i10b 1
-R41
-R42
-R43
+R48
+R49
+R50
 R11
 R12
 Evjtag
-Z44 w1464799397
+Z51 w1464833422
 R2
 R3
 R4
-Z45 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd
-Z46 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd
+Z52 8C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd
+Z53 FC:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd
 l0
 L42
 Vzh4Vz6C1Zl88gdca]3>HP0
 R7
 31
-Z47 !s108 1464799479.157000
-Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd|
-Z49 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd|
+Z54 !s108 1464833528.359000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd|
+Z56 !s107 C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd|
 R11
 R12
 !s100 Gee_>z180:fXaoMBPz4dm0
@@ -239,16 +279,16 @@ R12
 Asyn
 R2
 R3
-R23
+R24
 l105
 L62
-VY:=c?0lX@0QAOMNda_GaE1
+VVmP>N]ENSDC@W4?9WKiLm3
 R7
 31
-R47
-R48
-R49
+R54
+R55
+R56
 R11
 R12
-!s100 bIL0OSH@LmY<Zg5hPTPCS1
+!s100 B21AP69C0B>PT2NHYZ3@b3
 !i10b 1

@@ -49,6 +49,15 @@
 # -- Loading package mem_pkg
 # -- Compiling entity memory_map
 # -- Compiling architecture BHV of memory_map
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity tdo_shifter
+# -- Compiling architecture FSMD2 of tdo_shifter
 # vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -60,6 +69,7 @@
 # -- Loading entity vJTAG
 # -- Loading package NUMERIC_STD
 # -- Loading entity tdi_shifter
+# -- Loading entity tdo_shifter
 # vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -73,13 +83,14 @@
 # -- Loading entity memory_map
 # -- Loading entity decoder7seg
 # 
-vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jtag_wrapper
-# vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jtag_wrapper 
+vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.top_level_application_test
+# vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.top_level_application_test 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.mem_pkg
 # Loading ieee.numeric_std(body)
+# Loading work.mem_pkg
+# Loading work.top_level_application_test(str)
 # Loading work.jtag_wrapper(bhvr)
 # Loading work.vjtag(syn)
 # Loading ieee.std_logic_arith(body)
@@ -90,6 +101,9 @@ vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jta
 # Loading altera_mf.jtag_tap_controller(fsm)
 # Loading altera_mf.dummy_hub(behavior)
 # Loading work.tdi_shifter(fsmd2)
+# Loading work.tdo_shifter(fsmd2)
+# Loading work.memory_map(bhv)
+# Loading work.decoder7seg(case_statment)
 # do vJTAG_ALU_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -136,6 +150,15 @@ vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jta
 # -- Loading package mem_pkg
 # -- Compiling entity memory_map
 # -- Compiling architecture BHV of memory_map
+# vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mem_pkg
+# -- Compiling entity tdo_shifter
+# -- Compiling architecture FSMD2 of tdo_shifter
 # vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -147,6 +170,7 @@ vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jta
 # -- Loading entity vJTAG
 # -- Loading package NUMERIC_STD
 # -- Loading entity tdi_shifter
+# -- Loading entity tdo_shifter
 # vcom -93 -work work {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -160,18 +184,30 @@ vsim +altera -do vJTAG_ALU_run_msim_rtl_vhdl.do -l msim_transcript -gui work.jta
 # -- Loading entity memory_map
 # -- Loading entity decoder7seg
 # 
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/clk
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/rst
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/tdi
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/v_sdr
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/ir_in
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/udr
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/output_data
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/output_address
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/w_r_en
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/state
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/temp_RW
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/temp_addr
-add wave -position end  sim:/jtag_wrapper/U_TDI_SHIFTER/temp_data
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/clk
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/rst
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/tdi
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/v_sdr
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/ir_in
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/udr
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/output_data
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/output_address
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/w_r_en
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/done
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/state
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDI_SHIFTER/temp_RW
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/clk
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/rst
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/v_sdr
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/valid
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/data
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/output
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/state
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/next_state
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/temp_reg
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/next_temp
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/valid_reg
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/next_valid
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/data_reg
+add wave -position end  sim:/top_level_application_test/U_jtag_wrapper/U_TDO_SHIFTER/next_data
 run -all
-# Break key hit 

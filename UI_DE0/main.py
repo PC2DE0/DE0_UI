@@ -273,6 +273,7 @@ class App(Frame):
                 zero_tt = self.toBin(int(0), 22)
                 addr = self.toBin(int(self.regNames[array_location].get()), 9)
                 self.writeOut(zero_tt+addr+zero)
+                self.writeOut(zero_tt+addr+zero)
                 self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
         #self.writeOut(int('0xFF',16))
         #self.writeOut(int(0))

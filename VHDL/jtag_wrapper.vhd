@@ -38,12 +38,11 @@ architecture bhvr of jtag_wrapper is
 
 begin
 
-  w_r_en <= wr_en;
+	w_r_en <= wr_en;
 
-  data_register <= "0000000000" & d_reg_inter;
-  address_register <= "00000000000000000000000" & addr_reg_inter;
-  done <= done_iter;
-  valid <= (not wr_en) and done_iter;
+	data_register <= "0000000000" & d_reg_inter;
+	address_register <= "00000000000000000000000" & addr_reg_inter;
+	done <= done_iter;
 	--vJTAG Megafunction call
 	U_vJTAG : entity work.vJTAG
 		port map(
@@ -72,14 +71,12 @@ begin
     );
 
 	U_TDO_SHIFTER : entity work.tdo_shifter
-		generic map (
-			DATA_WIDTH 			=> DATA_WIDTH)
 		port map (
 			clk 				=> tck,
 			rst 				=> rst,
 			v_sdr 				=> sdr,
-			valid 				=> valid,
 			data 				=> design_output,
+			ir_in => ir_in(0),
 			output 				=> tdo
 		);
 

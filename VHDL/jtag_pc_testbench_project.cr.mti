@@ -6,19 +6,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity vJTAG
 -- Compiling architecture SYN of vjtag
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package mem_pkg
--- Compiling entity top_level_application_test
--- Compiling architecture str of top_level_application_test
--- Loading entity jtag_wrapper
--- Loading entity application_test
--- Loading entity decoder7seg
-
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -27,16 +14,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity decoder7seg
 -- Compiling architecture case_statment of decoder7seg
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/seriel_to_parallel_reg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/seriel_to_parallel_reg.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package mem_pkg
--- Compiling entity seriel_to_parallel_reg
--- Compiling architecture SEQ_LOG of seriel_to_parallel_reg
-
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -44,25 +21,25 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_1164
 -- Compiling package mem_pkg
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/d_logic.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/d_logic.vhd}
+} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package mem_pkg
--- Compiling entity d_logic
--- Compiling architecture SEQ_LOGIC of d_logic
+-- Compiling entity tdi_shifter
+-- Compiling architecture FSMD2 of tdi_shifter
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd}
+} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package mem_pkg
--- Compiling entity tdo_shifter
--- Compiling architecture FSMD2 of tdo_shifter
+-- Compiling entity memory_map
+-- Compiling architecture BHV of memory_map
 
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/application_test.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/application_test.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -72,84 +49,5 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity application_test
 -- Compiling architecture bhvr of application_test
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/address_wrapper.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/address_wrapper.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package mem_pkg
--- Compiling entity address_wrapper
--- Compiling architecture STR of address_wrapper
--- Loading entity reg_gen
--- Loading package NUMERIC_STD
--- Loading entity sdr_count
--- Loading entity d_logic
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package mem_pkg
--- Compiling entity jtag_wrapper
--- Compiling architecture bhvr of jtag_wrapper
--- Loading entity vJTAG
--- Loading package NUMERIC_STD
--- Loading entity seriel_to_parallel_reg
--- Loading entity tdo_shifter
--- Loading entity address_wrapper
--- Loading entity reg_gen
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/serial_to_serial_reg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/serial_to_serial_reg.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity serial_to_serial_reg
--- Compiling architecture bhvr of serial_to_serial_reg
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/reg_gen.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/reg_gen.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package mem_pkg
--- Compiling entity reg_gen
--- Compiling architecture SEQ_LOGIC of reg_gen
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/sdr_count.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/sdr_count.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package mem_pkg
--- Compiling entity sdr_count
--- Compiling architecture count of sdr_count
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/alu_ns.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/alu_ns.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity alu_ns
--- Compiling architecture numeric of alu_ns
-
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_tb.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_tb.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package mem_pkg
--- Compiling entity jtag_tb
--- Compiling architecture TB of jtag_tb
--- Loading entity vJTAG
--- Loading entity seriel_to_parallel_reg
--- Loading entity tdo_shifter
--- Loading entity address_wrapper
--- Loading entity reg_gen
 
 } {} {}}
