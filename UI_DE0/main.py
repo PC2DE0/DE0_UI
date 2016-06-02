@@ -7,6 +7,7 @@ else:
     import socketserver
     import os
 
+import datetime
 import logging
 from threading import Thread
 from errorHand import *
@@ -133,7 +134,7 @@ class App(Frame):
 ## based on address decoding. It will only appear after the setup button is hit,
 ## where it takes in the number of registers defined by the user.
     def inputFrame(self, master):
-        self.regLabel = Label(master, text="Register Address (Decimal)", compound=CENTER)
+        self.regLabel = Label(master, text="Address (Decimal)", compound=CENTER)
         self.regLabel.grid(row=0, column=1)
 
         self.valueLabel = Label(master, text="Value (Decimal)", compound=CENTER)
@@ -203,6 +204,7 @@ class App(Frame):
             time.sleep(2) #delays for 2 seconds
 
             self.start_count = 1                                                #This is a flag that when set lets other functions know that there is a connection to the board
+            self.writeToText(datetime.datetime.now().time().isoformat()+"\tConnected to DE0 Board")
             '''for i in range(0, 100):
                 self.writeOut(int(1))
                 self.writeOut(int(10))
@@ -214,7 +216,7 @@ class App(Frame):
         elif (self.start_count == 1):
             #os.system('kill jtagserver')
             #os.system('kill quartus_stp')
-            self.writeToText("Disconnected")
+            self.writeToText(datetime.datetime.now().time().isoformat()+"\tDisconnected from DE0 Board")
             self.start_count = 0
             self.tcl.kill()
             self.conn.close()
@@ -251,7 +253,7 @@ class App(Frame):
             if(checkVal(self.regValues[array_location].get()) == 1):
                 pass
             else:
-                self.writeToText("Send data: \n Register : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
+                self.writeToText("Send data: \n Address : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
                 wr = self.toBin(int(1), 1)
                 addr = self.toBin(int(self.regNames[array_location].get()), 9)
                 data = self.toBin(int(self.regValues[array_location].get()), 22)
@@ -266,15 +268,12 @@ class App(Frame):
             button = Button(noConn, text="close", command=noConn.destroy)
             button.pack()
         else:
-            if(checkVal(self.regValues[array_location].get()) == 1):
-                pass
-            else:
-                zero = self.toBin(int(0), 1)
-                zero_tt = self.toBin(int(0), 22)
-                addr = self.toBin(int(self.regNames[array_location].get()), 9)
-                self.writeOut(zero_tt+addr+zero)
-                self.writeOut(zero_tt+addr+zero)
-                self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
+            zero = self.toBin(int(0), 1)
+            zero_tt = self.toBin(int(0), 22)
+            addr = self.toBin(int(self.regNames[array_location].get()), 9)
+            self.writeOut(zero_tt+addr+zero)
+            self.writeOut(zero_tt+addr+zero)
+            self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
         #self.writeOut(int('0xFF',16))
         #self.writeOut(int(0))
         #self.writeToText("Receive data: \n Register : %s \n Value : %s \n" % ())

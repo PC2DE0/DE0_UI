@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vJTAG_ALU
-Thu Jun 02 12:53:30 2016
+Thu Jun 02 17:25:11 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,16 +16,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Analysis & Synthesis IP Cores Summary
   9. State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state
  10. State Machine - |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|state
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component
- 16. Port Connectivity Checks: "memory_map:U_MEMORY_MAP"
- 17. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
- 18. Virtual JTAG Settings
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component
+ 17. Port Connectivity Checks: "memory_map:U_MEMORY_MAP"
+ 18. Port Connectivity Checks: "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
+ 19. Virtual JTAG Settings
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -51,15 +52,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 02 12:53:30 2016           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 17:25:11 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 285                                             ;
-;     Total combinational functions  ; 174                                             ;
-;     Dedicated logic registers      ; 173                                             ;
-; Total registers                    ; 173                                             ;
+; Total logic elements               ; 258                                             ;
+;     Total combinational functions  ; 160                                             ;
+;     Dedicated logic registers      ; 159                                             ;
+; Total registers                    ; 159                                             ;
 ; Total pins                         ; 29                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -192,28 +193,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 285                      ;
+; Estimated Total logic elements              ; 258                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 174                      ;
+; Total combinational functions               ; 160                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 104                      ;
-;     -- 3 input functions                    ; 32                       ;
-;     -- <=2 input functions                  ; 38                       ;
+;     -- 4 input functions                    ; 84                       ;
+;     -- 3 input functions                    ; 36                       ;
+;     -- <=2 input functions                  ; 40                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 166                      ;
+;     -- normal mode                          ; 152                      ;
 ;     -- arithmetic mode                      ; 8                        ;
 ;                                             ;                          ;
-; Total registers                             ; 173                      ;
-;     -- Dedicated logic registers            ; 173                      ;
+; Total registers                             ; 159                      ;
+;     -- Dedicated logic registers            ; 159                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 29                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 194                      ;
-; Total fan-out                               ; 1270                     ;
-; Average fan-out                             ; 3.07                     ;
+; Maximum fan-out                             ; 180                      ;
+; Total fan-out                               ; 1151                     ;
+; Average fan-out                             ; 2.98                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -222,19 +223,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 174 (1)           ; 173 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 160 (1)           ; 159 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_b                                                                                                                   ; work         ;
-;    |jtag_wrapper:U_jtag_wrapper|                                 ; 35 (0)            ; 95 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
-;       |tdi_shifter:U_TDI_SHIFTER|                                ; 1 (1)             ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER                                                                                    ; work         ;
-;       |tdo_shifter:U_TDO_SHIFTER|                                ; 32 (32)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER                                                                                    ; work         ;
+;    |jtag_wrapper:U_jtag_wrapper|                                 ; 17 (0)            ; 81 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
+;       |tdi_shifter:U_TDI_SHIFTER|                                ; 1 (1)             ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER                                                                                    ; work         ;
+;       |tdo_shifter:U_TDO_SHIFTER|                                ; 14 (14)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER                                                                                    ; work         ;
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
 ;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
 ;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
-;    |sld_hub:auto_hub|                                            ; 110 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 109 (74)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;    |sld_hub:auto_hub|                                            ; 114 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 113 (78)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                               ; 18 (18)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -306,6 +307,17 @@ Encoding Type:  One-Hot
 +----------------------+-------------+-----------------+------------------+---------------------+----------------------+------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                            ;
++--------------------------------------------------------------------+------------------------------------------------------------------+------------------------+
+; Latch Name                                                         ; Latch Enable Signal                                              ; Free of Timing Hazards ;
++--------------------------------------------------------------------+------------------------------------------------------------------+------------------------+
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|temp_reg[31] ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector32 ; yes                    ;
+; Number of user-specified and inferred latches = 1                  ;                                                                  ;                        ;
++--------------------------------------------------------------------+------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                                                        ;
 +----------------------------------------------------------------------------+------------------------------------------------------------------------------+
@@ -326,12 +338,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 173   ;
+; Total registers                              ; 159   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 11    ;
-; Number of registers using Asynchronous Clear ; 120   ;
+; Number of registers using Asynchronous Clear ; 107   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 144   ;
+; Number of registers using Clock Enable       ; 130   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -353,14 +365,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[4]                               ;
-; 6:1                ; 22 bits   ; 88 LEs        ; 22 LEs               ; 66 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[2]                                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector1                                       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[8]                               ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[1]                                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector0                                       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1] ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
@@ -435,7 +447,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 02 12:53:25 2016
+    Info: Processing started: Thu Jun 02 17:25:07 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vJTAG_ALU -c vJTAG_ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file ../VHDL/reg.vhd is missing
@@ -486,6 +498,40 @@ Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "jtag_wra
 Info (12131): Elaborated megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
 Info (12128): Elaborating entity "tdi_shifter" for hierarchy "jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER"
 Info (12128): Elaborating entity "tdo_shifter" for hierarchy "jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER"
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(333): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(347): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(354): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(361): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(369): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(376): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(383): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(391): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(399): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(408): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(417): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(426): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(435): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(444): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(453): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(462): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(471): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(480): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(489): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(498): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(507): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(516): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(525): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(534): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(543): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(552): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(561): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(570): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(579): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(588): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(597): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tdo_shifter.vhd(605): signal "temp_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at tdo_shifter.vhd(329): inferring latch(es) for signal or variable "temp_reg", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp_reg[31]" at tdo_shifter.vhd(329)
 Info (12128): Elaborating entity "memory_map" for hierarchy "memory_map:U_MEMORY_MAP"
 Warning (10631): VHDL Process Statement warning at memory_map.vhd(49): inferring latch(es) for signal or variable "reg_n", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at memory_map.vhd(49): inferring latch(es) for signal or variable "rd_data", which holds its previous value in one or more paths through the process
@@ -554,6 +600,8 @@ Info (10041): Inferred latch for "reg_n[29]" at memory_map.vhd(49)
 Info (10041): Inferred latch for "reg_n[30]" at memory_map.vhd(49)
 Info (10041): Inferred latch for "reg_n[31]" at memory_map.vhd(49)
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED_HI_a"
+Warning (13012): Latch jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|temp_reg[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.START
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -562,13 +610,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 322 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 295 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 288 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info (21061): Implemented 261 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
     Info: Peak virtual memory: 517 megabytes
-    Info: Processing ended: Thu Jun 02 12:53:30 2016
+    Info: Processing ended: Thu Jun 02 17:25:12 2016
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
