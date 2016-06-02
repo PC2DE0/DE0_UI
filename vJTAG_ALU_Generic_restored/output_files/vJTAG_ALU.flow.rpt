@@ -1,5 +1,5 @@
 Flow report for vJTAG_ALU
-Thu Jun 02 17:25:29 2016
+Thu Jun 02 17:48:31 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 02 17:25:29 2016           ;
+; Flow Status                        ; Successful - Thu Jun 02 17:48:31 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 239 / 15,408 ( 2 % )                            ;
-;     Total combinational functions  ; 160 / 15,408 ( 1 % )                            ;
-;     Dedicated logic registers      ; 159 / 15,408 ( 1 % )                            ;
-; Total registers                    ; 159                                             ;
+; Total logic elements               ; 232 / 15,408 ( 2 % )                            ;
+;     Total combinational functions  ; 165 / 15,408 ( 1 % )                            ;
+;     Dedicated logic registers      ; 160 / 15,408 ( 1 % )                            ;
+; Total registers                    ; 160                                             ;
 ; Total pins                         ; 29 / 347 ( 8 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/02/2016 17:25:07 ;
+; Start date & time ; 06/02/2016 17:48:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vJTAG_ALU           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+----------------------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name                ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+----------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 202818013877818.146490270719136       ; --            ; --                         ; --             ;
+; COMPILER_SIGNATURE_ID               ; 202818013877818.146490408822452       ; --            ; --                         ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --                         ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --                         ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                         ; --             ;
@@ -100,8 +100,8 @@ applicable agreement for further details.
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 517 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 783 MB              ; 00:00:08                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 429 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 778 MB              ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 433 MB              ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 477 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 402 MB              ; 00:00:01                           ;
 ; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:16                           ;

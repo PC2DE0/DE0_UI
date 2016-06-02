@@ -44,8 +44,8 @@ begin
 		port map(
 			clk => jtag_clock,
 			rst => rst,
-			design_output => address_register,
-			--design_output => design_output,
+			--design_output => address_register,
+			design_output => design_output,
 			data_register => data_register,
 			address_register => address_register,
 			w_r_en => wr_en,
