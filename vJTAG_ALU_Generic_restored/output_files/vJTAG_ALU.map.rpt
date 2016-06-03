@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vJTAG_ALU
-Thu Jun 02 17:48:13 2016
+Fri Jun 03 18:10:54 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -51,13 +51,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 02 17:48:13 2016           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 03 18:10:54 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 263                                             ;
-;     Total combinational functions  ; 165                                             ;
+; Total logic elements               ; 265                                             ;
+;     Total combinational functions  ; 167                                             ;
 ;     Dedicated logic registers      ; 160                                             ;
 ; Total registers                    ; 160                                             ;
 ; Total pins                         ; 29                                              ;
@@ -192,16 +192,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 263                      ;
+; Estimated Total logic elements              ; 265                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 165                      ;
+; Total combinational functions               ; 167                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
 ;     -- 4 input functions                    ; 95                       ;
-;     -- 3 input functions                    ; 31                       ;
-;     -- <=2 input functions                  ; 39                       ;
+;     -- 3 input functions                    ; 32                       ;
+;     -- <=2 input functions                  ; 40                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 157                      ;
+;     -- normal mode                          ; 159                      ;
 ;     -- arithmetic mode                      ; 8                        ;
 ;                                             ;                          ;
 ; Total registers                             ; 160                      ;
@@ -212,7 +212,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 181                      ;
-; Total fan-out                               ; 1181                     ;
+; Total fan-out                               ; 1186                     ;
 ; Average fan-out                             ; 3.01                     ;
 +---------------------------------------------+--------------------------+
 
@@ -222,7 +222,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 165 (1)           ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 167 (1)           ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
@@ -233,9 +233,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
 ;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
 ;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
-;    |sld_hub:auto_hub|                                            ; 109 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 108 (73)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
-;          |sld_rom_sr:hub_info_reg|                               ; 18 (18)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
+;    |sld_hub:auto_hub|                                            ; 111 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 110 (74)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;          |sld_rom_sr:hub_info_reg|                               ; 19 (19)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -348,21 +348,15 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[8]                               ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]                                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector0                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[8] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector0         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -419,14 +413,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------+------------------+----------+---------+-----------------+-------------------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; sld_hub:auto_hub ; 00:00:00     ;
-; Top              ; 00:00:01     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -435,7 +428,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 02 17:48:08 2016
+    Info: Processing started: Fri Jun 03 18:10:47 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vJTAG_ALU -c vJTAG_ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file ../VHDL/reg.vhd is missing
@@ -556,21 +549,16 @@ Info (10041): Inferred latch for "reg_n[30]" at memory_map.vhd(49)
 Info (10041): Inferred latch for "reg_n[31]" at memory_map.vhd(49)
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED_HI_a"
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 267 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info (21061): Implemented 269 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 517 megabytes
-    Info: Processing ended: Thu Jun 02 17:48:14 2016
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Fri Jun 03 18:10:54 2016
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:04
 
 

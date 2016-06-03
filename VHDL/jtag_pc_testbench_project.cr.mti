@@ -1,4 +1,4 @@
-{C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd}
+{C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/top_level_application_test.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\j_salkey\Documents\GitHub\DE0 UI\VHDL\top_level_application_test.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -11,13 +11,13 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading entity memory_map
 -- Loading entity decoder7seg
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd}
+} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity vJTAG
--- Compiling architecture SYN of vjtag
+-- Compiling entity decoder7seg
+-- Compiling architecture case_statment of decoder7seg
 
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/mem_pkg.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -26,13 +26,13 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_1164
 -- Compiling package mem_pkg
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/decoder7seg.vhd}
+} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/vJTAG.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity decoder7seg
--- Compiling architecture case_statment of decoder7seg
+-- Compiling entity vJTAG
+-- Compiling architecture SYN of vjtag
 
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdi_shifter.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -43,6 +43,16 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package mem_pkg
 -- Compiling entity tdi_shifter
 -- Compiling architecture FSMD2 of tdi_shifter
+
+} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package mem_pkg
+-- Compiling entity memory_map
+-- Compiling architecture BHV of memory_map
 
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/jtag_wrapper.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -57,15 +67,15 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading entity tdi_shifter
 -- Loading entity tdo_shifter
 
-} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/memory_map.vhd}
+} {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/tdo_shifter.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package mem_pkg
--- Compiling entity memory_map
--- Compiling architecture BHV of memory_map
+-- Compiling entity tdo_shifter
+-- Compiling architecture FSMD2 of tdo_shifter
 
 } {} {}} {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/application_test.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/j_salkey/Documents/GitHub/DE0 UI/VHDL/application_test.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012

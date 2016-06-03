@@ -1,5 +1,5 @@
 Fitter report for vJTAG_ALU
-Thu Jun 02 17:48:22 2016
+Fri Jun 03 18:11:06 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -67,15 +67,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jun 02 17:48:22 2016           ;
+; Fitter Status                      ; Successful - Fri Jun 03 18:11:06 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 232 / 15,408 ( 2 % )                            ;
-;     Total combinational functions  ; 165 / 15,408 ( 1 % )                            ;
+; Total logic elements               ; 234 / 15,408 ( 2 % )                            ;
+;     Total combinational functions  ; 167 / 15,408 ( 1 % )                            ;
 ;     Dedicated logic registers      ; 160 / 15,408 ( 1 % )                            ;
 ; Total registers                    ; 160                                             ;
 ; Total pins                         ; 29 / 347 ( 8 % )                                ;
@@ -220,8 +220,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 404 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 404 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 406 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 406 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -246,7 +246,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Top                            ; 207     ; 0                 ; N/A                     ; Source File       ;
-; sld_hub:auto_hub               ; 187     ; 0                 ; N/A                     ; Post-Synthesis    ;
+; sld_hub:auto_hub               ; 189     ; 0                 ; N/A                     ; Post-Synthesis    ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -262,26 +262,26 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 232 / 15,408 ( 2 % )   ;
-;     -- Combinational with no register       ; 72                     ;
+; Total logic elements                        ; 234 / 15,408 ( 2 % )   ;
+;     -- Combinational with no register       ; 74                     ;
 ;     -- Register only                        ; 67                     ;
 ;     -- Combinational with a register        ; 93                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 95                     ;
-;     -- 3 input functions                    ; 31                     ;
-;     -- <=2 input functions                  ; 39                     ;
+;     -- 3 input functions                    ; 32                     ;
+;     -- <=2 input functions                  ; 40                     ;
 ;     -- Register only                        ; 67                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 157                    ;
+;     -- normal mode                          ; 159                    ;
 ;     -- arithmetic mode                      ; 8                      ;
 ;                                             ;                        ;
 ; Total registers*                            ; 160 / 17,068 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 160 / 15,408 ( 1 % )   ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 22 / 963 ( 2 % )       ;
+; Total LABs:  partially or completely used   ; 21 / 963 ( 2 % )       ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 29 / 347 ( 8 % )       ;
 ;     -- Clock pins                           ; 0 / 8 ( 0 % )          ;
@@ -299,11 +299,11 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%           ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 2%           ;
 ; Maximum fan-out                             ; 160                    ;
 ; Highest non-global fan-out                  ; 82                     ;
-; Total fan-out                               ; 1246                   ;
-; Average fan-out                             ; 2.76                   ;
+; Total fan-out                               ; 1253                   ;
+; Average fan-out                             ; 2.75                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -316,25 +316,25 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +---------------------------------------------+-----------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                   ; Low                            ;
 ;                                             ;                       ;                       ;                                ;
-; Total logic elements                        ; 105 / 15408 ( < 1 % ) ; 127 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 23                    ; 49                    ; 0                              ;
+; Total logic elements                        ; 105 / 15408 ( < 1 % ) ; 129 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 23                    ; 51                    ; 0                              ;
 ;     -- Register only                        ; 49                    ; 18                    ; 0                              ;
 ;     -- Combinational with a register        ; 33                    ; 60                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                       ;                                ;
 ;     -- 4 input functions                    ; 50                    ; 45                    ; 0                              ;
-;     -- 3 input functions                    ; 4                     ; 27                    ; 0                              ;
-;     -- <=2 input functions                  ; 2                     ; 37                    ; 0                              ;
+;     -- 3 input functions                    ; 4                     ; 28                    ; 0                              ;
+;     -- <=2 input functions                  ; 2                     ; 38                    ; 0                              ;
 ;     -- Register only                        ; 49                    ; 18                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                       ;                                ;
-;     -- normal mode                          ; 56                    ; 101                   ; 0                              ;
+;     -- normal mode                          ; 56                    ; 103                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                     ; 8                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Total registers                             ; 82                    ; 78                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 82 / 15408 ( < 1 % )  ; 78 / 15408 ( < 1 % )  ; 0 / 15408 ( 0 % )              ;
 ;                                             ;                       ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 9 / 963 ( < 1 % )     ; 14 / 963 ( 1 % )      ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 9 / 963 ( < 1 % )     ; 12 / 963 ( 1 % )      ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                     ; 0                              ;
 ; I/O pins                                    ; 29                    ; 0                     ; 0                              ;
@@ -351,8 +351,8 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 ;     -- Registered Output Connections        ; 0                     ; 19                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Internal Connections                        ;                       ;                       ;                                ;
-;     -- Total Connections                    ; 757                   ; 620                   ; 5                              ;
-;     -- Registered Connections               ; 248                   ; 407                   ; 0                              ;
+;     -- Total Connections                    ; 756                   ; 628                   ; 5                              ;
+;     -- Registered Connections               ; 248                   ; 410                   ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; External Connections                        ;                       ;                       ;                                ;
 ;     -- Top                                  ; 166                   ; 135                   ; 0                              ;
@@ -977,7 +977,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 232 (1)     ; 160 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; 72 (1)       ; 67 (0)            ; 93 (0)           ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 234 (1)     ; 160 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; 74 (1)       ; 67 (0)            ; 93 (0)           ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
@@ -988,9 +988,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
 ;          |sld_virtual_jtag:sld_virtual_jtag_component|           ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component                                                    ; work         ;
 ;             |sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst ; work         ;
-;    |sld_hub:auto_hub|                                            ; 127 (1)     ; 78 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 49 (1)       ; 18 (0)            ; 60 (0)           ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 126 (88)    ; 78 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 48 (38)      ; 18 (18)           ; 60 (35)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
-;          |sld_rom_sr:hub_info_reg|                               ; 18 (18)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 9 (9)            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
+;    |sld_hub:auto_hub|                                            ; 129 (1)     ; 78 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 51 (1)       ; 18 (0)            ; 60 (0)           ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 128 (89)    ; 78 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 50 (39)      ; 18 (18)           ; 60 (35)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;          |sld_rom_sr:hub_info_reg|                               ; 19 (19)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 9 (9)            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 20 (20)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 19 (19)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1129,32 +1129,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                                                         ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 160     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 160     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 23      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]~0                                                                                       ; LCCOMB_X24_Y21_N4  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|process_1~0                                                                                            ; LCCOMB_X23_Y21_N14 ; 35      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr~0 ; LCCOMB_X23_Y20_N2  ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; LCCOMB_X23_Y21_N12 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]~0                                                                                       ; LCCOMB_X29_Y25_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|process_1~0                                                                                            ; LCCOMB_X29_Y21_N22 ; 35      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr~0 ; LCCOMB_X29_Y21_N24 ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; LCCOMB_X29_Y21_N12 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; rst                                                                                                                                                          ; PIN_D2             ; 82      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; FF_X22_Y17_N31     ; 13      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; LCCOMB_X22_Y17_N0  ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; LCCOMB_X22_Y17_N10 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; LCCOMB_X21_Y17_N30 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; LCCOMB_X22_Y16_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; LCCOMB_X22_Y16_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; LCCOMB_X23_Y17_N28 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~4                                                                                  ; LCCOMB_X21_Y17_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~18                                                                           ; LCCOMB_X22_Y17_N4  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~19                                                                           ; LCCOMB_X20_Y16_N20 ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~13                                                          ; LCCOMB_X21_Y17_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~22                                                     ; LCCOMB_X21_Y18_N6  ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~23                                                     ; LCCOMB_X21_Y17_N22 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; FF_X23_Y16_N5      ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; FF_X22_Y17_N3      ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; FF_X22_Y17_N27     ; 18      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; FF_X21_Y17_N1      ; 12      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0                                                                      ; LCCOMB_X22_Y17_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; FF_X22_Y20_N9      ; 19      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; FF_X27_Y20_N11     ; 13      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; LCCOMB_X26_Y19_N28 ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; LCCOMB_X27_Y19_N20 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; LCCOMB_X27_Y19_N26 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; LCCOMB_X29_Y19_N20 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; LCCOMB_X29_Y19_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; LCCOMB_X28_Y20_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~4                                                                                  ; LCCOMB_X28_Y20_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10                                                                           ; LCCOMB_X27_Y19_N4  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11                                                                           ; LCCOMB_X27_Y19_N22 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~1                                                           ; LCCOMB_X27_Y19_N18 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~10                                                     ; LCCOMB_X28_Y19_N2  ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~11                                                     ; LCCOMB_X27_Y19_N6  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; FF_X27_Y20_N5      ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; FF_X27_Y20_N7      ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; FF_X28_Y20_N21     ; 16      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; FF_X27_Y20_N29     ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0                                                                      ; LCCOMB_X27_Y20_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; FF_X26_Y20_N17     ; 22      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1163,7 +1163,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                         ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; altera_internal_jtag~TCKUTAP ; JTAG_X1_Y15_N0 ; 160     ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; altera_internal_jtag~TCKUTAP ; JTAG_X1_Y15_N0 ; 160     ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
 +------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1176,22 +1176,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|process_1~0                                                                                            ; 35      ;
 ; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr~0 ; 31      ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                 ; 23      ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; 22      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]                                                             ; 22      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; 19      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; 18      ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; 16      ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; 15      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; 15      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; 13      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]                                                                                    ; 13      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; 12      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; 12      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                              ; 9       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]                                                                              ; 9       ;
 ; altera_internal_jtag~TDIUTAP                                                                                                                                 ; 9       ;
 ; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; 9       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]                                                                                    ; 8       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]                                                                              ; 8       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]                                                                              ; 8       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                              ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]                                                                              ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                              ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]~0                                                                                       ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[3]                                                                                      ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[2]                                                                                      ; 8       ;
@@ -1201,7 +1201,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[6]                                                                                      ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[5]                                                                                      ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[4]                                                                                      ; 8       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg                                                                            ; 7       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[1]                                                                                    ; 7       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                    ; 7       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0                                                                               ; 7       ;
@@ -1213,22 +1212,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[6]                                                                                         ; 7       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[5]                                                                                         ; 7       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[4]                                                                                         ; 7       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; 6       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]                                                        ; 6       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~23                                                     ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~22                                                     ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~19                                                                           ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~18                                                                           ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~11                                                     ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~10                                                     ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~11                                                                           ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10                                                                           ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg                                                                            ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                        ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                    ; 5       ;
 ; ~GND                                                                                                                                                         ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~13                                                          ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; 4       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|clear_signal                                                           ; 4       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; 4       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~1                                                           ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; 4       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~19                                                                          ; 4       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~8                                                                           ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]                                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0                                                                           ; 4       ;
@@ -1261,6 +1260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[1]                                                                  ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0                                                                ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~3                                                                                  ; 2       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~5                                                                              ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]                                                                                 ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|Equal0~1                                                                                       ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]                                                                                 ; 2       ;
@@ -1331,56 +1331,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]~1                                                                               ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]~0                                                                               ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~27                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~26                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~25                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~24                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~23                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~22                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~14                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~21                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~12                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~11                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~3                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[3]                                                                 ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~15                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~6                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~5                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~14                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~11                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~4                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~10                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~9                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~8                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~3                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[3]                                                                 ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~9                                                      ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~7                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~6                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~5                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~4                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[3]                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~2                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[3]                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[2]                                                                 ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~2                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~1                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~7                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~3                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~2                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2]                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~1                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[2]                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]~4                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]~3                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|Equal3~0                                                                                       ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~20                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[1]                                                                 ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~17                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~9                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~0                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~3                                                                              ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|Equal0~2                                                                                       ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~1                                                                              ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~0                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]~2                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~8                                                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~7                                                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~6                                                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~6                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~0                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~5                                                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~0                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~2                                                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~0                                                                               ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~18                                                                          ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~7                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~4                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]                                                                 ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~12                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~11                                                             ; 1       ;
@@ -1411,29 +1413,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo                                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4]~20                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[3]~19                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[3]~18                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4]~16                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[3]~15                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[3]~14                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~3                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]~17                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]~16                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~14                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~13                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~12                                                     ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~11                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]~13                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]~12                                                     ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~8                                                      ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~7                                                      ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~6                                                      ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]~5                                                      ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[2]~2                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[2]                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]~1                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~15                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~16                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~15                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~14                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~13                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~13                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~12                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~11                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~10                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~9                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~8                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~7                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~8                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~7                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~6                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~5                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]~1                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]~0                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                             ; 1       ;
@@ -1515,36 +1517,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
 ; Block interconnects         ; 217 / 47,787 ( < 1 % ) ;
-; C16 interconnects           ; 5 / 1,804 ( < 1 % )    ;
-; C4 interconnects            ; 107 / 31,272 ( < 1 % ) ;
+; C16 interconnects           ; 2 / 1,804 ( < 1 % )    ;
+; C4 interconnects            ; 102 / 31,272 ( < 1 % ) ;
 ; Direct links                ; 62 / 47,787 ( < 1 % )  ;
 ; Global clocks               ; 1 / 20 ( 5 % )         ;
-; Local interconnects         ; 164 / 15,408 ( 1 % )   ;
-; R24 interconnects           ; 8 / 1,775 ( < 1 % )    ;
-; R4 interconnects            ; 107 / 41,310 ( < 1 % ) ;
+; Local interconnects         ; 159 / 15,408 ( 1 % )   ;
+; R24 interconnects           ; 4 / 1,775 ( < 1 % )    ;
+; R4 interconnects            ; 97 / 41,310 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.55) ; Number of LABs  (Total = 22) ;
+; Number of Logic Elements  (Average = 11.14) ; Number of LABs  (Total = 21) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 2                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 2                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 2                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 2                            ;
-; 13                                          ; 2                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 3                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 2                            ;
+; 15                                          ; 3                            ;
 ; 16                                          ; 6                            ;
 +---------------------------------------------+------------------------------+
 
@@ -1552,12 +1554,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.27) ; Number of LABs  (Total = 22) ;
+; LAB-wide Signals  (Average = 2.24) ; Number of LABs  (Total = 21) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 12                           ;
-; 1 Clock                            ; 20                           ;
+; 1 Clock                            ; 19                           ;
 ; 1 Clock enable                     ; 5                            ;
-; 1 Sync. load                       ; 4                            ;
+; 1 Sync. clear                      ; 1                            ;
+; 1 Sync. load                       ; 1                            ;
 ; 2 Async. clears                    ; 1                            ;
 ; 2 Clock enables                    ; 8                            ;
 +------------------------------------+------------------------------+
@@ -1566,7 +1569,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.68) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced  (Average = 17.67) ; Number of LABs  (Total = 21) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 1                            ;
 ; 1                                            ; 1                            ;
@@ -1574,52 +1577,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 1                            ;
-; 6                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 1                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 1                            ;
+; 20                                           ; 2                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 2                            ;
 ; 24                                           ; 0                            ;
 ; 25                                           ; 2                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 2                            ;
+; 26                                           ; 2                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.86) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced Out  (Average = 5.14) ; Number of LABs  (Total = 21) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 1                            ;
 ; 1                                               ; 4                            ;
-; 2                                               ; 5                            ;
+; 2                                               ; 4                            ;
 ; 3                                               ; 1                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 2                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 1                            ;
 ; 9                                               ; 1                            ;
-; 10                                              ; 0                            ;
+; 10                                              ; 1                            ;
 ; 11                                              ; 1                            ;
 ; 12                                              ; 0                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 0                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 1                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
@@ -1628,24 +1635,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 7.50) ; Number of LABs  (Total = 22) ;
+; Number of Distinct Inputs  (Average = 7.48) ; Number of LABs  (Total = 21) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 1                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 2                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 3                            ;
 ; 5                                           ; 3                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 2                            ;
+; 8                                           ; 4                            ;
+; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 1                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 3                            ;
+; 15                                          ; 0                            ;
 ; 16                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
@@ -1849,7 +1856,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1858,9 +1865,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG_ALU_Generic_restored/output_files/vJTAG_ALU.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 778 megabytes
-    Info: Processing ended: Thu Jun 02 17:48:23 2016
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 774 megabytes
+    Info: Processing ended: Fri Jun 03 18:11:06 2016
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:08
 
 

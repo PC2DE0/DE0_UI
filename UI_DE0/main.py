@@ -1,9 +1,11 @@
 from sys import platform as _platform
 if _platform == "linux":
     from Tkinter import *
+    import ttk
     import SocketServer
 else:
     from tkinter import *
+    from tkinter.ttk import *
     import socketserver
     import os
 
@@ -65,16 +67,25 @@ class App(Frame):
         #########################################
 
         ###Right Frame###
-        self.rightFrame = LabelFrame(self.master, text="Console", padx=10)
-        self.rightFrame.pack(fill=Y)
+        self.tree = ttk.Treeview()
+        self.tree["columns"] = ("Address","Data")
+        self.tree["show"] = "headings"
+        self.tree.column("Address", width = 200)
+        self.tree.column("Data", width = 200)
+        self.tree.heading("Address", text = "Address")
+        self.tree.heading("Data", text = "Data")
+        #self.rightFrame = LabelFrame(self.master, text="Console", padx=10)
+        for x in range(511,-1,-1):
+            self.tree.insert("", 0, text="", values=(x,""))
+        self.tree.pack()
 
-        self.textscroll = Scrollbar(self.rightFrame)
-        self.text_console = Text(self.rightFrame, state='disabled', height=20, width=60)
-        self.textscroll.pack(side=RIGHT, fill=Y)
-        self.text_console.pack(side=LEFT)
-        self.textscroll.config(command=self.text_console.yview)
-        initTXT = open("Documents\Start.txt").read()
-        self.writeToText(initTXT)
+        self.textscroll = Scrollbar(self.tree)
+        #self.text_console = Text(self.rightFrame, state='disabled', height=20, width=60)
+        #self.textscroll.pack(side=RIGHT, fill=Y)
+        #self.text_console.pack(side=LEFT)
+        #self.textscroll.config(command=self.text_console.yview)
+        #initTXT = open("Documents\Start.txt").read()
+        #self.writeToText(initTXT)
         self.inputFrame(self.middleleftFrame)
 
         #self.configWin(self.master)
@@ -199,12 +210,12 @@ class App(Frame):
             self.conn.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.conn.bind((host, port))
             self.tcl = subprocess.Popen('start /B Start_Server.LNK', shell=True) #opens the TCL Server and the Quartus TCL
-            time.sleep(5) #delays for 5 seconds
+            time.sleep(1) #delays for 5 seconds
             self.conn = self.Probe_Port(host, port)
-            time.sleep(2) #delays for 2 seconds
+            time.sleep(1) #delays for 2 seconds
 
             self.start_count = 1                                                #This is a flag that when set lets other functions know that there is a connection to the board
-            self.writeToText(datetime.datetime.now().time().isoformat()+"\tConnected to DE0 Board")
+            #self.writeToText(datetime.datetime.now().time().isoformat()+"\tConnected to DE0 Board")
             '''for i in range(0, 100):
                 self.writeOut(int(1))
                 self.writeOut(int(10))
@@ -216,7 +227,7 @@ class App(Frame):
         elif (self.start_count == 1):
             #os.system('kill jtagserver')
             #os.system('kill quartus_stp')
-            self.writeToText(datetime.datetime.now().time().isoformat()+"\tDisconnected from DE0 Board")
+            #self.writeToText(datetime.datetime.now().time().isoformat()+"\tDisconnected from DE0 Board")
             self.start_count = 0
             self.tcl.kill()
             self.conn.close()
@@ -227,14 +238,15 @@ class App(Frame):
         try:
             self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         except socket.error as msg:
-            self.writeToText("Failed to create socket. Error code: ", msg[0], " , Error message : ", msg[1])
+            #self.writeToText("Failed to create socket. Error code: ", msg[0], " , Error message : ", msg[1])
             sys.exit();
         while True:
             try:
                 self.s.connect((host, port))
                 break
             except OSError as e:
-                self.writeToText("There was a problem connecting to device, retrying")
+                print("Problem with connecting to device, retrying\n")
+                #self.writeToText("There was a problem connecting to device, retrying")
         return self.s
 
 
@@ -253,7 +265,7 @@ class App(Frame):
             if(checkVal(self.regValues[array_location].get()) == 1):
                 pass
             else:
-                self.writeToText("Send data: \n Address : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
+                #self.writeToText("Send data: \n Address : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
                 wr = self.toBin(int(1), 1)
                 addr = self.toBin(int(self.regNames[array_location].get()), 9)
                 data = self.toBin(int(self.regValues[array_location].get()), 22)
@@ -273,17 +285,25 @@ class App(Frame):
             addr = self.toBin(int(self.regNames[array_location].get()), 9)
             self.writeOut(zero_tt+addr+zero)
             self.writeOut(zero_tt+addr+zero)
-            self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
-        #self.writeOut(int('0xFF',16))
-        #self.writeOut(int(0))
-        #self.writeToText("Receive data: \n Register : %s \n Value : %s \n" % ())
+            #self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
+            self.edit(int(self.regNames[array_location].get()), mode="read")
+
+    def edit(self, address, mode="write"):
+        #if(self.tree.get_children(address) == None):
+        self.x = self.tree.get_children()
+        for i in self.x:
+            if(self.tree.item(i)["values"][0] == address):
+                if(mode == "read"):
+                    print(self.data.decode('utf-8') + ": DATA")
+                    self.tree.item(i, text="", values=(address,self.data.decode('utf-8')))
+
 
     def writeOut(self, val):
         if (self.start_count == 1):
             # This will take an integer input and convert it to a binary string.
             # It will also cut off the 0b at the beginning of the string.
             self.conn.send(val.encode('utf-8') + b'\n')                         # Newline is required to flush the buffer on the Tcl server
-            self.data = self.conn.recv(4+2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.
+            self.data = self.conn.recv(32+2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.
             #return self.data
         else:
             pass
