@@ -86,7 +86,7 @@ proc return_data {send_data} {
 
 	device_virtual_ir_shift -instance_index 0 -ir_value 0 -no_captured_ir_value
 
-	return return
+	return $return
 }
 
 ##############################################################################################
@@ -151,7 +151,6 @@ proc IncomingData {sock} {
 
 		set recdata [return_data $line]
 		puts $sock $recdata
-
 	}
     }
 }

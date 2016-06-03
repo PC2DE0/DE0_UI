@@ -74,25 +74,15 @@ class App(Frame):
         self.tree.column("Data", width = 200)
         self.tree.heading("Address", text = "Address")
         self.tree.heading("Data", text = "Data")
-        #self.rightFrame = LabelFrame(self.master, text="Console", padx=10)
         for x in range(511,-1,-1):
             self.tree.insert("", 0, text="", values=(x,""))
         self.tree.pack()
 
         self.textscroll = Scrollbar(self.tree)
-        #self.text_console = Text(self.rightFrame, state='disabled', height=20, width=60)
-        #self.textscroll.pack(side=RIGHT, fill=Y)
-        #self.text_console.pack(side=LEFT)
-        #self.textscroll.config(command=self.text_console.yview)
-        #initTXT = open("Documents\Start.txt").read()
-        #self.writeToText(initTXT)
         self.inputFrame(self.middleleftFrame)
-
-        #self.configWin(self.master)
 
 #####Start Textbox write#############
     def writeToText(self, msg):
-        #numline = self.text_console.index('end -1 line').split('.')[0]
         self.text_console['state'] = 'normal'
         if self.text_console.index('end-1c') != '1.0':
             self.text_console.insert('end', '\n')
@@ -124,22 +114,8 @@ class App(Frame):
         self.middleleftFrame = LabelFrame(self.leftFrame, text="Input", pady=10)
         self.middleleftFrame.pack(fill=BOTH)
 
-#Popup window to setup the number of registers
     def configWin(self, master):
-        #make a popup window asking for the register values
-        #self.setupWindow = Toplevel(master)
-        #self.setupWindow.title("Set the number of registers")
-        ##Enter the number of registers##
-        #self.reglabel = Label(self.setupWindow, text="Number of Registers")
-        #self.reglabel.grid(row=2, column=0, sticky=E, columnspan=2)
-        #self.numregisterentry = Entry(self.setupWindow)
-        #self.numregisterentry.bind('<Key>', keyPress)
-        #self.numregisterentry.grid(row=2, column=2)
-
         self.setup_button = Button(self.setupWindow, text="Setup", command=lambda: (self.inputFrame(self.middleleftFrame), self.setupWindow.destroy()))
-        #self.Quit_button = Button(self.setupWindow, text="Quit", command=self.master.quit)
-        #self.setup_button.grid(row=4, column=0, padx=10, pady=5, sticky=E)
-        #self.Quit_button.grid(row=4, column=2, padx=10, pady=5, sticky=E)
 
 ## This class will be used to take in the input specifications for the glue logic
 ## based on address decoding. It will only appear after the setup button is hit,
@@ -215,19 +191,11 @@ class App(Frame):
             time.sleep(1) #delays for 2 seconds
 
             self.start_count = 1                                                #This is a flag that when set lets other functions know that there is a connection to the board
-            #self.writeToText(datetime.datetime.now().time().isoformat()+"\tConnected to DE0 Board")
-            '''for i in range(0, 100):
-                self.writeOut(int(1))
-                self.writeOut(int(10))
-                self.writeOut(int(14))'''
 
     def close_server(self):
         if (self.start_count == 0):
             pass
         elif (self.start_count == 1):
-            #os.system('kill jtagserver')
-            #os.system('kill quartus_stp')
-            #self.writeToText(datetime.datetime.now().time().isoformat()+"\tDisconnected from DE0 Board")
             self.start_count = 0
             self.tcl.kill()
             self.conn.close()
@@ -238,7 +206,6 @@ class App(Frame):
         try:
             self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         except socket.error as msg:
-            #self.writeToText("Failed to create socket. Error code: ", msg[0], " , Error message : ", msg[1])
             sys.exit();
         while True:
             try:
@@ -246,7 +213,6 @@ class App(Frame):
                 break
             except OSError as e:
                 print("Problem with connecting to device, retrying\n")
-                #self.writeToText("There was a problem connecting to device, retrying")
         return self.s
 
 
@@ -265,11 +231,11 @@ class App(Frame):
             if(checkVal(self.regValues[array_location].get()) == 1):
                 pass
             else:
-                #self.writeToText("Send data: \n Address : %s \n Value : %s \n" % (self.regNames[array_location].get(), self.regValues[array_location].get()))
                 wr = self.toBin(int(1), 1)
                 addr = self.toBin(int(self.regNames[array_location].get()), 9)
                 data = self.toBin(int(self.regValues[array_location].get()), 22)
                 self.writeOut(data+addr+wr)
+                self.edit(int(self.regNames[array_location].get()),int(self.regValues[array_location].get()),mode="write")
 
     def reciveData(self, event, array_location):
         if(self.start_count == 0):
@@ -285,17 +251,17 @@ class App(Frame):
             addr = self.toBin(int(self.regNames[array_location].get()), 9)
             self.writeOut(zero_tt+addr+zero)
             self.writeOut(zero_tt+addr+zero)
-            #self.writeToText("Read data: \n Address : %s \n" % (self.regNames[array_location].get()))
-            self.edit(int(self.regNames[array_location].get()), mode="read")
+            self.edit(int(self.regNames[array_location].get()), 0, mode="read")
 
-    def edit(self, address, mode="write"):
-        #if(self.tree.get_children(address) == None):
+    def edit(self, address, data, mode="read"):
         self.x = self.tree.get_children()
         for i in self.x:
             if(self.tree.item(i)["values"][0] == address):
                 if(mode == "read"):
-                    print(self.data.decode('utf-8') + ": DATA")
-                    self.tree.item(i, text="", values=(address,self.data.decode('utf-8')))
+                    self.tree.item(i, text="", values=(address,int(self.data.decode('utf-8'),2)))
+                if(mode == "write"):
+                    self.tree.item(i, text="", values=(address,data))
+                return
 
 
     def writeOut(self, val):
@@ -304,7 +270,6 @@ class App(Frame):
             # It will also cut off the 0b at the beginning of the string.
             self.conn.send(val.encode('utf-8') + b'\n')                         # Newline is required to flush the buffer on the Tcl server
             self.data = self.conn.recv(32+2)	                                # This will always need to have two additional bits added to the size of the string, this is for a start and stop bit.
-            #return self.data
         else:
             pass
 ###############################################################################
