@@ -250,7 +250,6 @@ class App(Frame):
             zero_tt = self.toBin(int(0), 22)
             addr = self.toBin(int(self.regNames[array_location].get()), 9)
             self.writeOut(zero_tt+addr+zero)
-            self.writeOut(zero_tt+addr+zero)
             self.edit(int(self.regNames[array_location].get()), 0, mode="read")
 
     def edit(self, address, data, mode="read"):
