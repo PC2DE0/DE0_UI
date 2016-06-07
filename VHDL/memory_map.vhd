@@ -21,15 +21,11 @@ entity memory_map is
         clk     : in  std_logic;
         rst     : in  std_logic;
         wr_en   : in  std_logic;
-        --wr_addr : in  std_logic_vector(MMAP_ADDR_RANGE);
-        --wr_data : in  std_logic_vector(MMAP_DATA_RANGE);
         wr_addr : in std_logic_vector(INSTR_WIDTH-1 downto 0);
         wr_data : in std_logic_vector(INSTR_WIDTH-1 downto 0);
         rd_en   : in  std_logic;
         rd_addr : in std_logic_vector(INSTR_WIDTH-1 downto 0);
         rd_data : out std_logic_vector(INSTR_WIDTH-1 downto 0);
-        --rd_addr : in  std_logic_vector(MMAP_ADDR_RANGE);
-        --rd_data : out std_logic_vector(MMAP_DATA_RANGE);
 
         -- application-specific I/O
         go     : out std_logic;
@@ -63,11 +59,11 @@ begin
             -- writes
             if (wr_en = '1') then
                 case to_integer(unsigned(wr_addr)) is
-                    -- when C_GO_ADDR =>
-                    --     reg_go <= wr_data(0);
-                    --
-                    -- when C_N_ADDR =>
-                    --     reg_n <= wr_data(n'length-1 downto 0);
+                     when C_GO_ADDR =>
+                         reg_go <= wr_data(0);
+                    
+                     when C_N_ADDR =>
+                         reg_n <= wr_data(n'length-1 downto 0);
 
                     when others =>
                         null;
@@ -77,19 +73,19 @@ begin
             -- reads
             if (rd_en = '1')then
                 case to_integer(unsigned(rd_addr)) is
-                    -- when C_GO_ADDR =>
-                    --     rd_data    <= (others => '0');
-                    --     rd_data(0) <= reg_go;
-                    --
-                    -- when C_N_ADDR =>
-                    --     rd_data <= reg_n;
-                    --
-                    -- when C_RESULT_ADDR =>
-                    --     rd_data <= result;
-                    --
-                    -- when C_DONE_ADDR =>
-                    --     rd_data    <= (others => '0');
-                    --     rd_data(0) <= done;
+                     when C_GO_ADDR =>
+                         rd_data    <= (others => '0');
+                         rd_data(0) <= reg_go;
+                    
+                     when C_N_ADDR =>
+                         rd_data <= reg_n;
+                    
+                     when C_RESULT_ADDR =>
+                         rd_data <= result;
+                    
+                     when C_DONE_ADDR =>
+                         rd_data    <= (others => '0');
+                         rd_data(0) <= done;
 
                     when others =>
                         null;
