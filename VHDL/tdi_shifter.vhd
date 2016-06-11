@@ -46,17 +46,16 @@ begin
 
 				when INIT =>
 					if(v_sdr = '1' and ir_in = '1') then
-						--temp_data <= "0"&temp_data(INSTR_WIDTH-1 downto 1);
 						temp_RW <= tdi & temp_RW(INSTR_WIDTH-1 downto 1);
 					end if;
 					if(udr = '1') then
 						if(temp_rw(0) = '1') then
 							w_r_en <= '1';
-							output_address <= temp_RW(9 downto 1);
-							output_data <= temp_RW(31 downto 10);
+							output_address <= temp_RW(16 downto 1);
+							output_data <= temp_RW(31 downto 17);
 							state <= INIT;
 						elsif(temp_rw(0) = '0') then
-							output_address <= temp_RW(9 downto 1);
+							output_address <= temp_RW(16 downto 1);
 							w_r_en <= '0';
 							state <= INIT;
 						end if;
@@ -72,12 +71,12 @@ begin
 					state <= WRITE_DATA;
 
 				when GET_ADDR_READ =>
-					output_address <= temp_RW(9 downto 1);
+					output_address <= temp_RW(16 downto 1);
 					done <= '0';
 					state <= READ_DATA;
 
 				when WRITE_DATA =>
-					output_data <= temp_RW(31 downto 10);
+					output_data <= temp_RW(31 downto 17);
 					done <= '1';
 					state <= INIT;
 

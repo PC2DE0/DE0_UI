@@ -40,8 +40,8 @@ begin
 
 	w_r_en <= wr_en;
 
-	data_register <= "0000000000" & d_reg_inter;
-	address_register <= "00000000000000000000000" & addr_reg_inter;
+	data_register <= "00000000000000000" & d_reg_inter;
+	address_register <= "0000000000000000" & addr_reg_inter;
 	done <= done_iter;
 	--vJTAG Megafunction call
 	U_vJTAG : entity work.vJTAG

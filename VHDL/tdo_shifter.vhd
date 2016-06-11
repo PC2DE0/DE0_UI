@@ -40,7 +40,7 @@ begin
 		end if;
 	end process;
 	
-	process(state, v_sdr, ir_in, data, temp_reg)
+	process(state, v_sdr, ir_in, data, temp_reg, next_temp_reg)
 	begin
 		
 		next_state <= state;

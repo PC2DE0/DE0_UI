@@ -232,8 +232,8 @@ class App(Frame):
                 pass
             else:
                 wr = self.toBin(int(1), 1)
-                addr = self.toBin(int(self.regNames[array_location].get()), 9)
-                data = self.toBin(int(self.regValues[array_location].get()), 22)
+                addr = self.toBin(int(self.regNames[array_location].get()), 16)
+                data = self.toBin(int(self.regValues[array_location].get()), 15)
                 self.writeOut(data+addr+wr)
                 self.edit(int(self.regNames[array_location].get()),int(self.regValues[array_location].get()),mode="write")
 
@@ -247,8 +247,8 @@ class App(Frame):
             button.pack()
         else:
             zero = self.toBin(int(0), 1)
-            zero_tt = self.toBin(int(0), 22)
-            addr = self.toBin(int(self.regNames[array_location].get()), 9)
+            zero_tt = self.toBin(int(0), 15)
+            addr = self.toBin(int(self.regNames[array_location].get()), 16)
             self.writeOut(zero_tt+addr+zero)
             self.edit(int(self.regNames[array_location].get()), 0, mode="read")
 

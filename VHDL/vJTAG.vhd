@@ -120,7 +120,7 @@ BEGIN
 		sld_auto_instance_index => "YES",
 		sld_instance_index => 0,
 		sld_ir_width => 1,
-		sld_sim_action => "((1,1,1,1),(1,2,0000000C,20),(1,1,0,1),(1,1,1,1),(1,2,0000000C,20),(1,1,0,1))",
+		sld_sim_action => "((1,1,1,1),(1,2,00060009,20),(1,1,0,1),(1,1,1,1),(1,2,00000008,20),(1,1,0,1))",
 		sld_sim_n_scan => 6,
 		sld_sim_total_length => 68,
 		lpm_type => "sld_virtual_jtag"
@@ -154,7 +154,7 @@ END SYN;
 -- Retrieval info: CONSTANT: SLD_AUTO_INSTANCE_INDEX STRING "YES"
 -- Retrieval info: CONSTANT: SLD_INSTANCE_INDEX NUMERIC "0"
 -- Retrieval info: CONSTANT: SLD_IR_WIDTH NUMERIC "1"
--- Retrieval info: CONSTANT: SLD_SIM_ACTION STRING "((1,1,1,1),(1,2,0000000C,20),(1,1,0,1),(1,1,1,1),(1,2,0000000C,20),(1,1,0,1))"
+-- Retrieval info: CONSTANT: SLD_SIM_ACTION STRING "((1,1,1,1),(1,2,00060009,20),(1,1,0,1),(1,1,1,1),(1,2,00000008,20),(1,1,0,1))"
 -- Retrieval info: CONSTANT: SLD_SIM_N_SCAN NUMERIC "6"
 -- Retrieval info: CONSTANT: SLD_SIM_TOTAL_LENGTH NUMERIC "68"
 -- Retrieval info: USED_PORT: ir_in 0 0 1 0 OUTPUT NODEFVAL "ir_in[0..0]"
