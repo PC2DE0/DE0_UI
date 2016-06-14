@@ -32,10 +32,10 @@ entity memory_map is
         n      : out std_logic_vector(31 downto 0);
         result      : in std_logic_vector(31 downto 0);
         done   : in  std_logic;
-        mem_in_wr_data  : out std_logic_vector(C_MEM_IN_WIDTH-1 downto 0);
-        mem_in_wr_addr  : out std_logic_vector(C_MEM_ADDR_WIDTH-1 downto 0);
+        mem_in_wr_data  : out std_logic_vector(C_MMAP_DATA_WIDTH-1 downto 0);
+        mem_in_wr_addr  : out std_logic_vector(C_MMAP_ADDR_WIDTH-1 downto 0);
         mem_in_wr_en    : out std_logic;
-        mem_out_rd_addr : out std_logic_vector(C_MEM_ADDR_WIDTH-1 downto 0)
+        mem_out_rd_addr : out std_logic_vector(C_MMAP_ADDR_WIDTH-1 downto 0)
         );
 end memory_map;
 

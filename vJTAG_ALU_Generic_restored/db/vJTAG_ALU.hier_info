@@ -133,7 +133,8 @@ data_register[28] <= <GND>
 data_register[29] <= <GND>
 data_register[30] <= <GND>
 data_register[31] <= <GND>
-w_r_en <= tdi_shifter:U_TDI_SHIFTER.w_r_en
+w_en <= w_en.DB_MAX_OUTPUT_PORT_TYPE
+r_en <= r_en.DB_MAX_OUTPUT_PORT_TYPE
 done <= tdi_shifter:U_TDI_SHIFTER.done
 
 

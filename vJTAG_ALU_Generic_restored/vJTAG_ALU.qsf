@@ -103,7 +103,6 @@ set_location_assignment PIN_H1 -to output[3]
 set_location_assignment PIN_J3 -to output[2]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE ../VHDL/reg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/tdi_shifter.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/memory_map.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/jtag_wrapper.vhd
@@ -112,7 +111,6 @@ set_global_assignment -name VHDL_FILE ../VHDL/vJTAG.vhd
 set_global_assignment -name SOURCE_FILE ../VHDL/vJTAG.cmp
 set_global_assignment -name VHDL_FILE ../VHDL/tdo_shifter.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/mem_pkg.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/application_test.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/top_level_application_test.vhd
 set_global_assignment -name QIP_FILE ../VHDL/ram.qip
 set_location_assignment PIN_G21 -to clk

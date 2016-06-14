@@ -1,5 +1,5 @@
 Fitter report for vJTAG_ALU
-Fri Jun 10 22:08:10 2016
+Mon Jun 13 22:45:40 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -68,15 +68,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jun 10 22:08:10 2016           ;
+; Fitter Status                      ; Successful - Mon Jun 13 22:45:40 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 244 / 15,408 ( 2 % )                            ;
-;     Total combinational functions  ; 170 / 15,408 ( 1 % )                            ;
+; Total logic elements               ; 243 / 15,408 ( 2 % )                            ;
+;     Total combinational functions  ; 168 / 15,408 ( 1 % )                            ;
 ;     Dedicated logic registers      ; 161 / 15,408 ( 1 % )                            ;
 ; Total registers                    ; 161                                             ;
 ; Total pins                         ; 30 / 347 ( 9 % )                                ;
@@ -221,8 +221,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 421 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 421 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 419 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 419 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -247,7 +247,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Top                            ; 221     ; 0                 ; N/A                     ; Source File       ;
-; sld_hub:auto_hub               ; 190     ; 0                 ; N/A                     ; Post-Synthesis    ;
+; sld_hub:auto_hub               ; 188     ; 0                 ; N/A                     ; Post-Synthesis    ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -263,19 +263,19 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 244 / 15,408 ( 2 % )      ;
-;     -- Combinational with no register       ; 83                        ;
-;     -- Register only                        ; 74                        ;
-;     -- Combinational with a register        ; 87                        ;
+; Total logic elements                        ; 243 / 15,408 ( 2 % )      ;
+;     -- Combinational with no register       ; 82                        ;
+;     -- Register only                        ; 75                        ;
+;     -- Combinational with a register        ; 86                        ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 94                        ;
-;     -- 3 input functions                    ; 37                        ;
-;     -- <=2 input functions                  ; 39                        ;
-;     -- Register only                        ; 74                        ;
+;     -- 4 input functions                    ; 96                        ;
+;     -- 3 input functions                    ; 32                        ;
+;     -- <=2 input functions                  ; 40                        ;
+;     -- Register only                        ; 75                        ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 162                       ;
+;     -- normal mode                          ; 160                       ;
 ;     -- arithmetic mode                      ; 8                         ;
 ;                                             ;                           ;
 ; Total registers*                            ; 161 / 17,068 ( < 1 % )    ;
@@ -303,7 +303,7 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 ; Peak interconnect usage (total/H/V)         ; 2% / 3% / 2%              ;
 ; Maximum fan-out                             ; 161                       ;
 ; Highest non-global fan-out                  ; 83                        ;
-; Total fan-out                               ; 1239                      ;
+; Total fan-out                               ; 1235                      ;
 ; Average fan-out                             ; 2.67                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -317,25 +317,25 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 +---------------------------------------------+-----------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                   ; Low                            ;
 ;                                             ;                       ;                       ;                                ;
-; Total logic elements                        ; 115 / 15408 ( < 1 % ) ; 129 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 32                    ; 51                    ; 0                              ;
-;     -- Register only                        ; 57                    ; 17                    ; 0                              ;
-;     -- Combinational with a register        ; 26                    ; 61                    ; 0                              ;
+; Total logic elements                        ; 115 / 15408 ( < 1 % ) ; 128 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 32                    ; 50                    ; 0                              ;
+;     -- Register only                        ; 57                    ; 18                    ; 0                              ;
+;     -- Combinational with a register        ; 26                    ; 60                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                       ;                                ;
-;     -- 4 input functions                    ; 51                    ; 43                    ; 0                              ;
-;     -- 3 input functions                    ; 4                     ; 33                    ; 0                              ;
-;     -- <=2 input functions                  ; 3                     ; 36                    ; 0                              ;
-;     -- Register only                        ; 57                    ; 17                    ; 0                              ;
+;     -- 4 input functions                    ; 51                    ; 45                    ; 0                              ;
+;     -- 3 input functions                    ; 4                     ; 28                    ; 0                              ;
+;     -- <=2 input functions                  ; 3                     ; 37                    ; 0                              ;
+;     -- Register only                        ; 57                    ; 18                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                       ;                                ;
-;     -- normal mode                          ; 58                    ; 104                   ; 0                              ;
+;     -- normal mode                          ; 58                    ; 102                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                     ; 8                     ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Total registers                             ; 83                    ; 78                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 83 / 15408 ( < 1 % )  ; 78 / 15408 ( < 1 % )  ; 0 / 15408 ( 0 % )              ;
 ;                                             ;                       ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 10 / 963 ( 1 % )      ; 13 / 963 ( 1 % )      ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 11 / 963 ( 1 % )      ; 12 / 963 ( 1 % )      ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                     ; 0                              ;
 ; I/O pins                                    ; 30                    ; 0                     ; 0                              ;
@@ -348,13 +348,13 @@ The pin-out file can be found in C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG
 ;                                             ;                       ;                       ;                                ;
 ; Connections                                 ;                       ;                       ;                                ;
 ;     -- Input Connections                    ; 107                   ; 115                   ; 0                              ;
-;     -- Registered Input Connections         ; 84                    ; 85                    ; 0                              ;
+;     -- Registered Input Connections         ; 83                    ; 85                    ; 0                              ;
 ;     -- Output Connections                   ; 199                   ; 23                    ; 0                              ;
 ;     -- Registered Output Connections        ; 0                     ; 22                    ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; Internal Connections                        ;                       ;                       ;                                ;
-;     -- Total Connections                    ; 783                   ; 635                   ; 5                              ;
-;     -- Registered Connections               ; 201                   ; 415                   ; 0                              ;
+;     -- Total Connections                    ; 787                   ; 627                   ; 5                              ;
+;     -- Registered Connections               ; 201                   ; 411                   ; 0                              ;
 ;                                             ;                       ;                       ;                                ;
 ; External Connections                        ;                       ;                       ;                                ;
 ;     -- Top                                  ; 168                   ; 138                   ; 0                              ;
@@ -980,12 +980,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 244 (2)     ; 161 (0)                   ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 30   ; 0            ; 83 (2)       ; 74 (0)            ; 87 (0)           ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 243 (1)     ; 161 (0)                   ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 30   ; 0            ; 82 (1)       ; 75 (0)            ; 86 (0)           ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_b|                                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|decoder7seg:U_LED_LO_b                                                                                                                   ; work         ;
-;    |jtag_wrapper:U_jtag_wrapper|                                 ; 93 (0)      ; 83 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 57 (0)            ; 26 (0)           ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
+;    |jtag_wrapper:U_jtag_wrapper|                                 ; 94 (1)      ; 83 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (1)       ; 57 (0)            ; 26 (0)           ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
 ;       |tdi_shifter:U_TDI_SHIFTER|                                ; 50 (50)     ; 50 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 39 (39)           ; 11 (11)          ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER                                                                                    ; work         ;
 ;       |tdo_shifter:U_TDO_SHIFTER|                                ; 42 (42)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 18 (18)           ; 15 (15)          ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER                                                                                    ; work         ;
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 1 (0)            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
@@ -994,8 +994,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;    |ram:U_RAM_IN|                                                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|ram:U_RAM_IN                                                                                                                             ; work         ;
 ;       |altsyncram:altsyncram_component|                          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|ram:U_RAM_IN|altsyncram:altsyncram_component                                                                                             ; work         ;
 ;          |altsyncram_tag1:auto_generated|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_level_application_test|ram:U_RAM_IN|altsyncram:altsyncram_component|altsyncram_tag1:auto_generated                                                              ; work         ;
-;    |sld_hub:auto_hub|                                            ; 129 (1)     ; 78 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 51 (1)       ; 17 (0)            ; 61 (0)           ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 128 (90)    ; 78 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 50 (40)      ; 17 (17)           ; 61 (36)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;    |sld_hub:auto_hub|                                            ; 128 (1)     ; 78 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 50 (1)       ; 18 (0)            ; 60 (0)           ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 127 (89)    ; 78 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 49 (39)      ; 18 (18)           ; 60 (35)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                               ; 18 (18)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 9 (9)            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 20 (20)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 19 (19)          ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -1035,7 +1035,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_lo_b[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led_lo_b[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led_lo_b[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; rst         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; rst         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; clk         ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +-------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1046,89 +1046,89 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                            ; Pad To Core Index ; Setting ;
 +--------------------------------------------------------------------------------+-------------------+---------+
 ; rst                                                                            ;                   ;         ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[1]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[2]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[3]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[4]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[5]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[6]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[7]    ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[21]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|temp_reg[31]      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.START       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_1       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_2       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_3       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_4       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_5       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_6       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_7       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_8       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_9       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_10      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_11      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_12      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_13      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_14      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_15      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_16      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_17      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_18      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_19      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_20      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_21      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_22      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_23      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_24      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_25      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_26      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_27      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_28      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_29      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_30      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_31      ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[0]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[22]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[23]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[24]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[17]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[18]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[19]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[20]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|done              ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[0] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[1] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[2] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[3] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[4] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[5] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[6] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[7] ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[1]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[25]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|w_r_en~0          ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[2]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[3]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[4]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[5]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[6]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[7]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[8]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[26]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[9]        ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[27]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[10]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[28]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[11]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[29]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[12]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[30]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[13]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[31]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[14]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[15]       ; 1                 ; 6       ;
-;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[16]       ; 1                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[1]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[2]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[3]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[4]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[5]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[6]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[7]    ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[21]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|temp_reg[31]      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.START       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_1       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_2       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_3       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_4       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_5       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_6       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_7       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_8       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_9       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_10      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_11      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_12      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_13      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_14      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_15      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_16      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_17      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_18      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_19      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_20      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_21      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_22      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_23      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_24      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_25      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_26      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_27      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_28      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_29      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_30      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_31      ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[0]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[22]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[23]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[24]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[17]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[18]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[19]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[20]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|done              ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[0] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[1] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[2] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[3] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[4] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[5] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[6] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[7] ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[1]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[25]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|w_r_en~0          ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[2]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[3]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[4]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[5]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[6]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[7]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[8]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[26]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[9]        ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[27]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[10]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[28]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[11]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[29]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[12]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[30]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[13]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[31]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[14]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[15]       ; 0                 ; 6       ;
+;      - jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|temp_RW[16]       ; 0                 ; 6       ;
 ; clk                                                                            ;                   ;         ;
 +--------------------------------------------------------------------------------+-------------------+---------+
 
@@ -1138,34 +1138,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                                                         ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 161     ; Clock                      ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; altera_internal_jtag~TCKUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 161     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                 ; JTAG_X1_Y15_N0     ; 23      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; clk                                                                                                                                                          ; PIN_G21            ; 1       ; Clock                      ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]~0                                                                                       ; LCCOMB_X24_Y25_N18 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|process_1~0                                                                                            ; LCCOMB_X23_Y25_N2  ; 35      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr~0 ; LCCOMB_X23_Y25_N24 ; 30      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; LCCOMB_X23_Y25_N10 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]~0                                                                                       ; LCCOMB_X26_Y25_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|process_1~0                                                                                            ; LCCOMB_X27_Y24_N10 ; 35      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr~0 ; LCCOMB_X27_Y24_N16 ; 30      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; LCCOMB_X27_Y25_N24 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; jtag_wrapper:U_jtag_wrapper|w_en                                                                                                                             ; LCCOMB_X27_Y25_N28 ; 1       ; Write enable               ; no     ; --                   ; --               ; --                        ;
 ; rst                                                                                                                                                          ; PIN_D2             ; 83      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; FF_X22_Y24_N31     ; 13      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; LCCOMB_X24_Y23_N18 ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; LCCOMB_X24_Y23_N14 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; LCCOMB_X23_Y23_N6  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; LCCOMB_X24_Y22_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; LCCOMB_X24_Y22_N10 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; LCCOMB_X24_Y24_N8  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~4                                                                                  ; LCCOMB_X23_Y24_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~14                                                                           ; LCCOMB_X23_Y23_N28 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~19                                                                           ; LCCOMB_X24_Y23_N0  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~13                                                          ; LCCOMB_X23_Y23_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~22                                                     ; LCCOMB_X22_Y23_N22 ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~23                                                     ; LCCOMB_X23_Y23_N4  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; FF_X22_Y24_N25     ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; FF_X22_Y24_N27     ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; FF_X23_Y24_N5      ; 18      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; FF_X23_Y23_N25     ; 12      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0                                                                      ; LCCOMB_X22_Y24_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; FF_X21_Y24_N17     ; 20      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; w_en                                                                                                                                                         ; LCCOMB_X23_Y25_N6  ; 1       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; FF_X24_Y23_N29     ; 13      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; LCCOMB_X22_Y22_N14 ; 4       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; LCCOMB_X22_Y22_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; LCCOMB_X24_Y23_N30 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; LCCOMB_X23_Y22_N18 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; LCCOMB_X23_Y22_N12 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; LCCOMB_X23_Y23_N22 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~4                                                                                  ; LCCOMB_X24_Y23_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10                                                                           ; LCCOMB_X22_Y23_N28 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~9                                                                            ; LCCOMB_X21_Y22_N4  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~13                                                          ; LCCOMB_X24_Y23_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~22                                                     ; LCCOMB_X22_Y24_N30 ; 5       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~23                                                     ; LCCOMB_X24_Y23_N22 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; FF_X23_Y24_N17     ; 15      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; FF_X23_Y24_N3      ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; FF_X23_Y24_N21     ; 18      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; FF_X24_Y23_N27     ; 11      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_dr_scan_proc~0                                                                      ; LCCOMB_X23_Y24_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; FF_X24_Y24_N17     ; 19      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1174,7 +1174,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                         ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; altera_internal_jtag~TCKUTAP ; JTAG_X1_Y15_N0 ; 161     ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
+; altera_internal_jtag~TCKUTAP ; JTAG_X1_Y15_N0 ; 161     ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
 ; clk                          ; PIN_G21        ; 1       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
 +------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -1189,22 +1189,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_sdr~0 ; 30      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]                                                             ; 23      ;
 ; altera_internal_jtag~TMSUTAP                                                                                                                                 ; 23      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; 20      ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                                                                            ; 19      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]                                                             ; 18      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0]                                                             ; 15      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                                                                                        ; 13      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]                                                                                    ; 13      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; 12      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[11]                                                            ; 12      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                              ; 10      ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]                                                             ; 11      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]                                                                              ; 10      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]                                                                              ; 10      ;
 ; jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|virtual_state_udr~0 ; 10      ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]                                                                              ; 9       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]                                                                              ; 9       ;
 ; altera_internal_jtag~TDIUTAP                                                                                                                                 ; 9       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]                                                                                    ; 8       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0                                                                               ; 8       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]                                                                              ; 8       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                              ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]~0                                                                                       ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[3]                                                                                         ; 8       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[2]                                                                                         ; 8       ;
@@ -1228,8 +1228,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[2]                                                        ; 6       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~23                                                     ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~22                                                     ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~19                                                                           ; 5       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~14                                                                           ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~10                                                                           ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~9                                                                            ; 5       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|clear_signal                                                           ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena~0                                                                             ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                        ; 5       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                    ; 5       ;
@@ -1237,9 +1238,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]~13                                                          ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~1                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]~0                                                               ; 4       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|clear_signal                                                           ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg_ena                                                                               ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_proc~0                                                                             ; 4       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~21                                                                          ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]                                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]~0                                                                                ; 4       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|reset_ena_reg_proc~0                                                                           ; 4       ;
@@ -1247,7 +1248,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                                        ; 4       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.START                                                                                            ; 4       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|state.OUT_1                                                                                            ; 4       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~11                                                                          ; 3       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt[0]                                                           ; 3       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[0]~4                                                                                  ; 3       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]                                                                                ; 3       ;
@@ -1272,7 +1272,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[1]                                                                  ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]~0                                                                ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]~3                                                                                  ; 2       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~5                                                                           ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]                                                                                 ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|Equal0~1                                                                                       ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]                                                                                 ; 2       ;
@@ -1345,13 +1344,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]~1                                                                               ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]~0                                                                               ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~29                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~28                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~27                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~26                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~25                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~24                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~23                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~15                                                                             ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~14                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~14                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~12                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~11                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~3                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[3]                                                                 ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~16                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~15                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]~15                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~10                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR~9                                                              ; 1       ;
@@ -1359,9 +1365,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[3]                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg~2                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[3]                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~14                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~13                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~12                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[2]                                                                 ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~2                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~1                                                            ; 1       ;
@@ -1371,12 +1374,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[2]                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]~4                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|Equal3~0                                                                                       ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~10                                                                             ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~9                                                                              ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~8                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[1]                                                                 ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~22                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg[0]                                                                  ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~13                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt~0                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~3                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]~2                                                                              ; 1       ;
@@ -1394,10 +1394,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg~2                                                                                     ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo_bypass_reg~0                                                                               ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~7                                                                              ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~6                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]~20                                                                          ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg[0]                                                                 ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg~4                                                                              ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~12                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~11                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state~10                                                             ; 1       ;
@@ -1441,15 +1439,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[2]~2                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[2]                                                                             ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]~1                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~17                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~16                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~15                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]~15                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~14                                                                           ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[3]~13                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~12                                                                           ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[2]~11                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~10                                                                           ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~9                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~8                                                                            ; 1       ;
-; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~7                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~8                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[1]~7                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~6                                                                            ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]~5                                                                            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]~1                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]~0                                                                                  ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                             ; 1       ;
@@ -1485,7 +1483,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[2]                                                                                      ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[1]                                                                                      ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[0]                                                                                      ; 1       ;
-; w_en                                                                                                                                                         ; 1       ;
+; jtag_wrapper:U_jtag_wrapper|w_en                                                                                                                             ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|done                                                                                                   ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector32~16                                                                                          ; 1       ;
 ; jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector32~15                                                                                          ; 1       ;
@@ -1550,51 +1548,51 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 236 / 47,787 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 1,804 ( 0 % )      ;
-; C4 interconnects            ; 81 / 31,272 ( < 1 % )  ;
-; Direct links                ; 56 / 47,787 ( < 1 % )  ;
+; Block interconnects         ; 245 / 47,787 ( < 1 % ) ;
+; C16 interconnects           ; 1 / 1,804 ( < 1 % )    ;
+; C4 interconnects            ; 92 / 31,272 ( < 1 % )  ;
+; Direct links                ; 62 / 47,787 ( < 1 % )  ;
 ; Global clocks               ; 2 / 20 ( 10 % )        ;
-; Local interconnects         ; 156 / 15,408 ( 1 % )   ;
+; Local interconnects         ; 148 / 15,408 ( < 1 % ) ;
 ; R24 interconnects           ; 2 / 1,775 ( < 1 % )    ;
-; R4 interconnects            ; 139 / 41,310 ( < 1 % ) ;
+; R4 interconnects            ; 141 / 41,310 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.09) ; Number of LABs  (Total = 22) ;
+; Number of Logic Elements  (Average = 11.05) ; Number of LABs  (Total = 22) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 2                            ;
+; 1                                           ; 1                            ;
 ; 2                                           ; 1                            ;
 ; 3                                           ; 1                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
+; 5                                           ; 1                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 2                            ;
+; 7                                           ; 3                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 2                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 4                            ;
+; 13                                          ; 3                            ;
+; 14                                          ; 1                            ;
 ; 15                                          ; 2                            ;
-; 16                                          ; 5                            ;
+; 16                                          ; 6                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.27) ; Number of LABs  (Total = 22) ;
+; LAB-wide Signals  (Average = 2.14) ; Number of LABs  (Total = 22) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 13                           ;
 ; 1 Clock                            ; 19                           ;
-; 1 Clock enable                     ; 9                            ;
-; 1 Sync. clear                      ; 2                            ;
-; 1 Sync. load                       ; 2                            ;
+; 1 Clock enable                     ; 8                            ;
+; 1 Sync. clear                      ; 1                            ;
+; 1 Sync. load                       ; 1                            ;
 ; 2 Clock enables                    ; 5                            ;
 +------------------------------------+------------------------------+
 
@@ -1602,56 +1600,59 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.09) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced  (Average = 17.05) ; Number of LABs  (Total = 22) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 1                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 1                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
+; 7                                            ; 3                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 2                            ;
-; 17                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 3                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 2                            ;
+; 28                                           ; 3                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.41) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced Out  (Average = 5.14) ; Number of LABs  (Total = 22) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 1                            ;
-; 1                                               ; 2                            ;
+; 1                                               ; 1                            ;
 ; 2                                               ; 6                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 3                            ;
+; 4                                               ; 4                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 1                            ;
 ; 11                                              ; 0                            ;
 ; 12                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
@@ -1666,19 +1667,19 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
 ; 3                                           ; 2                            ;
-; 4                                           ; 2                            ;
+; 4                                           ; 3                            ;
 ; 5                                           ; 4                            ;
 ; 6                                           ; 2                            ;
-; 7                                           ; 3                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 2                            ;
+; 11                                          ; 2                            ;
 ; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 1                            ;
 ; 17                                          ; 0                            ;
 ; 18                                          ; 0                            ;
 ; 19                                          ; 0                            ;
@@ -1689,7 +1690,8 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; 24                                          ; 0                            ;
 ; 25                                          ; 0                            ;
 ; 26                                          ; 0                            ;
-; 27                                          ; 1                            ;
+; 27                                          ; 0                            ;
+; 28                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1884,7 +1886,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "output[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "output[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "ov_flag" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1897,7 +1899,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1906,9 +1908,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/j_salkey/Documents/GitHub/DE0 UI/vJTAG_ALU_Generic_restored/output_files/vJTAG_ALU.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 783 megabytes
-    Info: Processing ended: Fri Jun 10 22:08:11 2016
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 784 megabytes
+    Info: Processing ended: Mon Jun 13 22:45:40 2016
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 
 

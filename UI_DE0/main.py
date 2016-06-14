@@ -74,7 +74,7 @@ class App(Frame):
         self.tree.column("Data", width = 200)
         self.tree.heading("Address", text = "Address")
         self.tree.heading("Data", text = "Data")
-        for x in range(511,-1,-1):
+        for x in range(255,-1,-1):
             self.tree.insert("", 0, text="", values=(x,""))
         self.tree.pack()
 
@@ -121,10 +121,10 @@ class App(Frame):
 ## based on address decoding. It will only appear after the setup button is hit,
 ## where it takes in the number of registers defined by the user.
     def inputFrame(self, master):
-        self.regLabel = Label(master, text="Address (Decimal)", compound=CENTER)
+        self.regLabel = Label(master, text="Address (0-255); 8-8 RAM", compound=CENTER)
         self.regLabel.grid(row=0, column=1)
 
-        self.valueLabel = Label(master, text="Value (Decimal)", compound=CENTER)
+        self.valueLabel = Label(master, text="Value (0-255)", compound=CENTER)
         self.valueLabel.grid(row=0, column=2)
 
         self.regNames = []

@@ -13,8 +13,9 @@ entity jtag_wrapper is
    rst : in std_logic;
    design_output : in std_logic_vector(INSTR_WIDTH-1 downto 0);
    address_register : out std_logic_vector(INSTR_WIDTH-1 downto 0);
-	 data_register : out std_logic_vector(INSTR_WIDTH-1 downto 0);
-   w_r_en : out std_logic;
+	data_register : out std_logic_vector(INSTR_WIDTH-1 downto 0);
+   w_en : out std_logic;
+	r_en : out std_logic;
    done : out std_logic
 	 );
 end jtag_wrapper;
@@ -38,11 +39,12 @@ architecture bhvr of jtag_wrapper is
 
 begin
 
-	w_r_en <= wr_en;
-
+	done <= done_iter;
+	w_en <= wr_en and done_iter;
+	r_en <= (not wr_en) and done_iter;
 	data_register <= "00000000000000000" & d_reg_inter;
 	address_register <= "0000000000000000" & addr_reg_inter;
-	done <= done_iter;
+	
 	--vJTAG Megafunction call
 	U_vJTAG : entity work.vJTAG
 		port map(

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vJTAG_ALU
-Fri Jun 10 22:08:01 2016
+Mon Jun 13 22:45:31 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -56,13 +56,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 10 22:08:01 2016           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 13 22:45:31 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vJTAG_ALU                                       ;
 ; Top-level Entity Name              ; top_level_application_test                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 267                                             ;
-;     Total combinational functions  ; 170                                             ;
+; Total logic elements               ; 265                                             ;
+;     Total combinational functions  ; 168                                             ;
 ;     Dedicated logic registers      ; 161                                             ;
 ; Total registers                    ; 161                                             ;
 ; Total pins                         ; 30                                              ;
@@ -208,16 +208,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 267                      ;
+; Estimated Total logic elements              ; 265                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 170                      ;
+; Total combinational functions               ; 168                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 94                       ;
-;     -- 3 input functions                    ; 37                       ;
-;     -- <=2 input functions                  ; 39                       ;
+;     -- 4 input functions                    ; 96                       ;
+;     -- 3 input functions                    ; 32                       ;
+;     -- <=2 input functions                  ; 40                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 162                      ;
+;     -- normal mode                          ; 160                      ;
 ;     -- arithmetic mode                      ; 8                        ;
 ;                                             ;                          ;
 ; Total registers                             ; 161                      ;
@@ -229,7 +229,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 182                      ;
-; Total fan-out                               ; 1285                     ;
+; Total fan-out                               ; 1280                     ;
 ; Average fan-out                             ; 3.15                     ;
 +---------------------------------------------+--------------------------+
 
@@ -239,12 +239,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level_application_test                                      ; 170 (2)           ; 161 (0)      ; 2048        ; 0            ; 0       ; 0         ; 30   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
+; |top_level_application_test                                      ; 168 (1)           ; 161 (0)      ; 2048        ; 0            ; 0       ; 0         ; 30   ; 0            ; |top_level_application_test                                                                                                                                          ; work         ;
 ;    |decoder7seg:U_LED_HI_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_HI_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_HI_b                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_a|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_a                                                                                                                   ; work         ;
 ;    |decoder7seg:U_LED_LO_b|                                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|decoder7seg:U_LED_LO_b                                                                                                                   ; work         ;
-;    |jtag_wrapper:U_jtag_wrapper|                                 ; 28 (0)            ; 83 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
+;    |jtag_wrapper:U_jtag_wrapper|                                 ; 29 (1)            ; 83 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper                                                                                                              ; work         ;
 ;       |tdi_shifter:U_TDI_SHIFTER|                                ; 2 (2)             ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER                                                                                    ; work         ;
 ;       |tdo_shifter:U_TDO_SHIFTER|                                ; 24 (24)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER                                                                                    ; work         ;
 ;       |vJTAG:U_vJTAG|                                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG                                                                                                ; work         ;
@@ -253,8 +253,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |ram:U_RAM_IN|                                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|ram:U_RAM_IN                                                                                                                             ; work         ;
 ;       |altsyncram:altsyncram_component|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|ram:U_RAM_IN|altsyncram:altsyncram_component                                                                                             ; work         ;
 ;          |altsyncram_tag1:auto_generated|                        ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|ram:U_RAM_IN|altsyncram:altsyncram_component|altsyncram_tag1:auto_generated                                                              ; work         ;
-;    |sld_hub:auto_hub|                                            ; 112 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 111 (76)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
+;    |sld_hub:auto_hub|                                            ; 110 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub                                                                                                                         ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|             ; 109 (74)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                            ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                               ; 18 (18)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                    ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                             ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                  ; work         ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -378,21 +378,15 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[7]                               ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]                                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector0                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                      ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |top_level_application_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_address[7] ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdi_shifter:U_TDI_SHIFTER|output_data[0]    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level_application_test|jtag_wrapper:U_jtag_wrapper|tdo_shifter:U_TDO_SHIFTER|Selector0         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -537,6 +531,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; clk  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -549,14 +544,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------+------------------+----------+---------+-----------------+-------------------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; sld_hub:auto_hub ; 00:00:00     ;
-; Top              ; 00:00:01     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -565,10 +559,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 10 22:07:56 2016
+    Info: Processing started: Mon Jun 13 22:45:27 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vJTAG_ALU -c vJTAG_ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Warning (12019): Can't analyze file -- file ../VHDL/reg.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/tdi_shifter.vhd
     Info (12022): Found design unit 1: tdi_shifter-FSMD2
     Info (12023): Found entity 1: tdi_shifter
@@ -589,9 +582,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: tdo_shifter
 Info (12021): Found 1 design units, including 0 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/mem_pkg.vhd
     Info (12022): Found design unit 1: mem_pkg
-Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/application_test.vhd
-    Info (12022): Found design unit 1: application_test-bhvr
-    Info (12023): Found entity 1: application_test
 Info (12021): Found 2 design units, including 1 entities, in source file /users/j_salkey/documents/github/de0 ui/vhdl/top_level_application_test.vhd
     Info (12022): Found design unit 1: top_level_application_test-str
     Info (12023): Found entity 1: top_level_application_test
@@ -600,11 +590,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: ram
 Info (12127): Elaborating entity "top_level_application_test" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(24): object "jtag_clock" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at top_level_application_test.vhd(35): used implicit default value for signal "mmap_done" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(36): object "go" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(37): object "n" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(33): object "done" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at top_level_application_test.vhd(34): used implicit default value for signal "mmap_done" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(35): object "go" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at top_level_application_test.vhd(36): object "n" assigned a value but never read
 Info (12128): Elaborating entity "jtag_wrapper" for hierarchy "jtag_wrapper:U_jtag_wrapper"
-Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(28): object "cdr" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at jtag_wrapper.vhd(29): object "cdr" assigned a value but never read
 Info (12128): Elaborating entity "vJTAG" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG"
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
 Info (12130): Elaborated megafunction instantiation "jtag_wrapper:U_jtag_wrapper|vJTAG:U_vJTAG|sld_virtual_jtag:sld_virtual_jtag_component"
@@ -646,22 +637,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_tag1" for hierarchy "ram:U_RAM_IN|altsyncram:altsyncram_component|altsyncram_tag1:auto_generated"
 Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED_HI_a"
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 313 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 272 logic cells
+    Info (21061): Implemented 270 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 521 megabytes
-    Info: Processing ended: Fri Jun 10 22:08:01 2016
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 524 megabytes
+    Info: Processing ended: Mon Jun 13 22:45:31 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

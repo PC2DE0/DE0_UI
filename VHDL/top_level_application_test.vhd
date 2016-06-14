@@ -29,7 +29,6 @@ architecture str of top_level_application_test is
 	
 	signal w_en : std_logic;
 	signal r_en : std_logic;
-	signal wr_en : std_logic;
 	
 	signal done : std_logic;
 	signal mmap_done : std_logic;
@@ -49,8 +48,6 @@ architecture str of top_level_application_test is
 
 begin
 
-	w_en <= wr_en and done;
-	r_en <= (not wr_en) and done;
 	mem_out_rd_data_toMap <= x"000000" & mem_out_rd_data;
 	
 	U_jtag_wrapper : entity work.jtag_wrapper
@@ -60,7 +57,8 @@ begin
 			design_output => design_output,
 			data_register => data_register,
 			address_register => address_register,
-			w_r_en => wr_en,
+			w_en => w_en,
+			r_en => r_en,
 			done => done
 		);
 
